@@ -1,0 +1,44 @@
+(function(w, d) {
+  try {
+    d = w.top.document || d; w = w.top.document ? w.top : w;
+  } catch (e) {}
+  var ttag = function() {
+    var _tt_minSlot = 2;
+var _tt_wrapper = frameElement.parentNode.parentNode.parentNode;
+var _tt_slots = _tt_wrapper.querySelectorAll(".article-body > p, .article-body p");
+var forecastCheck = _tt_slots[0].innerHTML;
+var draftking = _tt_slots[0].nextElementSibling.nodeName;
+if (forecastCheck.match(/Forecaster/g)) {
+    _tt_minSlot = 3;
+} else if (draftking === "HR") {
+    _tt_minSlot = 4;
+}
+w.teads.SUMOLOGIC_ENABLED = false;
+    w.teads.page(67896).placement(72800, {slider: {allow_corner_position: false, allow_top_position: false}, "css":"margin: 0px auto 30px; max-width: 450px;","format":"inread","slot":{"avoid":{"selector":".inline, .article-footer, twitterwidget, .ad-300, .article-footer","distance":50},"filter":function filter(slot) {var pCheck = _tt_slots.length;
+var teadsCheck = _tt_wrapper.querySelectorAll(".teads-inread").length;
+if (pCheck < 4 || teadsCheck > 0) {
+	return false;
+}},"selector":_tt_slots,"minimum":_tt_minSlot}}).passback(function passback() {var Fr = window.document.createElement('iframe');
+Fr.width = 1;
+Fr.height = 3;
+Fr.border = 0;
+Fr.style.border = "0";
+Fr.frameBorder = 0;
+Fr.style.display = "block";
+Fr.style.margin = "0px auto";
+var content = "<html><head><style>body{margin:0;padding:0;border:0}<\/style><\/head><body><script src='https://www.googletagservices.com/tag/js/gpt.js'> googletag.pubads().definePassback('/21783347309/espn.global/teads_passback', [1, 3]).display(); <\/script><\/body><\/html>";
+var _tt_passback_slot = _tt_wrapper.querySelector(".teads-adCall");
+_tt_passback_slot.parentNode.insertBefore(Fr, _tt_passback_slot.nextElementSibling);
+Fr.contentWindow.document.open('text/html');
+Fr.contentWindow.document.write(content);
+Fr.contentWindow.document.close();}).serve();
+  };
+  if (w.teads && w.teads.page) { ttag(); }
+  else if (!w.teadsscript) {
+    var s = document.createElement('script');
+    s.src = 'https://static.teads.tv/static/master/media/format/v3/teads-format.min.js';
+    s.async = true; s.onload = ttag; w.teadsscript = d.getElementsByTagName('head')[0].appendChild(s);
+  } else {
+    w.teadsscript.addEventListener('load', ttag);
+  }
+})(window, document);

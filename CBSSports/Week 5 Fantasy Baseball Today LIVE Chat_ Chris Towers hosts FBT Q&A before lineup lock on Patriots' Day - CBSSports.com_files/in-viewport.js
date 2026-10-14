@@ -1,0 +1,1 @@
+define([],function(){return{checkElement:function e(n,t){var t=typeof t==="undefined"?0:t;var i=n.getBoundingClientRect();return i.top>=0-t&&i.left>=0&&i.bottom<=(window.innerHeight+t||document.documentElement.clientHeight+t)&&i.right<=(window.innerWidth||document.documentElement.clientWidth)}}});

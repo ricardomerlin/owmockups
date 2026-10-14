@@ -1,0 +1,1 @@
+define(["managers/locale"],function(e){var a={en:{confirmation:"Your e-mail was sent successfully!",incorrectCaptcha:"The captcha you entered was incorrect.  Please try again."}};return a[e.getLanguage()]});

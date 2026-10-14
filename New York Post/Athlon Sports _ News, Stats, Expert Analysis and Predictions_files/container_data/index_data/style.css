@@ -1,0 +1,123 @@
+@charset "UTF-8";
+
+/* CSS Document */
+
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body,
+body * {
+    position: absolute;
+    vertical-align: baseline;
+    border: 0 none;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+#main_wrapper {
+    position: absolute;
+    display: block;
+    width: 728px;
+    height: 90px;
+    overflow: hidden;
+    background-color: #000000;
+    opacity: 0;
+}
+
+#frame {
+    position: absolute;
+    display: block;
+    width: 728px;
+    height: 90px;
+    border: 1px solid #cccccc;
+}
+
+.active#main_wrapper {
+    opacity: 1;
+}
+
+#black_frame {
+    position: absolute;
+    display: block;
+    width: 728px;
+    height: 90px;
+    background-color: #000;
+}
+
+#bg1 {
+    position: absolute;
+    display: block;
+    background: url("img/bg1.jpg") 0px 0px no-repeat;
+    background-size: 728px 90px;
+    width: 728px;
+    height: 90px;
+}
+
+#logo {
+    position: absolute;
+    display: block;
+    background: url("img/logo.png") 0px 0px no-repeat;
+    background-size: 728px 90px;
+    width: 728px;
+    height: 90px;
+}
+
+#disclaimer {
+    position: absolute;
+    display: block;
+    background: url("img/disclaimer.png") 0px 0px no-repeat;
+    background-size: 728px 90px;
+    width: 728px;
+    height: 90px;
+}
+
+#copy1 {
+    position: absolute;
+    display: block;
+    background: url("img/copy1.png") 0px 0px no-repeat;
+    background-size: 728px 90px;
+    width: 728px;
+    height: 90px;
+}
+
+#cta_text {
+    position: absolute;
+    display: block;
+    background: url("img/cta_text.png") 0px 0px no-repeat;
+    background-size: 728px 90px;
+    width: 728px;
+    height: 90px;
+}
+
+#cta_frame {
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    display: block;
+    width: 728px;
+    height: 90px;
+}
+
+#cta_frame > path{
+    fill: none;
+    stroke: #FFF;
+    stroke-width: 1px;
+
+}
+
+.cta_border_left{
+    stroke-dasharray: 149;
+    stroke-dashoffset: 149;
+}
+
+.cta_border_right{
+    stroke-dasharray: 149;
+    stroke-dashoffset: 149;
+}
+

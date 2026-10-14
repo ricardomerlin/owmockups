@@ -1,0 +1,1 @@
+define(["exports","jquery","utils/date-time-ago"],function(e,t,i){"use strict";function a(e){return e&&e.__esModule?e:{default:e}}var u=a(t);var o=a(i);u["default"].widget("sports.dateTimeAgo",u["default"].fly.base,{options:{},_create:function e(){o["default"].displayTimeAgo(this.element)}})});

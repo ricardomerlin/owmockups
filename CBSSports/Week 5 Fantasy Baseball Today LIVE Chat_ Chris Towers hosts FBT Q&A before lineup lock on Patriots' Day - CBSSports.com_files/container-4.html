@@ -1,0 +1,71 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+  <style>body { margin: 0px !important; }</style></head>
+  <body>
+    <div id="IL_IFR_Content"></div>
+    <script>
+      (function () {
+        window.addEventListener("message", displayMessage, false);
+        function displayMessage(e) {
+          try {
+            const evt = JSON.parse(e.data);
+            if (evt.name === "IL_iceContent") {
+              createContentIFrame(evt.content);
+              const styleElement = document.createElement("style");
+              styleElement.textContent = "body { margin: 0px !important; }";
+              document.head.appendChild(styleElement);
+            }
+            if (evt.name === "IL_sendExternalMrc") {
+              evt.mrcTrackingPixels.map((pixel) => {
+                document
+                  .getElementById("IL_IFR_Content")
+                  .insertAdjacentHTML(
+                    "beforeend",
+                    "<img src='" +
+                      pixel +
+                      "'style='display:none; width:1px; height:1px' alt=''>"
+                  );
+              });
+            }
+          } catch (err) {
+            //console.log("[ICE] do nothing", err)
+          }
+        }
+        /**
+         * creates second nested iframe to display the ad content
+         */
+        function createContentIFrame(content) {
+          const iframe = document.createElement("iframe");
+          iframe.setAttribute("width", "100%");
+          iframe.setAttribute("height", "100%");
+          iframe.setAttribute("frameborder", "0");
+          iframe.setAttribute("scrolling", "no");
+
+          // Setting up communication between parent and iframe
+          iframe.setAttribute("sandbox", "allow-scripts allow-same-origin");
+
+          iframe.onload = function () {
+            const iframeDoc =
+              iframe.contentDocument || iframe.contentWindow.document;
+            handleContent(content, iframeDoc);
+          };
+          document.body.appendChild(iframe);
+        }
+        /**
+         * Aims to handle content that is sent to be rendered
+         * @param {*} content The ad content
+         * @param {*} iframeDoc the iframe container document
+         */
+        function handleContent(content, iframeDoc) {
+          var frag = iframeDoc.createRange().createContextualFragment(content);
+          iframeDoc.body.appendChild(frag);
+          const styleElement = document.createElement("style");
+          styleElement.textContent = "body { margin: 0px !important; }";
+          iframeDoc.head.appendChild(styleElement);
+        }
+      })();
+    </script>
+  
+
+<iframe width="100%" height="100%" frameborder="0" scrolling="no" sandbox="allow-scripts allow-same-origin"></iframe></body></html>

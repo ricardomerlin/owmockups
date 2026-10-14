@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@keyframes wiggle {
+  0% {
+    transform: scaleY(1);
+    transform-origin: 50% 50%;
+  }
+
+  50% {
+    transform: scaleY(.85);
+    transform-origin: 50% 50%;
+  }
+
+  100% {
+    transform: scaleY(.5);
+    transform-origin: 50% 50%;
+  }
+}
+
+#Line_1 {
+  animation: wiggle 1s infinite;
+  animation-delay: .1s;
+}
+
+#Line_2 {
+  animation: wiggle 1s infinite;
+  animation-delay: .30s;
+}
+
+#Line_3 {
+  animation: wiggle 1s infinite;
+  animation-delay: .45s;
+}
+
+#Line_4 {
+  animation: wiggle 1s infinite;
+  animation-delay: .60s;
+}
+
+#Line_5 {
+  animation: wiggle 1s infinite;
+  animation-delay: .75s;
+}
+
+#Line_6 {
+  animation: wiggle 1s infinite;
+  animation-delay: .15s;
+}
+
+#Line_7 {
+  animation: wiggle 1s infinite;
+  animation-delay: .25s;
+}
+
+#Line_8 {
+  animation: wiggle 1s infinite;
+  animation-delay: .35s;
+}
+
+#Line_9 {
+  animation: wiggle 1s infinite;
+  animation-delay: .5s;
+}
+
+
+.row__inner {
+}
+.tile {
+  position: relative;
+  display: inline-block;
+  width: 300px;
+  height: 168.75px;
+  margin-right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 450ms all;
+  transform-origin: center left;
+}
+.tile__img {
+  width: 400px;
+  height: 168.75px;
+  object-fit: cover;
+}
+.tile__details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  font-size: 10px;
+  opacity: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+  transition: 450ms opacity;
+}
+.tile:hover .tile__details {
+  opacity: 1;
+}
+.tile__title {
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+  color:  #fff;
+}
+.row__inner:hover {
+  /*transform: translate3d(-50px, 0, 0);*/
+}
+.row__inner:hover .tile {
+  opacity: 0.3;
+}
+.row__inner:hover .tile:hover {
+  transform: scale(1.5) translate3d(-50px, 0, 0);
+  opacity: 1;
+}
+.row__inner:hover .tile:hover {
+
+}
+.tile:hover ~ .tile {
+  transform: translate3d(50px, 0, 0);
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: 0;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  scrollbar-width: 0;
+  display: none;
+}
+.scrollbar-default {
+  -ms-overflow-style: auto;
+  scrollbar-width: auto;
+}
+.scrollbar-default::-webkit-scrollbar {
+  display: block;
+}
+.svg-icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -.125em;
+  line-height: 1em;
+  fill: currentColor;
+  display: inline-block;
+}
+/* Disable long-presses menu on iOS  */
+@supports (-webkit-touch-callout: none) {
+  body { -webkit-touch-callout: none }
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */

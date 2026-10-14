@@ -1,0 +1,1 @@
+window.ccRealTime.callback({"ccuid":"3b3340f6-8b48-4e0b-89e0-6b17f679967b","user":{"age":0,"gender":0,"segments":[]},"brands":[],"demographics":[],"audiences":[],"interests":[],"createdAt":1741705529});

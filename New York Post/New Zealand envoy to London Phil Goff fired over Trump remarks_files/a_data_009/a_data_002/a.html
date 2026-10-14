@@ -1,0 +1,55 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+      <style>
+        .str-thumbnail-body {
+          margin: auto;
+          display: flex;
+          overflow: -moz-scrollbars-none;
+          width: 100%;
+          height: 100%;
+          align-items: center;
+          justify-content: center;
+        }
+        .str-thumbnail-body::-webkit-scrollbar {
+          width: 0 !important;
+        }
+      </style>
+      <script>
+        function resize() {
+          const { innerWidth, innerHeight } = window;
+          const width = 300;
+          const height = 600;
+          const thumbnailContent = document.querySelector(".str-thumbnail-content");
+          const thumbnailContentScale = document.querySelector(".str-thumbnail-content-scale");
+          const heightScale = innerHeight / (height ?? thumbnailContent.clientHeight);
+          const widthScale = innerWidth / (width ?? thumbnailContent.clientWidth);
+          const scale = Math.min(heightScale, widthScale);
+          thumbnailContentScale.style.width = width ?? thumbnailContent.clientWidth;
+          thumbnailContentScale.style.height = height ?? thumbnailContent.clientHeight;
+          if (scale < 1) {
+            thumbnailContent.style.transform = "scale(" + scale + ")";
+            thumbnailContent.style.transformOrigin = "center";
+          } else {
+            thumbnailContent.style.transformOrigin = "";
+            thumbnailContent.style.transform = "scale(1)";
+          }
+        }
+        window.addEventListener("resize", () => resize());
+        const observer = new MutationObserver(() => {
+          resize();
+        });
+        observer.observe(document, {
+          childList: true,
+          subtree: true,
+        });
+      </script>
+    </head>
+    <body class="str-thumbnail-body">
+      <div class="str-thumbnail-content" style="transform: scale(1);">
+        <div class="str-thumbnail-content-scale" style="width: 300px; height: 600px;"><img src="a_data/Untitled.gif" width="1" height="1" style="display: none;"><img src="a_data/1.png" width="1" height="1" style="display: none;"><iframe id="te-clr1-543d6e44-fccd-4242-a4ed-50ab8a3d288f-icon" frameborder="0" scrolling="no" style="cursor: pointer; display: block; position: absolute; overflow: hidden; margin: 0px; padding: 0px; pointer-events: auto; transform: none !important; background: transparent !important; opacity: 0.8; z-index: 1000001; width: 19px; height: 15px; left: 281px; top: 0px;" data-has-click-listener="true"></iframe><ins class="dcmads" style="display:inline-block;width:300px;height:600px" data-dcm-placement="N369804.284566THETRADEDESK/B33136360.415353073" data-dcm-rendering-mode="script" data-dcm-https-only="" data-dcm-api-frameworks="[APIFRAMEWORKS]" data-dcm-omid-partner="[OMIDPARTNER]" data-dcm-ltd="false" data-dcm-resettable-device-id="" data-dcm-app-id="" data-dcm-click-tracker="https://insight.adsrvr.org/track/clk?imp=595b75ee-ae5c-4cd1-9fd5-86a7fe3d76fa&amp;ag=f68y7ti&amp;sfe=1a0141de&amp;sig=rFteO78WX35K0TDRv5v3i1sLlJfJ0M1VrLDPNK10eWM.&amp;crid=4ftzvmxq&amp;cf=8330758&amp;fq=0&amp;t=1&amp;td_s=nypost.com&amp;rcats=y29&amp;mste=&amp;mfld=4&amp;mssi=&amp;mfsi=&amp;sv=sharethrough&amp;uhow=106&amp;agsa=&amp;wp=0.37&amp;rgz=10118&amp;dt=PC&amp;osf=OSX&amp;os=OSX1015&amp;br=Firefox&amp;svpid=PAGVlrTx&amp;rlangs=01&amp;mlang=&amp;did=Jrjzn&amp;rcxt=Other&amp;tmpc=10.300000000000011&amp;vrtd=&amp;osi=&amp;osv=&amp;daid=&amp;dnr=0&amp;vpb=&amp;c=1~KLUv_SNa1XJF6EUDAOPDDWG-PEwfXgTfXQjf7n12rS-Ib4crXHDK9X1V_0MyA-t9Rf7n-b_H_7spnI0TmVA9hys2qUoLwl4P_EO5Krk2Pxfep8t6hLL8Dq6kiAbgrUBd5Hn-2HXVUH2OqdmBC_9v8IVIG_gJ&amp;dur=1~KLUv_WMFoCgkfgCVAwBDBRERXAAAeOt9453Xej3hxj_Dv_eEnbYXyq5fGbuOJVVv5WQSJt4CdpB0DOafjJScMuhNTQKY5Iy3AI5280Y69VT0c6ZBCQ78RrUJU8Xygdbo3izEQEdF1K3qVJj2-aisQQh4xUrsVs0LTTH0DxyTcAI.&amp;durs=F_BuJM&amp;crrelr=&amp;npt=&amp;bdc=131&amp;dat=68cf83ac-4545-8a23-747b-e8e666d6485a&amp;mk=Apple&amp;mdl=Firefox&amp;testid=iavc1%20&amp;adpt=st_lsharethrough&amp;fpa=636&amp;pcm=3&amp;ict=Unknown&amp;said=12ad50ce-244f-4ff7-9aa4-4e014396021c&amp;auct=1&amp;tail=1&amp;r=">
+  <script src="a_data/dcmads.js"></script><script type="text/javascript" onload="__IntegralASEventLoadHandler_742a6242aee7a401d804d402b86b776a &amp;&amp; __IntegralASEventLoadHandler_742a6242aee7a401d804d402b86b776a()" src="a_data/dcmads_002.js" referrerpolicy="no-referrer-when-downgrade"></script>
+</ins><span id="te-clearads-js-tradedesk01cont1" style="display: none !important; padding: 0px;"><script type="text/javascript" src="a_data/ca.js"></script></span><iframe id="iframe_949459343073" name="iframe_949459343073" data-dv-frm="949459343073" width="0" height="0" style="display: none;" src="../../a_data/a_data/a_004.html" data-has-click-listener="true"></iframe><script src="a_data/dvtp_src.js" type="text/javascript"></script></div>
+      </div><iframe style="width: 0px !important; height: 0px !important; border: 0px !important; position: absolute !important; top: -10000px !important; left: -10000px !important;" src="../../a_data/a_data/a_004.html" class="_ntnrjf7826-hj" data-has-click-listener="true"></iframe>
+    
+  
+<script src="a_data/get.js"></script></body></html>

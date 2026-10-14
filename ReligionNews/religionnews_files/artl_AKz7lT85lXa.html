@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html class="h-full h-[100dvh]" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><style type="text/css">.turbo-progress-bar {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: #0076ff;
+  z-index: 2147483647;
+  transition:
+    width 300ms ease-out,
+    opacity 150ms 150ms ease-in;
+  transform: translate3d(0, 0, 0);
+}
+</style>
+    <title>Everlit Audio Player</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+
+    <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="EB2dxXeLSW_CK4-z-p2K1euM3pE6L64rJzR0c7nmhvYZE0OZbGCkv4CrhUJdl2kOarsbi2j__ZMe2-2DB1Q4pQ">
+    <link rel="stylesheet" href="artl_AKz7lT85lXa_data/tailwind-7fed6868ba5eef2ddbc02cb1245a58a8ffcf0920b3427f2baf3.css" data-turbo-track="reload">
+    <link rel="stylesheet" href="artl_AKz7lT85lXa_data/application-88c48c352a1ddc18d1f1208d022989278fc24f9259e4f9ba.css" data-turbo-track="reload">
+
+    <script type="importmap" data-turbo-track="reload" nonce="">{
+  "imports": {
+    "application": "https://assets.everlit.audio/assets/application-44806fb74e1340a329ed41cbb6571faa4270ccf4fc87c20a4a75b121afb8af51.js",
+    "@hotwired/turbo-rails": "https://assets.everlit.audio/assets/turbo.min-961347d6016d034e0458a43b6f12ef206a17aa069a2df3f1828c7c7c582e6d90.js",
+    "@hotwired/stimulus": "https://assets.everlit.audio/assets/stimulus.min-ef9ce4c177a67e50bab672f7d00031b2db705e108b056a61a48c7d7a346a6c2e.js",
+    "@hotwired/stimulus-loading": "https://assets.everlit.audio/assets/stimulus-loading-3576ce92b149ad5d6959438c6f291e2426c86df3b874c525b30faad51b0d96b3.js",
+    "el-transition": "https://assets.everlit.audio/assets/el-transition-ea3c9b45578809c199f6725e011d96e3f37f5311744d1da6b1b16c889ad9e73b.js",
+    "lodash.throttle": "https://assets.everlit.audio/assets/lodash.throttle-0645c509f8df29119b0356a57ec59548874d7b06a2329d7da53a690762c850ac.js",
+    "chartkick": "https://assets.everlit.audio/assets/chartkick-8eb76e6cbdb540d495739fce84049fd038e59e7fd55c9e08e47b0b5a74b62db4.js",
+    "Chart.bundle": "https://assets.everlit.audio/assets/Chart.bundle-545c7dd29b3aabbf63c41f01186053ea7a673254f2cbb405b88182510983ac55.js",
+    "sortablejs": "https://assets.everlit.audio/assets/sortablejs-f774108136497c0dcd196d17cbb6ab5f879b38f0d93b77595ab6eacda7710c05.js",
+    "@rails/request.js": "https://assets.everlit.audio/assets/rails-request-f6b93d67a941693dfa8544a711ffc6113d60cda50a540d35bb080a0bf899e94a.js",
+    "hls.js": "https://assets.everlit.audio/assets/hls.js-871f0eeb170e0dd02dbc7525127bd79e097e1f72144e18341a6600912443917a.js",
+    "@dailymotion/vast-client": "https://assets.everlit.audio/assets/vast-client-d3340045deada8ab643c7edad65fab62ad207f38757ac472afd1a5f12a064ccd.js",
+    "@xmldom/xmldom": "https://assets.everlit.audio/assets/@xmldom--xmldom-36bddd76407de350cc607ce1738713990127ea93d760e9bbe08e576c3d86bd20.js",
+    "controllers/application": "https://assets.everlit.audio/assets/controllers/application-368d98631bccbf2349e0d4f8269afb3fe9625118341966de054759d96ea86c7e.js",
+    "controllers/auto_audio_controller": "https://assets.everlit.audio/assets/controllers/auto_audio_controller-e4a105999fcdc3e238faf2cb2527252f7345f54d2f23ed9d0b788cdb6008878b.js",
+    "controllers/autosuggest_controller": "https://assets.everlit.audio/assets/controllers/autosuggest_controller-78d5af9467d1032b9e4dbf887d121fc45d7a20f9cec0c71c5a317587a3541090.js",
+    "controllers/billing_controller": "https://assets.everlit.audio/assets/controllers/billing_controller-6ba828afb09fcfa6ff3393bf35c16d9d74df774707ef07b066c63c052e3642c8.js",
+    "controllers/checkboxlist_controller": "https://assets.everlit.audio/assets/controllers/checkboxlist_controller-ccad9df035a74bee7efadf14271b50661637f0efd5549bc161761fde000807ad.js",
+    "controllers/clicker_controller": "https://assets.everlit.audio/assets/controllers/clicker_controller-864eec61df5bbd35a142c0c6099d0ea39123b423e9a5d3cef4134461cfca76df.js",
+    "controllers/clipboard_controller": "https://assets.everlit.audio/assets/controllers/clipboard_controller-a50dd650f157815b6d3ad31726ef7142cbac3340a0017f3a1559ff6a82c195e8.js",
+    "controllers/conditional_display_controller": "https://assets.everlit.audio/assets/controllers/conditional_display_controller-28a2c313cfdebec447c77f27dee1ff2bf98b4b97a8f9b85dbf70103bb6d25612.js",
+    "controllers/dropmenu_controller": "https://assets.everlit.audio/assets/controllers/dropmenu_controller-25f7ac9aa9ccde466b137907efc4b45191f94f3c69d90e7ffe3d896b036df09e.js",
+    "controllers/file_upload_validator_controller": "https://assets.everlit.audio/assets/controllers/file_upload_validator_controller-4a9714d756b478f2e240126a40b6bfecc131e7d051099c31f2887a98db626a60.js",
+    "controllers": "https://assets.everlit.audio/assets/controllers/index-78fbd01474398c3ea1bffd81ebe0dc0af5146c64dfdcbe64a0f4763f9840df28.js",
+    "controllers/live_search_controller": "https://assets.everlit.audio/assets/controllers/live_search_controller-3e7d025ac3a1f0217de0f270b40708f99a8cfd85118ff420c51e8b84cfa14d3e.js",
+    "controllers/marquee_controller": "https://assets.everlit.audio/assets/controllers/marquee_controller-4860f410f4ba58477ab398b2ac5bb6c908c9b0beeab69203901bab3bfc916942.js",
+    "controllers/media_session_controller": "https://assets.everlit.audio/assets/controllers/media_session_controller-2326bedb2e7f3994d43ec9bee0b658049661da8a32caeb76476137d20ab7df4f.js",
+    "controllers/modal_controller": "https://assets.everlit.audio/assets/controllers/modal_controller-f9c4c3d08acc6785c313991ab521773fc6c19ea0b4ba40a35c993b4be1f92e29.js",
+    "controllers/player_controller": "https://assets.everlit.audio/assets/controllers/player_controller-03d80ff0d82f749520d69a2f8bd252d6a3cb6290179775652001d4a8dc2ffa86.js",
+    "controllers/playlist_controller": "https://assets.everlit.audio/assets/controllers/playlist_controller-0e4e64526aad7323e434cddd1c3837a9267a6b1dc624b1975c79b743516b965e.js",
+    "controllers/popover_controller": "https://assets.everlit.audio/assets/controllers/popover_controller-25a84d92ff4f7e385549688efc14f96e6542b1c2652eedef71643ad8b47df330.js",
+    "controllers/reveal_controller": "https://assets.everlit.audio/assets/controllers/reveal_controller-5a978da788b8df87e4b6474b9cd21308454811a3765176f0ba84ca7de6e18c16.js",
+    "controllers/service_worker_controller": "https://assets.everlit.audio/assets/controllers/service_worker_controller-06563e5e80e3d0261dff0e18817563386545eb5573063c0a5d75d7d779928876.js",
+    "controllers/snackbar_controller": "https://assets.everlit.audio/assets/controllers/snackbar_controller-d9d2daa8406e5e306ba52ad4f51e77f3e1b39ff084e3c3eac68ccfce816a16cd.js",
+    "controllers/sortable_controller": "https://assets.everlit.audio/assets/controllers/sortable_controller-e767aac3f904b778270379b23f904f59592a2a77e0d449efd9409477cb64415f.js",
+    "controllers/sticky_header_controller": "https://assets.everlit.audio/assets/controllers/sticky_header_controller-af798033336c2e7bb68b6f4b6feae6340389dbfe3b66059895fc0a363da6e544.js",
+    "controllers/time_range_controller": "https://assets.everlit.audio/assets/controllers/time_range_controller-b9a5cadb31963bee486331c3b11577af297f574f08357b794e7e522dd5eb3bf8.js",
+    "lib/ad_manager": "https://assets.everlit.audio/assets/lib/ad_manager-09d21cbd5a3a3eeccf37e97f164bdf57bd5cc3f05f3b4e9f21574e27679eee1f.js"
+  }
+}</script>
+<link rel="modulepreload" href="https://assets.everlit.audio/assets/application-44806fb74e1340a329ed41cbb6571faa4270ccf4fc87c20a4a75b121afb8af51.js" nonce="">
+<link rel="modulepreload" href="https://assets.everlit.audio/assets/turbo.min-961347d6016d034e0458a43b6f12ef206a17aa069a2df3f1828c7c7c582e6d90.js" nonce="">
+<link rel="modulepreload" href="https://assets.everlit.audio/assets/stimulus.min-ef9ce4c177a67e50bab672f7d00031b2db705e108b056a61a48c7d7a346a6c2e.js" nonce="">
+<link rel="modulepreload" href="https://assets.everlit.audio/assets/stimulus-loading-3576ce92b149ad5d6959438c6f291e2426c86df3b874c525b30faad51b0d96b3.js" nonce="">
+<link rel="modulepreload" href="https://assets.everlit.audio/assets/el-transition-ea3c9b45578809c199f6725e011d96e3f37f5311744d1da6b1b16c889ad9e73b.js" nonce="">
+<link rel="modulepreload" href="https://assets.everlit.audio/assets/lodash.throttle-0645c509f8df29119b0356a57ec59548874d7b06a2329d7da53a690762c850ac.js" nonce="">
+<link rel="modulepreload" href="https://assets.everlit.audio/assets/rails-request-f6b93d67a941693dfa8544a711ffc6113d60cda50a540d35bb080a0bf899e94a.js" nonce="">
+<script type="module" nonce="">import "application"</script>
+    <script type="module" nonce="">import "hls.js"</script>
+    <script type="module" nonce="">import "controllers/player_controller"</script>
+    <script type="module" nonce="">import "controllers/marquee_controller"</script>
+    <script type="module" nonce="">import "controllers/media_session_controller"</script>
+
+    <meta name="Description" content="Hear In Pittsburgh, pro-immigrant interfaith efforts emerge amid concerns about ICE with Everlit Audio">
+    <meta name="turbo-cache-control" content="no-cache">
+    <meta name="turbo-refresh-method" content="morph">
+    <meta name="turbo-refresh-scroll" content="preserve">
+
+    
+  <style>
+
+    :root {
+      color-scheme: light; /* dark */
+
+
+      --theme-bg-color: var(--theme-user-bg-color, oklch(1 0 0));
+      --theme-accent-color: var(--theme-user-accent-color, oklch(0.7845 0.1325 181.91));
+      --theme-primary: var(--theme-user-primary-color, oklch(0.3717 0.0198 257.29));
+      --theme-secondary: oklch(from var(--theme-primary) calc(l + 0.3) c h);
+      --theme-tertiary: oklch(from var(--theme-primary) calc(l + 0.5) c h);
+
+      --theme-border-color: var(--theme-user-border-color, var(--theme-tertiary));
+      --theme-cover-bg-color: var(--theme-user-cover-bg-color, var(--theme-tertiary));
+      --theme-control-bg-color: var(--theme-user-control-bg-color, var(--theme-tertiary));
+      --theme-control-border-color: oklch(from var(--theme-control-bg-color) calc(l - 0.05) c h);
+      --theme-control-icon-color: var(--theme-user-control-icon-color, var(--theme-primary));
+      --theme-control-icon-color--hover: oklch(from var(--theme-control-icon-color) calc(l - 0.2) c h);
+      --theme-title-text-color: var(--theme-user-title-text-color, var(--theme-primary));
+      --theme-body-text-color: var(--theme-user-body-text-color, var(--theme-secondary));
+      --theme-progress-bar-color: var(--theme-user-progress-bar-color, var(--theme-tertiary));
+      --theme-progress-bar-color--hover: oklch(from var(--theme-progress-bar-color) calc(l - 0.1) c h);
+      --theme-progress-bar-inactive-color: oklch(from var(--theme-progress-bar-color) calc(l - 0.3) c h);
+      --theme-progress-bar-active-color: var(--theme-user-progress-bar-active-color, var(--theme-accent-color));
+      --theme-progress-handle-bg-color: var(--theme-user-progress-handle-bg-color, var(--theme-bg-color));
+      --theme-progress-handle-border-color: oklch(from var(--theme-progress-handle-bg-color) calc(l - 0.1) c h);;
+      --theme-progress-timer-text-color: var(--theme-body-text-color);
+      --theme-action-text-color: var(--theme-body-text-color);
+      --theme-action-text-color--hover: oklch(from var(--theme-action-text-color) calc(l - 0.2) c h);
+      --theme-sponsorship-text-color: var(--theme-body-text-color);
+
+      --theme-playlist-tracks-bg-color: var(--theme-user-playlist-tracks-bg-color, var(--theme-bg-color));
+      --theme-playlist-tracks-bg-color--active: oklch(from var(--theme-tertiary) l c h / 20%);
+      --theme-playlist-tracks-bg-color--hover: oklch(from var(--theme-tertiary) l c h / 30%);
+      --theme-playlist-tracks-border-color: var(--theme-user-playlist-tracks-border-color, oklch(from var(--theme-tertiary) l c h));
+    }
+  </style>
+
+  </head>
+  <body class="h-full h-[100dvh] overscroll-none">
+      
+
+<div data-controller="player media-session" id="player" class=" flex flex-col h-full justify-center items-center gap-y-1 h-full h-[100dvh] overflow-y-hidden overscroll-none select-none scrollbar-hide font-embed-body" data-player-stream-url-value="https://everlit.audio/embeds/artl_AKz7lT85lXa/playlist?ste=aHR0cHM6Ly9yZWxpZ2lvbm5ld3MuY29tLw" data-player-watch-url-value="https://everlit.audio/embeds/artl_AKz7lT85lXa/watch" data-player-auth-key-value="eyJ1c2VyX3RhZyI6IjE3ZmE4YWE5LTBiMGItNGNhYi04ZmY0LTFiMjY5OWI0YTg2OSIsInNlc3Npb25fdGFnIjoiNDJlZWU1NGYtNTAzOS00YzdmLThiYzAtNGI4NDgwNTE1OWY1Iiwic2hvd19pZCI6MjQ5MjA2MywiYXJ0aWNsZV9pZCI6MjQ5MTM5OCwiY2hhbm5lbCI6ImVtYmVkZGVkX2FydGljbGUiLCJybnNfY2FtcGFpZ24iOiJhZGNwbl81ZEE5RXhJRHlBbSJ9--d249e967529bd8349d89213e4cb05c87611eabaa" data-player-duration-value="415590" data-player-autoplay-value="true" data-player-title-value="In Pittsburgh, pro-immigrant interfaith efforts emerge amid concerns about ICE" data-player-speed-value="0" data-player-hidden-class="hidden" data-player-ad-progress-class="!bg-[--theme-progress-bar-inactive-color]" data-media-session-title-value="In Pittsburgh, pro-immigrant interfaith efforts emerge amid concerns about ICE" data-media-session-album-value="Religion News Service" data-media-session-cover-value="https://cdn.everlit.audio/covers/artl_AKz7lT85lXa/58f4da07-1f65-4069-a2ed-5ee2645336a3/large.jpg" data-action="player:play-&gt;media-session#handlePlay
+                  player:pause-&gt;media-session#handlePause
+                  player:ended-&gt;media-session#handleEnded
+                  player:ready-&gt;media-session#handleReady
+                  player:loadedmetadata-&gt;media-session#handleLoadedMetadata
+                  player:position-changed-&gt;media-session#handlePositionChanged
+                  player:track-changed-&gt;media-session#handleTrackChanged
+                  media-session:seek-relative-&gt;player#seekRelative
+                  media-session:play-&gt;player#play
+                  media-session:pause-&gt;player#pause" aria-label="Everlit Audio Player">
+  <section id="embed-player-wrapper" class="flex w-full h-24 [.style-mini_&amp;]:h-12 gap-x-5 justify-center content-center relative p-1 border rounded-lg bg-[--theme-bg-color] border-[--theme-border-color]">
+    <div id="embed-player-cover" class="hidden xs:flex shrink items-center justify-center">
+        <div id="embed-player-cover-container" class="w-[120px] h-20 [.style-mini_&amp;]:w-14 [.style-mini_&amp;]:h-9 rounded-lg overflow-hidden p-1 [.style-mini_&amp;]:p-0.5 ml-1 [.style-mini_&amp;]:ml-0.5 bg-[--theme-cover-bg-color]">
+            <img data-player-target="coverElement" alt="In Pittsburgh, pro-immigrant interfaith efforts emerge amid concerns about ICE" class="w-full h-full object-cover rounded-md" src="artl_AKz7lT85lXa_data/large.jpg">
+        </div>
+    </div>
+    <div id="embed-player-controls" class="flex flex-none justify-center items-center">
+      <div id="embed-player-controls-container" class="size-16 [.style-mini_&amp;]:size-8 text-4xl [.style-mini_&amp;]:text-lg border rounded-full justify-center flex flex-none font-sans bg-[--theme-control-bg-color] border-[--theme-control-border-color] text-[--theme-control-icon-color] hover:text-[--theme-control-icon-color--hover]">
+        <button aria-label="Play" class="w-16 sm:w-24 focus:outline-none focus-visible:ring-2 focus-visible:ring-[--theme-accent-color] focus-visible:ring-offset-2 rounded-full" data-player-target="playContainer" data-action="click-&gt;player#play">
+          <svg aria-hidden="true" class="svg-icon ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"></path></svg>
+        </button>
+        <button aria-label="Pause" class="hidden w-16 sm:w-24 focus:outline-none focus-visible:ring-2 focus-visible:ring-[--theme-accent-color] focus-visible:ring-offset-2 rounded-full" data-player-target="pauseContainer" data-action="click-&gt;player#pause">
+          <svg aria-hidden="true" class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M48 64C21.5 64 0 85.5 0 112V400c0 26.5 21.5 48 48 48H80c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H48zm192 0c-26.5 0-48 21.5-48 48V400c0 26.5 21.5 48 48 48h32c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H240z"></path></svg>
+        </button>
+        <button aria-label="Loading" disabled="disabled" class="hidden w-16 sm:w-24 focus:outline-none focus-visible:ring-2 focus-visible:ring-[--theme-accent-color] focus-visible:ring-offset-2 rounded-full" data-player-target="loadingContainer">
+          <svg aria-hidden="true" class="svg-icon animate-spin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path class="fa-secondary" opacity=".4" d="M0 256C0 114.9 114.1 .5 255.1 0C237.9 .5 224 14.6 224 32c0 17.7 14.3 32 32 32C150 64 64 150 64 256s86 192 192 192c69.7 0 130.7-37.1 164.5-92.6c-3 6.6-3.3 14.8-1 22.2c1.2 3.7 3 7.2 5.4 10.3c1.2 1.5 2.6 3 4.1 4.3c.8 .7 1.6 1.3 2.4 1.9c.4 .3 .8 .6 1.3 .9s.9 .6 1.3 .8c5 2.9 10.6 4.3 16 4.3c11 0 21.8-5.7 27.7-16c-44.3 76.5-127 128-221.7 128C114.6 512 0 397.4 0 256z"></path><path class="fa-primary" d="M224 32c0-17.7 14.3-32 32-32C397.4 0 512 114.6 512 256c0 46.6-12.5 90.4-34.3 128c-8.8 15.3-28.4 20.5-43.7 11.7s-20.5-28.4-11.7-43.7c16.3-28.2 25.7-61 25.7-96c0-106-86-192-192-192c-17.7 0-32-14.3-32-32z"></path></svg>
+        </button>
+      </div>
+    </div>
+    <div id="embed-player-meta" class="flex flex-1 flex-col p-1 overflow-hidden">
+      <div id="embed-player-meta-title" class="flex flex-col grow justify-center items-end">
+        <div id="embed-player-meta-title-sm" class="hidden sm:flex flex-1 text-base tracking-tight gap-x-1 w-full items-end">
+          <div class="ml-1 text-nowrap text-[--theme-body-text-color]">Listen now:</div>
+          <div class="relative flex overflow-hidden w-full items-end" data-controller="marquee" data-action="mouseover-&gt;marquee#start" data-marquee-target="container" data-marquee-animation-class="animate-[marquee_linear]">
+            <div class="absolute top-0 left-0 h-full w-2 bg-gradient-to-r from-[--theme-bg-color] z-10"></div>
+            <div class="text-nowrap pl-1.5 pr-5 font-medium text-[--theme-title-text-color] font-embed-title" data-player-target="titleElement" data-marquee-target="text" style="animation-duration: 6.35333s;">In Pittsburgh, pro-immigrant interfaith efforts emerge amid concerns about ICE</div><div class="text-nowrap pl-1.5 pr-5 font-medium text-[--theme-title-text-color] font-embed-title" data-player-target="titleElement" data-marquee-target="text" style="animation-duration: 6.35333s;">In Pittsburgh, pro-immigrant interfaith efforts emerge amid concerns about ICE</div>
+            <div class="absolute top-0 right-0 h-full w-8 bg-gradient-to-l from-[--theme-bg-color]"></div>
+          </div>
+        </div>
+        <div id="embed-player-meta-title-xs" class="flex sm:hidden flex-col flex-1 tracking-tight gap-y-1 w-full justify-center">
+          <div class="flex gap-x-1 text-xs [.style-mini_&amp;]:hidden" aria-hidden="true">
+            <span class="text-nowrap text-[--theme-body-text-color]">Listen now:</span>
+          </div>
+          <div data-player-target="titleElement" class="text-sm font-medium line-clamp-2 [.style-mini_&amp;]:line-clamp-1 font-embed-title text-[--theme-title-text-color]">In Pittsburgh, pro-immigrant interfaith efforts emerge amid concerns about ICE</div>
+          <div class="[.style-mini_&amp;]:hidden text-xs text-[--theme-body-text-color]" data-player-target="mobileDurationText">
+            About 6 Minutes
+          </div>
+        </div>
+      </div>
+      <div id="embed-player-meta-progress" class="hidden sm:flex grow w-full items-center gap-x-2 mb-2 pl-1.5" data-player-target="progressContainer">
+        <div id="embed-player-meta-progress-timers" class="hidden md:flex [.style-mini_&amp;]:hidden" aria-hidden="true">
+          <div class="text-xs text-[--theme-progress-timer-text-color] font-mono" data-player-target="timecodeElapsed">0:00</div>
+        </div>
+        <div id="embed-player-meta-scrub-progress-container" class="relative w-full h-1 [.style-mini_&amp;]:h-0.5 [.style-mini_&amp;]:mt-1 rounded-full cursor-pointer transition-colors group bg-[--theme-progress-bar-color] hover:bg-[--theme-progress-bar-color--hover] focus:outline-none focus-visible:ring-2 focus-visible:ring-[--theme-accent-color] focus-visible:ring-offset-2" role="slider" tabindex="0" aria-label="Seek" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="0:00" data-player-target="seekBar" data-action="mousedown-&gt;player#startSeeking
+                          touchstart-&gt;player#startSeeking:!passive
+                          mousemove@document-&gt;player#dragSeeking
+                          touchmove@document-&gt;player#dragSeeking:!passive
+                          mouseup@document-&gt;player#stopSeeking
+                          touchend@document-&gt;player#stopSeeking
+                          keydown-&gt;player#seekBarKeydown">
+          <div id="embed-player-meta-scrub-progress-bar" class="progress absolute top-0 left-0 h-full rounded-full transition-all duration-75 active:!duration-0 bg-[--theme-progress-bar-active-color]" data-player-target="progressBar" style="width: 0%"></div>
+          <div id="embed-player-meta-scrub-handle" class="absolute top-1/2 transform -translate-y-1/2 size-4 [.style-mini_&amp;]:size-2.5 border shadow rounded-full opacity-0 group-hover:opacity-100 transition-opacity border-[--theme-progress-handle-border-color] bg-[--theme-progress-handle-bg-color]" style="left: 0%" data-player-target="seekHandle"></div>
+        </div>
+        <div id="embed-player-meta-progress-timers" class="flex [.style-mini_&amp;]:hidden" aria-hidden="true">
+          <div class="text-xs text-[--theme-progress-timer-text-color] font-mono" data-player-target="timecodeRemaining">6:55</div>
+        </div>
+      </div>
+    </div>
+    <div id="embed-player-timers" class="hidden [.style-mini_&amp;]:flex flex-none items-center justify-center text-xs mt-1 font-mono text-[--theme-progress-timer-text-color]" aria-hidden="true">
+      <span class="[.style-mini_&amp;]:hidden [.style-mini_&amp;]:sm:inline" data-player-target="timecodeElapsed">0:00</span>
+      <span class="mx-1 [.style-mini_&amp;]:hidden [.style-mini_&amp;]:sm:inline">/</span>
+      <span class="" data-player-target="timecodeRemaining">6:55</span>
+    </div>
+    <div id="embed-player-actions" class="hidden xs:flex flex-none justify-center items-center content-center gap-x-2">
+      <div class="flex flex-1 justify-center w-14">
+        <button aria-label="Playback speed, currently 1x" class="text-base [.style-mini_&amp;]:text-sm p-2 text-[--theme-action-text-color] hover:text-[--theme-action-text-color--hover] focus:outline-none focus-visible:ring-2 focus-visible:ring-[--theme-accent-color] focus-visible:ring-offset-2 rounded" data-player-target="playbackSpeed" data-action="click-&gt;player#speed">
+          1x
+        </button>
+      </div>
+    </div>
+    <div id="embed-player-spacer" class="hidden [.style-mini_&amp;]:flex w-12">
+    </div>
+    <div id="embed-player-brand" class="absolute bottom-0 right-0">
+      <a class="flex gap-x-1 group text-xs text-slate-400 hover:text-slate-700 p-2" target="_blank" rel="noopener noreferrer" title="Go to Everlit" href="https://everlit.audio/">
+        <img class="grayscale group-hover:grayscale-0 h-2.5" src="artl_AKz7lT85lXa_data/logo-icon-teal-86718a3177e71bfcb121999217059175c6b8d7728c740.png">
+        <svg class="h-2.5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 14.9 147.5 39.9"><path d="M24.95 18.70Q24.75 20.45 24.68 22.10Q24.60 23.75 24.60 24.60Q24.60 25.50 24.65 26.32Q24.70 27.15 24.75 27.70L23.60 27.70Q23.30 24.75 22.75 23.02Q22.20 21.30 20.88 20.58Q19.55 19.85 16.90 19.85L12.75 19.85Q11.05 19.85 10.18 20.13Q9.30 20.40 9.00 21.27Q8.70 22.15 8.70 24L8.70 48.80Q8.70 50.60 9.00 51.50Q9.30 52.40 10.18 52.68Q11.05 52.95 12.75 52.95L16.40 52.95Q19.55 52.95 21.18 52.10Q22.80 51.25 23.52 49.33Q24.25 47.40 24.60 44.10L25.75 44.10Q25.60 45.45 25.60 47.70Q25.60 48.65 25.68 50.43Q25.75 52.20 25.95 54.10Q23.40 54 20.20 53.98Q17 53.95 14.50 53.95Q13.40 53.95 11.68 53.95Q9.95 53.95 7.95 53.98Q5.95 54 3.90 54.02Q1.85 54.05 0 54.10L0 53.10Q1.70 53 2.57 52.70Q3.45 52.40 3.75 51.50Q4.05 50.60 4.05 48.80L4.05 24Q4.05 22.15 3.75 21.27Q3.45 20.40 2.57 20.08Q1.70 19.75 0 19.70L0 18.70Q1.85 18.75 3.90 18.77Q5.95 18.80 7.95 18.83Q9.95 18.85 11.68 18.85Q13.40 18.85 14.50 18.85Q16.80 18.85 19.73 18.83Q22.65 18.80 24.95 18.70M16.35 35.80Q16.35 35.80 16.35 36.30Q16.35 36.80 16.35 36.80L7.20 36.80Q7.20 36.80 7.20 36.30Q7.20 35.80 7.20 35.80L16.35 35.80M17.80 29.20Q17.60 32.05 17.63 33.55Q17.65 35.05 17.65 36.30Q17.65 37.55 17.70 39.05Q17.75 40.55 17.95 43.40L16.80 43.40Q16.60 41.80 16.32 40.27Q16.05 38.75 15.13 37.78Q14.20 36.80 12.00 36.80L12.00 35.80Q13.65 35.80 14.53 35.13Q15.40 34.45 15.80 33.40Q16.20 32.35 16.35 31.23Q16.50 30.10 16.65 29.20L17.80 29.20ZM52.65 28.35L52.65 29.35Q51.70 29.45 50.90 30.20Q50.10 30.95 49.40 32.85L41.20 54.35Q41 54.35 40.80 54.35Q40.60 54.35 40.35 54.35L31.15 32.20Q30.35 30.25 29.58 29.82Q28.80 29.40 28.25 29.40L28.25 28.35Q29.25 28.40 30.33 28.48Q31.40 28.55 32.65 28.55Q34.20 28.55 35.93 28.50Q37.65 28.45 39.15 28.35L39.15 29.40Q37.90 29.40 36.93 29.57Q35.95 29.75 35.68 30.55Q35.40 31.35 36.15 33.30L42.40 48.75L42.10 49L47.80 34.05Q48.45 32.40 48.33 31.43Q48.20 30.45 47.33 29.95Q46.45 29.45 44.65 29.35L44.65 28.35Q45.55 28.40 46.20 28.43Q46.85 28.45 47.48 28.48Q48.10 28.50 48.85 28.50Q50 28.50 50.93 28.45Q51.85 28.40 52.65 28.35ZM66.40 27.65Q70.80 27.65 73.28 30.32Q75.75 33 75.75 38.65L58.10 38.65L58.05 37.70L70.95 37.70Q71.05 35.25 70.55 33.17Q70.05 31.10 68.98 29.85Q67.90 28.60 66.20 28.60Q63.90 28.60 62.13 30.90Q60.35 33.20 60.00 38.20L60.15 38.40Q60.05 39.15 60.00 40.05Q59.95 40.95 59.95 41.85Q59.95 45.25 61.05 47.70Q62.15 50.15 63.93 51.43Q65.70 52.70 67.60 52.70Q69.10 52.70 70.45 52.23Q71.80 51.75 72.95 50.65Q74.10 49.55 74.95 47.70L75.95 48.10Q75.40 49.75 74.15 51.30Q72.90 52.85 71 53.83Q69.10 54.80 66.60 54.80Q63.00 54.80 60.43 53.15Q57.85 51.50 56.48 48.58Q55.10 45.65 55.10 41.85Q55.10 37.45 56.50 34.27Q57.90 31.10 60.45 29.38Q63.00 27.65 66.40 27.65ZM95.10 27.65Q96.45 27.65 97.48 28.20Q98.50 28.75 99.08 29.63Q99.65 30.50 99.65 31.60Q99.65 32.85 98.88 33.80Q98.10 34.75 96.80 34.75Q95.75 34.75 94.95 34.08Q94.15 33.40 94.15 32.15Q94.15 31.20 94.68 30.52Q95.20 29.85 95.85 29.45Q95.50 28.95 94.80 28.95Q93.25 28.95 91.95 29.88Q90.65 30.80 89.75 32.25Q88.85 33.70 88.35 35.33Q87.85 36.95 87.85 38.35L87.85 48.95Q87.85 51.40 89.28 52.23Q90.70 53.05 93.15 53.05L93.15 54.10Q92.00 54.05 89.90 53.98Q87.80 53.90 85.45 53.90Q83.75 53.90 82.08 53.98Q80.40 54.05 79.55 54.10L79.55 53.05Q81.60 53.05 82.48 52.30Q83.35 51.55 83.35 49.45L83.35 33.80Q83.35 31.55 82.55 30.48Q81.75 29.40 79.55 29.40L79.55 28.35Q81.15 28.50 82.65 28.50Q84.10 28.50 85.43 28.32Q86.75 28.15 87.85 27.80L87.85 34.05Q88.40 32.60 89.43 31.13Q90.45 29.65 91.90 28.65Q93.35 27.65 95.10 27.65ZM109.75 14.90L109.75 49.45Q109.75 51.55 110.63 52.30Q111.50 53.05 113.55 53.05L113.55 54.10Q112.70 54.05 110.98 53.98Q109.25 53.90 107.50 53.90Q105.80 53.90 104.05 53.98Q102.30 54.05 101.45 54.10L101.45 53.05Q103.50 53.05 104.38 52.30Q105.25 51.55 105.25 49.45L105.25 20.90Q105.25 18.65 104.45 17.58Q103.65 16.50 101.45 16.50L101.45 15.45Q103.05 15.60 104.55 15.60Q106.00 15.60 107.33 15.42Q108.65 15.25 109.75 14.90ZM121.80 15.85Q123.10 15.85 124.05 16.80Q125 17.75 125 19.05Q125 20.35 124.05 21.30Q123.10 22.25 121.80 22.25Q120.50 22.25 119.55 21.30Q118.60 20.35 118.60 19.05Q118.60 17.75 119.55 16.80Q120.50 15.85 121.80 15.85M124.40 27.80L124.40 49.45Q124.40 51.55 125.28 52.30Q126.15 53.05 128.20 53.05L128.20 54.10Q127.35 54.05 125.63 53.98Q123.90 53.90 122.15 53.90Q120.45 53.90 118.70 53.98Q116.95 54.05 116.10 54.10L116.10 53.05Q118.15 53.05 119.03 52.30Q119.90 51.55 119.90 49.45L119.90 33.80Q119.90 31.55 119.10 30.48Q118.30 29.40 116.10 29.40L116.10 28.35Q117.70 28.50 119.20 28.50Q120.65 28.50 121.98 28.32Q123.30 28.15 124.40 27.80ZM138.80 20.05L138.80 28.40L146.20 28.40L146.20 29.40L138.80 29.40L138.80 48.75Q138.80 51.10 139.65 52.05Q140.50 53 142 53Q143.50 53 144.60 51.77Q145.70 50.55 146.50 47.65L147.50 47.90Q147 50.80 145.53 52.80Q144.05 54.80 141 54.80Q139.30 54.80 138.20 54.38Q137.10 53.95 136.25 53.15Q135.15 52 134.73 50.40Q134.30 48.80 134.30 46.15L134.30 29.40L129.50 29.40L129.50 28.40L134.30 28.40L134.30 20.75Q135.55 20.70 136.70 20.55Q137.85 20.40 138.80 20.05Z"></path></svg>
+</a>    </div>
+  </section>
+    <section class="flex w-full h-9 items-center">
+      <div class="flex grow justify-end text-sm text-[--theme-sponsorship-text-color] line-clamp-1 tracking-tight pr-3">Play RNS Games: </div>
+      <div class="flex flex-initial justify-end line-clamp-1 max-w-28">
+        <a class="flex flex-1 sm:flex-initial py-2 h-14" title="Visit The Audio Sponsor" target="_blank" href="https://everlit.audio/l/7YaH2O">
+          <img alt="Sponsored Logo" src="artl_AKz7lT85lXa_data/RNS_Games_Promo_1.png">
+</a>      </div>
+    </section>
+
+  <audio id="embed-player-audio" data-player-target="mediaElement" preload="metadata" class="hidden" playsinline="" crossorigin="anonymous">
+  </audio>
+</div>
+
+
+  
+
+</body></html>

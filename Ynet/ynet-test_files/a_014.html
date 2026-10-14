@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" style="--text-Color: #000; --background-Color: white; --fill-Color: #ebebeb; --poll-one-option-color: var(--primary-Color-Opacity); --poll-one-progress-bar-color: var(--primary-Color); --poll-one-feedback-color: #f7f7f7; --logo-height-small: 20px; --logo-height-large: 100px; --outer-border-radius: 0px 0px 0px 0px; --shine-border-color1: #7c3aed; --shine-border-color2: #fe8fb5; --shine-border-color3: #ffbe7b; --primary-Color: #df1a19; --primary-Color-Opacity: rgba(223, 26, 25, 0.1); --primary-Color-Opacity-2: rgba(223, 26, 25, 0.3);"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta charset="utf-8"><link rel="icon" href="https://flipcard.bridged.media/favicon.ico"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><meta name="theme-color" content="#000000"><meta name="description" content="Web site created using create-react-app"><link rel="apple-touch-icon" href="https://flipcard.bridged.media/logo192.png"><meta name="google-adsense-account" content="ca-pub-3578780226674147"><title>Bridged Media</title><script defer="defer" src="a_data_014/main.7596d2c2.js"></script><link href="a_data_014/main.498ffb96.css" rel="stylesheet"><style type="text/css">.rfm-marquee-container {
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: var(--width);
+  transform: var(--transform);
+}
+.rfm-marquee-container:hover div {
+  animation-play-state: var(--pause-on-hover);
+}
+.rfm-marquee-container:active div {
+  animation-play-state: var(--pause-on-click);
+}
+
+.rfm-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.rfm-overlay::before, .rfm-overlay::after {
+  background: linear-gradient(to right, var(--gradient-color), rgba(255, 255, 255, 0));
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: var(--gradient-width);
+  z-index: 2;
+  pointer-events: none;
+  touch-action: none;
+}
+.rfm-overlay::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+.rfm-overlay::before {
+  left: 0;
+  top: 0;
+}
+
+.rfm-marquee {
+  flex: 0 0 auto;
+  min-width: var(--min-width);
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  animation: scroll var(--duration) linear var(--delay) var(--iteration-count);
+  animation-play-state: var(--play);
+  animation-delay: var(--delay);
+  animation-direction: var(--direction);
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.rfm-initial-child-container {
+  flex: 0 0 auto;
+  display: flex;
+  min-width: auto;
+  flex-direction: row;
+  align-items: center;
+}
+
+.rfm-child {
+  transform: var(--transform);
+}</style><style>
+      html {
+        font-size: 100%; !important;
+      }
+      </style><style>
+        @font-face {
+          font-family: 'User Uploaded Font';
+          font-style: normal;
+          font-weight: normal;
+          font-display: swap;
+          src: url(https://prod-assets-156041422845.s3.eu-west-1.amazonaws.com/fonts/9b027778-f9f0-4231-93f1-56efa312bb1a.woff) format('woff');
+        }
+        * {
+          font-family: "User Uploaded Font", sans-serif;
+        }
+      </style><style id="googleidentityservice_button_styles" nonce="undefined">.qJTHM{-moz-user-select:none;color:#202124;direction:ltr;font-family:"Roboto-Regular",arial,sans-serif;font-weight:400;margin:0;overflow:hidden}.ynRLnc{left:-9999px;position:absolute;top:-9999px}.L6cTce{display:none}.bltWBb{word-break:break-all}.hSRGPd{color:#1a73e8;cursor:pointer;font-weight:500;text-decoration:none}.Bz112c-W3lGp{height:16px;width:16px}.Bz112c-E3DyYd{height:20px;width:20px}.Bz112c-r9oPif{height:24px;width:24px}.Bz112c-r4WDKb{height:42px;width:42px}.Bz112c-uaxL4e{-moz-border-radius:10px;border-radius:10px}.LgbsSe-Bz112c{display:block}.S9gUrf-YoZ4jf,.S9gUrf-YoZ4jf *{border:none;margin:0;padding:0}.fFW7wc-ibnC6b>.aZ2wEe>div{border-color:#4285f4}.P1ekSe-ZMv3u>div:nth-child(1){background-color:#1a73e8!important}.P1ekSe-ZMv3u>div:nth-child(2),.P1ekSe-ZMv3u>div:nth-child(3){background-image:linear-gradient(to right,rgba(255,255,255,.7),rgba(255,255,255,.7)),linear-gradient(to right,#1a73e8,#1a73e8)!important}.haAclf{display:inline-block}.nsm7Bb-HzV7m-LgbsSe{border-radius:4px;box-sizing:border-box;transition:background-color .218s,border-color .218s;-moz-user-select:none;background-color:#fff;background-image:none;border:1px solid #dadce0;color:#3c4043;cursor:pointer;font-family:"Google Sans",arial,sans-serif;font-size:14px;height:40px;letter-spacing:0.25px;outline:none;overflow:hidden;padding:0 12px;position:relative;text-align:center;vertical-align:middle;white-space:nowrap;width:auto}@media screen and (-ms-high-contrast:active){.nsm7Bb-HzV7m-LgbsSe{border:2px solid windowText;color:windowText}}.nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe{font-size:14px;height:32px;letter-spacing:0.25px;padding:0 10px}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe{font-size:11px;height:20px;letter-spacing:0.3px;padding:0 8px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe{padding:0;width:40px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.pSzOP-SxQuSe{width:32px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.purZT-SxQuSe{width:20px}.nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK{border-radius:20px}.nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK.pSzOP-SxQuSe{border-radius:16px}.nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK.purZT-SxQuSe{border-radius:10px}.nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc{border:none;color:#fff}.nsm7Bb-HzV7m-LgbsSe.MFS4be-v3pZbf-Ia7Qfc{background-color:#1a73e8}.nsm7Bb-HzV7m-LgbsSe.MFS4be-JaPV2b-Ia7Qfc{background-color:#202124;color:#e8eaed}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{height:18px;margin-right:8px;min-width:18px;width:18px}.nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{height:14px;min-width:14px;width:14px}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{height:10px;min-width:10px;width:10px}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-Bz112c{margin-left:8px;margin-right:-4px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{margin:0;padding:10px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.pSzOP-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{padding:8px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{padding:4px}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-top-left-radius:3px;border-bottom-left-radius:3px;display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;justify-content:center;align-items:center;background-color:#fff;height:36px;margin-left:-10px;margin-right:12px;min-width:36px;width:36px}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf .nsm7Bb-HzV7m-LgbsSe-Bz112c,.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf .nsm7Bb-HzV7m-LgbsSe-Bz112c{margin:0;padding:0}.nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{height:28px;margin-left:-8px;margin-right:10px;min-width:28px;width:28px}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{height:16px;margin-left:-6px;margin-right:8px;min-width:16px;width:16px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-radius:3px;margin-left:2px;margin-right:0;padding:0}.nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-radius:18px}.nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-radius:14px}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-radius:8px}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-bN97Pc-sM5MNb{display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;align-items:center;flex-direction:row;justify-content:space-between;flex-wrap:nowrap;height:100%;position:relative;width:100%}.nsm7Bb-HzV7m-LgbsSe .oXtfBe-l4eHX{justify-content:center}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-BPrWId{flex-grow:1;font-family:"Google Sans",arial,sans-serif;font-weight:500;overflow:hidden;text-overflow:ellipsis;vertical-align:top}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-BPrWId{font-weight:300}.nsm7Bb-HzV7m-LgbsSe .oXtfBe-l4eHX .nsm7Bb-HzV7m-LgbsSe-BPrWId{flex-grow:0}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-MJoBVe{transition:background-color .218s;bottom:0;left:0;position:absolute;right:0;top:0}.nsm7Bb-HzV7m-LgbsSe:hover,.nsm7Bb-HzV7m-LgbsSe:focus{box-shadow:none;border-color:rgb(210,227,252);outline:none}.nsm7Bb-HzV7m-LgbsSe:hover .nsm7Bb-HzV7m-LgbsSe-MJoBVe,.nsm7Bb-HzV7m-LgbsSe:focus .nsm7Bb-HzV7m-LgbsSe-MJoBVe{background:rgba(66,133,244,.04)}.nsm7Bb-HzV7m-LgbsSe:active .nsm7Bb-HzV7m-LgbsSe-MJoBVe{background:rgba(66,133,244,.1)}.nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc:hover .nsm7Bb-HzV7m-LgbsSe-MJoBVe,.nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc:focus .nsm7Bb-HzV7m-LgbsSe-MJoBVe{background:rgba(255,255,255,.24)}.nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc:active .nsm7Bb-HzV7m-LgbsSe-MJoBVe{background:rgba(255,255,255,.32)}.nsm7Bb-HzV7m-LgbsSe .n1UuX-DkfjY{border-radius:50%;display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;height:20px;margin-left:-4px;margin-right:8px;min-width:20px;width:20px}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId{font-family:"Roboto";font-size:12px;text-align:left}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .ssJRIf,.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff .fmcmS{overflow:hidden;text-overflow:ellipsis}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff{display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;align-items:center;color:#5f6368;fill:#5f6368;font-size:11px;font-weight:400}.nsm7Bb-HzV7m-LgbsSe.jVeSEe.MFS4be-Ia7Qfc .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff{color:#e8eaed;fill:#e8eaed}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff .Bz112c{height:18px;margin:-3px -3px -3px 2px;min-width:18px;width:18px}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:3px;border-bottom-right-radius:3px;margin-left:12px;margin-right:-10px}.nsm7Bb-HzV7m-LgbsSe.jVeSEe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-radius:18px}.L5Fo6c-sM5MNb{border:0;display:block;left:0;position:relative;top:0}.L5Fo6c-bF1uUb{-moz-border-radius:4px;border-radius:4px;bottom:0;cursor:pointer;left:0;position:absolute;right:0;top:0}.L5Fo6c-bF1uUb:focus{border:none;outline:none}sentinel{}</style></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"><div class="flipcardLayout " style="border-radius: 0px;"><div class="mainFlipcard " style="border-radius: 0px;"><div class="flipCardInner" style="transform: rotateY(0deg); transition: none; border-radius: 0px;"><div class="flipCardFront" style="position: static;"><div class="bridgedCard" style="border-radius: 0px; border: medium; height: 37px;"><div class="eng" style="background-color: transparent;"><div class="engBody"><div style="height: 100%;"><div class="xray"><div style="cursor: pointer; display: flex; align-items: center; justify-content: flex-end;"><div style="background-color: rgb(223, 26, 25); color: white; width: fit-content; display: flex; align-items: center; justify-content: flex-end;"><h3 style="padding-top: ; padding-right: 3px; padding-bottom: ; padding-left: ; display: flex; align-items: center; justify-content: center;"><span class="firstLine">סכמו לי את הכתבה <span style="font-weight: 500; font-size: 14px; margin-left: 2px;">AI</span></span><img style="height: 22px;" src="a_data_014/ai_animation.gif" alt="Stars"></h3><div style="border-left: 2px solid rgb(245, 245, 245); padding: var(--mpr-mini);"><i class="ri-add-line icon" style="font-size: 25px; cursor: pointer;"></i></div></div></div><div class=" false false" style="background-color: rgb(245, 245, 245); margin-top: 2px;"><div class="xrayBody" style="padding: var(--mpr-1-2);"><div class="summaryListContainer " id="summaryUl"><ul style="direction: rtl; padding-right: var(--mpr-2);"><li>שינויי האקלים הקיצוניים בישראל, ובפרט מיעוט המשקעים בדרום והגשמים העזים בצפון, מקשים על החקלאים ומסכנים את היבולים.</li><li>הנזקים לחקלאות הישראלית עצומים וכוללים פגיעה ביבולים כגון חיטה, פירות וירקות עקב בצורות, שיטפונות, ברד וחום כבד.</li><li>קנט, קרן לביטוח נזקי טבע בחקלאות, מספקת רשת ביטחון חיונית לחקלאים שנפגעים מהתנאים הקשים ומאפשרת להם להמשיך ולעבוד.</li><li>קיים צורך דחוף לעודד חקלאים צעירים להיכנס לתחום ולתמוך בחקלאים הוותיקים על מנת להבטיח את עתיד החקלאות בישראל.</li></ul></div></div><div></div><div style="padding: 0px var(--mpr-1-2);"><div style="padding-bottom: var(--mpr-3);"><div style="background-color: rgb(245, 245, 245);"><div class="divider" style="margin-bottom: var(--mpr-3); background: var(--primary-Color);"></div><div class="feedbackTwo"><p class="feedbackTwoDisclaimer">תוכן זה נוצר על ידי בינה מלאכותית</p><div class="ratings"><div class="star-ratings" title="0 Stars" style="position: relative; box-sizing: border-box; display: inline-block;"><svg class="star-grad" style="position: absolute; z-index: 0; width: 0px; height: 0px; visibility: hidden;"><defs><linearGradient id="starGrad379897678039689" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" class="stop-color-first" style="stop-color: rgb(255, 161, 6); stop-opacity: 1;"></stop><stop offset="0%" class="stop-color-first" style="stop-color: rgb(255, 161, 6); stop-opacity: 1;"></stop><stop offset="0%" class="stop-color-final" style="stop-color: rgb(217, 217, 217); stop-opacity: 1;"></stop><stop offset="100%" class="stop-color-final" style="stop-color: rgb(217, 217, 217); stop-opacity: 1;"></stop></linearGradient></defs></svg><div class="star-container" style="position: relative; display: inline-block; vertical-align: middle; padding-right: 1px; cursor: pointer;"><svg viewBox="0 0 51 48" class="widget-svg" style="width: 15px; height: 15px; transition: transform 0.2s ease-in-out;"><path class="star" style="fill: rgb(217, 217, 217); transition: fill 0.2s ease-in-out;" d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"></path></svg></div><div class="star-container" style="position: relative; display: inline-block; vertical-align: middle; padding-left: 1px; padding-right: 1px; cursor: pointer;"><svg viewBox="0 0 51 48" class="widget-svg" style="width: 15px; height: 15px; transition: transform 0.2s ease-in-out;"><path class="star" style="fill: rgb(217, 217, 217); transition: fill 0.2s ease-in-out;" d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"></path></svg></div><div class="star-container" style="position: relative; display: inline-block; vertical-align: middle; padding-left: 1px; padding-right: 1px; cursor: pointer;"><svg viewBox="0 0 51 48" class="widget-svg" style="width: 15px; height: 15px; transition: transform 0.2s ease-in-out;"><path class="star" style="fill: rgb(217, 217, 217); transition: fill 0.2s ease-in-out;" d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"></path></svg></div><div class="star-container" style="position: relative; display: inline-block; vertical-align: middle; padding-left: 1px; padding-right: 1px; cursor: pointer;"><svg viewBox="0 0 51 48" class="widget-svg" style="width: 15px; height: 15px; transition: transform 0.2s ease-in-out;"><path class="star" style="fill: rgb(217, 217, 217); transition: fill 0.2s ease-in-out;" d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"></path></svg></div><div class="star-container" style="position: relative; display: inline-block; vertical-align: middle; padding-left: 1px; cursor: pointer;"><svg viewBox="0 0 51 48" class="widget-svg" style="width: 15px; height: 15px; transition: transform 0.2s ease-in-out;"><path class="star" style="fill: rgb(217, 217, 217); transition: fill 0.2s ease-in-out;" d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"></path></svg></div></div><p>דרגו את הסיכום ועזרו לנו להשתפר</p></div></div></div></div></div></div><div></div></div></div><div class="message hidden"><div class="messageContent error"><p>Oops something went wrong</p></div></div></div></div></div></div><div class="flipCardBack" style="position: static;"><div></div></div></div></div> </div></div><link href="a_data_014/remixicon.css" rel="stylesheet"><script src="a_data_014/client" async="" defer="defer"></script></body></html>

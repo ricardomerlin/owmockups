@@ -1,0 +1,592 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+			Object.assign(window, parent.bntIframeVars);
+			var sdkScript = document.createElement('script');
+sdkScript.onload = function() {
+  if (typeof bntInit == 'function') bntInit(); else console.error("bnt: no bntInit()");
+  if (typeof bntStart == 'function') bntStart(); else console.warn("bnt: no bntStart()");
+}
+sdkScript.onerror = function() {
+  throw new Error("bnt: sdk load error");
+}
+sdkScript.src = 'https://s8t.teads.tv/sdk/2022.0.0';
+document.documentElement.firstChild.appendChild(sdkScript);
+var stylesNode = document.createElement('style');
+stylesNode.type = 'text/css';
+stylesNode.appendChild(document.createTextNode("#BackgroundImage {    cursor: pointer;}.slideFromRight{animation-name:slideFromRight}@keyframes slideFromRight{from{transform:translate3d(100%, 0, 0);visibility:visible;opacity:0}to{transform:translate3d(0, 0, 0);opacity:1}}.slideFromLeft{animation-name:slideFromLeft}@keyframes slideFromLeft{from{transform:translate3d(-100%, 0, 0);visibility:visible;opacity:0}to{transform:translate3d(0, 0, 0);opacity:1}}.slideFromTop{animation-name:slideFromTop}@keyframes slideFromTop{from{transform:translate3d(0, -100%, 0);visibility:visible;opacity:0}to{transform:translate3d(0, 0, 0);opacity:1}}.slideFromBottom{animation-name:slideFromBottom}@keyframes slideFromBottom{from{transform:translate3d(0, 100%, 0);visibility:visible;opacity:0}to{transform:translate3d(0, 0, 0);opacity:1}}.horizontalFlipIn{animation-name:horizontalFlipIn}@keyframes horizontalFlipIn{from{transform:perspective(500px) rotate3d(1, 0, 0, 90deg);animation-timing-function:ease-in;opacity:0}to{transform:perspective(500px)}}.verticalFlipIn{animation-name:verticalFlipIn}@keyframes verticalFlipIn{from{transform:perspective(500px) rotate3d(0, 1, 0, 90deg);animation-timing-function:ease-in;opacity:0}to{transform:perspective(500px)}}.fadeIn{animation-name:fadeIn}@keyframes fadeIn{from{opacity:0}to{opacity:1}}.zoomIn{animation-name:zoomIn}@keyframes zoomIn{from{opacity:0;transform:scale3d(0.3, 0.3, 0.3)}to{opacity:1}}.slideToRight{animation-name:slideToRight}@keyframes slideToRight{from{transform:translate3d(0, 0, 0);opacity:1}to{transform:translate3d(100%, 0, 0);visibility:visible;opacity:0}}.slideToLeft{animation-name:slideToLeft}@keyframes slideToLeft{from{transform:translate3d(0, 0, 0);opacity:1}to{transform:translate3d(-100%, 0, 0);visibility:visible;opacity:0}}.slideToTop{animation-name:slideToTop}@keyframes slideToTop{from{transform:translate3d(0, 0, 0);opacity:1}to{transform:translate3d(0, -100%, 0);visibility:visible;opacity:0}}.slideToBottom{animation-name:slideToBottom}@keyframes slideToBottom{from{transform:translate3d(0, 0, 0);opacity:1}to{transform:translate3d(0, 100%, 0);visibility:visible;opacity:0}}.horizontalFlipOut{animation-name:horizontalFlipOut}@keyframes horizontalFlipOut{from{transform:perspective(500px)}to{transform:perspective(500px) rotate3d(1, 0, 0, 90deg);animation-timing-function:ease-in;opacity:0}}.verticalFlipOut{animation-name:verticalFlipOut}@keyframes verticalFlipOut{from{transform:perspective(500px)}to{transform:perspective(500px) rotate3d(0, 1, 0, 90deg);animation-timing-function:ease-in;opacity:0}}.fadeOut{animation-name:fadeOut}@keyframes fadeOut{from{opacity:1}to{opacity:0}}.zoomOut{animation-name:zoomOut}@keyframes zoomOut{from{opacity:1}to{opacity:0;transform:scale3d(0.3, 0.3, 0.3)}}/*# sourceMappingURL=animations.css.map */\n"));
+document.documentElement.firstChild.appendChild(stylesNode);
+var fontsToPreload = [];
+for(var i = 0;i < fontsToPreload.length; i++) {
+	var el = document.createElement("link");
+	el.setAttribute("rel", "preload");
+	el.setAttribute("as", "font");
+	el.setAttribute("href", fontsToPreload[i]);
+	el.setAttribute("crossorigin", "anonymous");
+	document.documentElement.firstChild.appendChild(el);
+}
+var VAST_PLAYER = 'https://s8t.teads.tv/format/2022.0.0'
+function bntInit() {
+bnt.LIBRARY.EC_LS_png = {
+  "id": "EC_LS_png",
+  "link": "https://s8t.teads.tv/creative-6753877077309673/ec_ls-1763145667706.png",
+  "name": "EC_LS.png",
+  "size": 702522,
+  "nature": "image",
+  "created": "2025-11-14T18:41:09.422Z",
+  "updated": "2025-11-14T18:41:09.422Z",
+  "external": false,
+  "filename": "ec_ls-1763145667706.png"
+};;
+bnt.ASSET_VERSIONS.EC_LS_png = {
+  "360": "https://s8t.teads.tv/creative-6753877077309673/ec_ls-1763145667706.360.webp",
+  "720": "https://s8t.teads.tv/creative-6753877077309673/ec_ls-1763145667706.720.webp",
+  "fallback": "https://s8t.teads.tv/creative-6753877077309673/ec_ls-1763145667706.720.png"
+};
+bnt.LIBRARY.ArrowL_png = {
+  "id": "ArrowL_png",
+  "link": "https://s8t.teads.tv/creative-6753877077309673/arrowl-1652980331520.png",
+  "name": "ArrowL.png",
+  "size": 4720,
+  "nature": "image",
+  "created": "2025-11-14T18:32:45.216Z",
+  "updated": "2025-11-14T18:32:45.216Z",
+  "external": false,
+  "filename": "arrowl-1652980331520.png"
+};;
+bnt.ASSET_VERSIONS.ArrowL_png = {
+  "80": "https://s8t.teads.tv/creative-6753877077309673/arrowl-1652980331520.80.webp",
+  "fallback": "https://s8t.teads.tv/creative-6753877077309673/arrowl-1652980331520.80.png"
+};
+bnt.LIBRARY.ArrowR_png = {
+  "id": "ArrowR_png",
+  "link": "https://s8t.teads.tv/creative-6753877077309673/arrowr-1652980345401.png",
+  "name": "ArrowR.png",
+  "size": 4685,
+  "nature": "image",
+  "created": "2025-11-14T18:32:45.263Z",
+  "updated": "2025-11-14T18:32:45.263Z",
+  "external": false,
+  "filename": "arrowr-1652980345401.png"
+};;
+bnt.ASSET_VERSIONS.ArrowR_png = {
+  "80": "https://s8t.teads.tv/creative-6753877077309673/arrowr-1652980345401.80.webp",
+  "fallback": "https://s8t.teads.tv/creative-6753877077309673/arrowr-1652980345401.80.png"
+};
+bnt.LIBRARY.IHAT_EC_png = {
+  "id": "IHAT_EC_png",
+  "link": "https://s8t.teads.tv/creative-6753877077309673/ihat_ec-1756832283758.png",
+  "name": "IHAT_EC.png",
+  "size": 335483,
+  "nature": "image",
+  "created": "2025-11-14T18:32:45.381Z",
+  "updated": "2025-11-14T18:32:45.381Z",
+  "external": false,
+  "filename": "ihat_ec-1756832283758.png"
+};;
+bnt.ASSET_VERSIONS.IHAT_EC_png = {
+  "579": "https://s8t.teads.tv/creative-6753877077309673/ihat_ec-1756832283758.579.webp",
+  "fallback": "https://s8t.teads.tv/creative-6753877077309673/ihat_ec-1756832283758.579.png"
+};
+bnt.LIBRARY.NewLogo_png = {
+  "id": "NewLogo_png",
+  "link": "https://s8t.teads.tv/creative-6753877077309673/newlogo-1756909637126.png",
+  "name": "NewLogo.png",
+  "size": 25497,
+  "nature": "image",
+  "created": "2025-11-14T18:32:45.445Z",
+  "updated": "2025-11-14T18:32:45.445Z",
+  "external": false,
+  "filename": "newlogo-1756909637126.png"
+};;
+bnt.ASSET_VERSIONS.NewLogo_png = {
+  "360": "https://s8t.teads.tv/creative-6753877077309673/newlogo-1756909637126.360.webp",
+  "720": "https://s8t.teads.tv/creative-6753877077309673/newlogo-1756909637126.720.webp",
+  "fallback": "https://s8t.teads.tv/creative-6753877077309673/newlogo-1756909637126.720.png"
+};
+bnt.LIBRARY.Tagline_png = {
+  "id": "Tagline_png",
+  "link": "https://s8t.teads.tv/creative-6753877077309673/tagline-1660326946289.png",
+  "name": "Tagline.png",
+  "size": 19258,
+  "nature": "image",
+  "created": "2025-11-14T18:32:45.510Z",
+  "updated": "2025-11-14T18:32:45.510Z",
+  "external": false,
+  "filename": "tagline-1660326946289.png"
+};;
+bnt.ASSET_VERSIONS.Tagline_png = {
+  "360": "https://s8t.teads.tv/creative-6753877077309673/tagline-1660326946289.360.webp",
+  "720": "https://s8t.teads.tv/creative-6753877077309673/tagline-1660326946289.720.webp",
+  "fallback": "https://s8t.teads.tv/creative-6753877077309673/tagline-1660326946289.720.png"
+};
+bnt.LIBRARY.IHAT_EC_png_2 = {
+  "id": "IHAT_EC_png_2",
+  "link": "https://s8t.teads.tv/creative-6753877077309673/ihat_ec-1756832290258.png",
+  "name": "IHAT_EC.png",
+  "size": 335483,
+  "nature": "image",
+  "created": "2025-11-14T18:32:45.628Z",
+  "updated": "2025-11-14T18:32:45.628Z",
+  "external": false,
+  "filename": "ihat_ec-1756832290258.png"
+};;
+bnt.ASSET_VERSIONS.IHAT_EC_png_2 = {
+  "579": "https://s8t.teads.tv/creative-6753877077309673/ihat_ec-1756832290258.579.webp",
+  "fallback": "https://s8t.teads.tv/creative-6753877077309673/ihat_ec-1756832290258.579.png"
+};
+bnt.LIBRARY.arrowwht__png = {
+  "id": "arrowwht__png",
+  "link": "https://s8t.teads.tv/creative-6753877077309673/arrowwht-1615442112906.png",
+  "name": "arrowwht .png",
+  "size": 2242,
+  "nature": "image",
+  "created": "2025-11-14T18:32:45.675Z",
+  "updated": "2025-11-14T18:32:45.675Z",
+  "external": false,
+  "filename": "arrowwht-1615442112906.png"
+};;
+bnt.ASSET_VERSIONS.arrowwht__png = {
+  "60": "https://s8t.teads.tv/creative-6753877077309673/arrowwht-1615442112906.60.webp",
+  "fallback": "https://s8t.teads.tv/creative-6753877077309673/arrowwht-1615442112906.60.png"
+};
+bnt.LIBRARY.arrow_left_png = {
+  "id": "arrow_left_png",
+  "link": "https://s8t.teads.tv/creative-6753877077309673/arrowleft-1660081732187.png",
+  "name": "arrow left.png",
+  "size": 517,
+  "nature": "image",
+  "created": "2025-11-14T18:32:45.730Z",
+  "updated": "2025-11-14T18:32:45.730Z",
+  "external": false,
+  "filename": "arrowleft-1660081732187.png"
+};;
+bnt.ASSET_VERSIONS.arrow_left_png = {
+  "20": "https://s8t.teads.tv/creative-6753877077309673/arrowleft-1660081732187.20.webp",
+  "fallback": "https://s8t.teads.tv/creative-6753877077309673/arrowleft-1660081732187.20.png"
+};
+bnt.LIBRARY.CTA_ShopNow_png = {
+  "id": "CTA_ShopNow_png",
+  "link": "https://s8t.teads.tv/creative-6753877077309673/cta_shopnow-1660081732218.png",
+  "name": "CTA_ShopNow.png",
+  "size": 3249,
+  "nature": "image",
+  "created": "2025-11-14T18:32:45.782Z",
+  "updated": "2025-11-14T18:32:45.782Z",
+  "external": false,
+  "filename": "cta_shopnow-1660081732218.png"
+};;
+bnt.ASSET_VERSIONS.CTA_ShopNow_png = {
+  "212": "https://s8t.teads.tv/creative-6753877077309673/cta_shopnow-1660081732218.212.webp",
+  "fallback": "https://s8t.teads.tv/creative-6753877077309673/cta_shopnow-1660081732218.212.png"
+};
+bnt.LIBRARY.arrow_right_png = {
+  "id": "arrow_right_png",
+  "link": "https://s8t.teads.tv/creative-6753877077309673/arrowright-1660081732232.png",
+  "name": "arrow right.png",
+  "size": 497,
+  "nature": "image",
+  "created": "2025-11-14T18:32:45.856Z",
+  "updated": "2025-11-14T18:32:45.856Z",
+  "external": false,
+  "filename": "arrowright-1660081732232.png"
+};;
+bnt.ASSET_VERSIONS.arrow_right_png = {
+  "20": "https://s8t.teads.tv/creative-6753877077309673/arrowright-1660081732232.20.webp",
+  "fallback": "https://s8t.teads.tv/creative-6753877077309673/arrowright-1660081732232.20.png"
+};
+bnt.LIBRARY._960x540_Golf_jpg = {
+  "id": "_960x540_Golf_jpg",
+  "link": "https://s8t.teads.tv/creative-6753877077309673/960x540golf-1724860162786.jpg",
+  "name": "960x540-Golf.jpg",
+  "size": 110576,
+  "nature": "image",
+  "created": "2025-11-14T18:32:45.953Z",
+  "updated": "2025-11-14T18:32:45.953Z",
+  "external": false,
+  "filename": "960x540golf-1724860162786.jpg"
+};;
+bnt.ASSET_VERSIONS._960x540_Golf_jpg = {
+  "360": "https://s8t.teads.tv/creative-6753877077309673/960x540golf-1724860162786.360.webp",
+  "720": "https://s8t.teads.tv/creative-6753877077309673/960x540golf-1724860162786.720.webp",
+  "fallback": "https://s8t.teads.tv/creative-6753877077309673/960x540golf-1724860162786.720.jpg"
+};
+bnt.LIBRARY.blackSoundIcon_svg = {
+  "id": "blackSoundIcon_svg",
+  "link": "https://s8t.teads.tv/creative-6753877077309673/blacksoundicon-1648827048399.svg",
+  "name": "blackSoundIcon.svg",
+  "size": 9699,
+  "nature": "svg",
+  "created": "2025-11-14T18:32:46.009Z",
+  "updated": "2025-11-14T18:32:46.009Z",
+  "external": false,
+  "filename": "blacksoundicon-1648827048399.svg"
+};;
+bnt.LIBRARY.LOGO_TMW_RGB_K_01_png = {
+  "id": "LOGO_TMW_RGB_K_01_png",
+  "link": "https://s8t.teads.tv/creative-6753877077309673/logo_tmw_rgb_k01-1660330119962.png",
+  "name": "LOGO_TMW_RGB_K-01.png",
+  "size": 14922,
+  "nature": "image",
+  "created": "2025-11-14T18:32:46.065Z",
+  "updated": "2025-11-14T18:32:46.065Z",
+  "external": false,
+  "filename": "logo_tmw_rgb_k01-1660330119962.png"
+};;
+bnt.ASSET_VERSIONS.LOGO_TMW_RGB_K_01_png = {
+  "360": "https://s8t.teads.tv/creative-6753877077309673/logo_tmw_rgb_k01-1660330119962.360.webp",
+  "720": "https://s8t.teads.tv/creative-6753877077309673/logo_tmw_rgb_k01-1660330119962.720.webp",
+  "fallback": "https://s8t.teads.tv/creative-6753877077309673/logo_tmw_rgb_k01-1660330119962.720.png"
+};
+bnt.LIBRARY.MW_Jan24_CarouselSlides_VWBlue_2_jpg = {
+  "id": "MW_Jan24_CarouselSlides_VWBlue_2_jpg",
+  "link": "https://s8t.teads.tv/creative-6753877077309673/mw_jan24_carouselslides_vwblue_2-1701898356485.jpg",
+  "name": "MW_Jan24_CarouselSlides_VWBlue_2.jpg",
+  "size": 13477,
+  "nature": "image",
+  "created": "2025-11-14T18:32:46.182Z",
+  "updated": "2025-11-14T18:32:46.182Z",
+  "external": false,
+  "filename": "mw_jan24_carouselslides_vwblue_2-1701898356485.jpg"
+};;
+bnt.ASSET_VERSIONS.MW_Jan24_CarouselSlides_VWBlue_2_jpg = {
+  "220": "https://s8t.teads.tv/creative-6753877077309673/mw_jan24_carouselslides_vwblue_2-1701898356485.220.webp",
+  "fallback": "https://s8t.teads.tv/creative-6753877077309673/mw_jan24_carouselslides_vwblue_2-1701898356485.220.jpg"
+};
+bnt.LIBRARY.MW_SP25_BBQ_OLV_EN_30s_1920x1080_mp4 = {
+  "id": "MW_SP25_BBQ_OLV_EN_30s_1920x1080_mp4",
+  "link": "https://s8t.teads.tv/creative-6753877077309673/mw_sp25_bbq_olv_en_30s_1920x1080-1756491619249.mp4",
+  "name": "MW_SP25_BBQ_OLV_EN_30s_1920x1080.mp4",
+  "size": 3460860,
+  "nature": "video",
+  "created": "2025-11-14T18:32:46.333Z",
+  "updated": "2025-11-14T18:32:46.333Z",
+  "external": false,
+  "filename": "mw_sp25_bbq_olv_en_30s_1920x1080-1756491619249.mp4"
+};;
+bnt.ASSET_VERSIONS.MW_SP25_BBQ_OLV_EN_30s_1920x1080_mp4 = {
+  "mp4_1536k": "https://s8t.teads.tv/creative-6753877077309673/mw_sp25_bbq_olv_en_30s_1920x1080-1756491619249.high.mp4",
+  "mp4_768k": "https://s8t.teads.tv/creative-6753877077309673/mw_sp25_bbq_olv_en_30s_1920x1080-1756491619249.low.mp4"
+};
+bnt.LIBRARY.MW_Jan24_CarouselSlides_CKWhite_4_jpg = {
+  "id": "MW_Jan24_CarouselSlides_CKWhite_4_jpg",
+  "link": "https://s8t.teads.tv/creative-6753877077309673/mw_jan24_carouselslides_ckwhite_4-1701898356480.jpg",
+  "name": "MW_Jan24_CarouselSlides_CKWhite_4.jpg",
+  "size": 13678,
+  "nature": "image",
+  "created": "2025-11-14T18:32:46.380Z",
+  "updated": "2025-11-14T18:32:46.380Z",
+  "external": false,
+  "filename": "mw_jan24_carouselslides_ckwhite_4-1701898356480.jpg"
+};;
+bnt.ASSET_VERSIONS.MW_Jan24_CarouselSlides_CKWhite_4_jpg = {
+  "220": "https://s8t.teads.tv/creative-6753877077309673/mw_jan24_carouselslides_ckwhite_4-1701898356480.220.webp",
+  "fallback": "https://s8t.teads.tv/creative-6753877077309673/mw_jan24_carouselslides_ckwhite_4-1701898356480.220.jpg"
+};
+bnt.LIBRARY.MW_Jan24_CarouselSlides_VWBlack_1_jpg = {
+  "id": "MW_Jan24_CarouselSlides_VWBlack_1_jpg",
+  "link": "https://s8t.teads.tv/creative-6753877077309673/mw_jan24_carouselslides_vwblack_1-1701898356481.jpg",
+  "name": "MW_Jan24_CarouselSlides_VWBlack_1.jpg",
+  "size": 13929,
+  "nature": "image",
+  "created": "2025-11-14T18:32:46.433Z",
+  "updated": "2025-11-14T18:32:46.433Z",
+  "external": false,
+  "filename": "mw_jan24_carouselslides_vwblack_1-1701898356481.jpg"
+};;
+bnt.ASSET_VERSIONS.MW_Jan24_CarouselSlides_VWBlack_1_jpg = {
+  "220": "https://s8t.teads.tv/creative-6753877077309673/mw_jan24_carouselslides_vwblack_1-1701898356481.220.webp",
+  "fallback": "https://s8t.teads.tv/creative-6753877077309673/mw_jan24_carouselslides_vwblack_1-1701898356481.220.jpg"
+};
+bnt.LIBRARY.MW_SP25_IHAT_OLV_EN_30s_1920x1080_mp4 = {
+  "id": "MW_SP25_IHAT_OLV_EN_30s_1920x1080_mp4",
+  "link": "https://s8t.teads.tv/creative-6753877077309673/mw_sp25_ihat_olv_en_30s_1920x1080-1756832336464.mp4",
+  "name": "MW_SP25_IHAT_OLV_EN_30s_1920x1080.mp4",
+  "size": 3488416,
+  "nature": "video",
+  "created": "2025-11-14T18:32:46.645Z",
+  "updated": "2025-11-14T18:32:46.645Z",
+  "external": false,
+  "filename": "mw_sp25_ihat_olv_en_30s_1920x1080-1756832336464.mp4"
+};;
+bnt.ASSET_VERSIONS.MW_SP25_IHAT_OLV_EN_30s_1920x1080_mp4 = {
+  "mp4_1536k": "https://s8t.teads.tv/creative-6753877077309673/mw_sp25_ihat_olv_en_30s_1920x1080-1756832336464.high.mp4",
+  "mp4_768k": "https://s8t.teads.tv/creative-6753877077309673/mw_sp25_ihat_olv_en_30s_1920x1080-1756832336464.low.mp4"
+};
+bnt.LIBRARY.MW_SP25_BBQ_OLV_EN_30s_1920x1080_mp4_2 = {
+  "id": "MW_SP25_BBQ_OLV_EN_30s_1920x1080_mp4_2",
+  "link": "https://s8t.teads.tv/creative-6753877077309673/mw_sp25_bbq_olv_en_30s_1920x1080-1756491857206.mp4",
+  "name": "MW_SP25_BBQ_OLV_EN_30s_1920x1080.mp4",
+  "size": 3460860,
+  "nature": "video",
+  "created": "2025-11-14T18:32:46.830Z",
+  "updated": "2025-11-14T18:32:46.830Z",
+  "external": false,
+  "filename": "mw_sp25_bbq_olv_en_30s_1920x1080-1756491857206.mp4"
+};;
+bnt.ASSET_VERSIONS.MW_SP25_BBQ_OLV_EN_30s_1920x1080_mp4_2 = {
+  "mp4_1536k": "https://s8t.teads.tv/creative-6753877077309673/mw_sp25_bbq_olv_en_30s_1920x1080-1756491857206.high.mp4",
+  "mp4_768k": "https://s8t.teads.tv/creative-6753877077309673/mw_sp25_bbq_olv_en_30s_1920x1080-1756491857206.low.mp4"
+};
+bnt.LIBRARY.MW_SP25_IHAT_OLV_EN_30s_1920x1080_mp4_2 = {
+  "id": "MW_SP25_IHAT_OLV_EN_30s_1920x1080_mp4_2",
+  "link": "https://s8t.teads.tv/creative-6753877077309673/mw_sp25_ihat_olv_en_30s_1920x1080-1756832425406.mp4",
+  "name": "MW_SP25_IHAT_OLV_EN_30s_1920x1080.mp4",
+  "size": 3488416,
+  "nature": "video",
+  "created": "2025-11-14T18:32:46.975Z",
+  "updated": "2025-11-14T18:32:46.975Z",
+  "external": false,
+  "filename": "mw_sp25_ihat_olv_en_30s_1920x1080-1756832425406.mp4"
+};;
+bnt.ASSET_VERSIONS.MW_SP25_IHAT_OLV_EN_30s_1920x1080_mp4_2 = {
+  "mp4_1536k": "https://s8t.teads.tv/creative-6753877077309673/mw_sp25_ihat_olv_en_30s_1920x1080-1756832425406.high.mp4",
+  "mp4_768k": "https://s8t.teads.tv/creative-6753877077309673/mw_sp25_ihat_olv_en_30s_1920x1080-1756832425406.low.mp4"
+};
+bnt.LIBRARY.Screenshot_2025_08_29_at_2_21_42_PM_png = {
+  "id": "Screenshot_2025_08_29_at_2_21_42_PM_png",
+  "link": "https://s8t.teads.tv/creative-6753877077309673/screenshot20250829at22142pm-1756491830699.png",
+  "name": "Screenshot 2025-08-29 at 2.21.42 PM.png",
+  "size": 3194121,
+  "nature": "image",
+  "created": "2025-11-14T18:32:47.160Z",
+  "updated": "2025-11-14T18:32:47.160Z",
+  "external": false,
+  "filename": "screenshot20250829at22142pm-1756491830699.png"
+};;
+bnt.ASSET_VERSIONS.Screenshot_2025_08_29_at_2_21_42_PM_png = {
+  "360": "https://s8t.teads.tv/creative-6753877077309673/screenshot20250829at22142pm-1756491830699.360.webp",
+  "720": "https://s8t.teads.tv/creative-6753877077309673/screenshot20250829at22142pm-1756491830699.720.webp",
+  "fallback": "https://s8t.teads.tv/creative-6753877077309673/screenshot20250829at22142pm-1756491830699.720.png"
+};
+bnt.LIBRARY.MW_Jan24_CarouselSlides_EgaraBurgandy_3_jpg = {
+  "id": "MW_Jan24_CarouselSlides_EgaraBurgandy_3_jpg",
+  "link": "https://s8t.teads.tv/creative-6753877077309673/mw_jan24_carouselslides_egaraburgandy_3-1701898356477.jpg",
+  "name": "MW_Jan24_CarouselSlides_EgaraBurgandy_3.jpg",
+  "size": 15574,
+  "nature": "image",
+  "created": "2025-11-14T18:32:47.218Z",
+  "updated": "2025-11-14T18:32:47.218Z",
+  "external": false,
+  "filename": "mw_jan24_carouselslides_egaraburgandy_3-1701898356477.jpg"
+};;
+bnt.ASSET_VERSIONS.MW_Jan24_CarouselSlides_EgaraBurgandy_3_jpg = {
+  "220": "https://s8t.teads.tv/creative-6753877077309673/mw_jan24_carouselslides_egaraburgandy_3-1701898356477.220.webp",
+  "fallback": "https://s8t.teads.tv/creative-6753877077309673/mw_jan24_carouselslides_egaraburgandy_3-1701898356477.220.jpg"
+};
+bnt.LIBRARY.MW_FL25_PreBlackFriday_16x9_15_FINAL_V2_1_mp4 = {
+  "id": "MW_FL25_PreBlackFriday_16x9_15_FINAL_V2_1_mp4",
+  "link": "https://s8t.teads.tv/creative-6753877077309673/mw_fl25_preblackfriday_16x9_15_final_v2_1-1763145437634.mp4",
+  "name": "MW_FL25_PreBlackFriday_16x9_15_FINAL_V2_1.mp4",
+  "size": 1829655,
+  "nature": "video",
+  "created": "2025-11-14T18:37:19.090Z",
+  "updated": "2025-11-14T18:37:19.090Z",
+  "external": false,
+  "filename": "mw_fl25_preblackfriday_16x9_15_final_v2_1-1763145437634.mp4"
+};;
+bnt.ASSET_VERSIONS.MW_FL25_PreBlackFriday_16x9_15_FINAL_V2_1_mp4 = {
+  "mp4_1536k": "https://s8t.teads.tv/creative-6753877077309673/mw_fl25_preblackfriday_16x9_15_final_v2_1-1763145437634.high.mp4",
+  "mp4_768k": "https://s8t.teads.tv/creative-6753877077309673/mw_fl25_preblackfriday_16x9_15_final_v2_1-1763145437634.low.mp4"
+};
+bnt.LIBRARY.MW_SP24_LTWYL_DWDA_OLV_EN_15s_1_15_1920x1080__3__StylishSteve_mp4 = {
+  "id": "MW_SP24_LTWYL_DWDA_OLV_EN_15s_1_15_1920x1080__3__StylishSteve_mp4",
+  "link": "https://s8t.teads.tv/creative-6753877077309673/mw_sp24_ltwyl_dwda_olv_en_15s_115_1920x10803_stylishsteve-1724351570810.mp4",
+  "name": "MW_SP24_LTWYL_DWDA_OLV_EN_15s_1.15_1920x1080 (3)_StylishSteve.mp4",
+  "size": 1603634,
+  "nature": "video",
+  "created": "2025-11-14T18:32:47.349Z",
+  "updated": "2025-11-14T18:32:47.349Z",
+  "external": false,
+  "filename": "mw_sp24_ltwyl_dwda_olv_en_15s_115_1920x10803_stylishsteve-1724351570810.mp4"
+};;
+bnt.ASSET_VERSIONS.MW_SP24_LTWYL_DWDA_OLV_EN_15s_1_15_1920x1080__3__StylishSteve_mp4 = {
+  "mp4_1536k": "https://s8t.teads.tv/creative-6753877077309673/mw_sp24_ltwyl_dwda_olv_en_15s_115_1920x10803_stylishsteve-1724351570810.high.mp4",
+  "mp4_768k": "https://s8t.teads.tv/creative-6753877077309673/mw_sp24_ltwyl_dwda_olv_en_15s_115_1920x10803_stylishsteve-1724351570810.low.mp4"
+};
+
+uid = 7378;
+cid = "6753877077309673";
+
+creative = bnt.unmarshall([{"ctor":"Creative","paths":[[]],"props":{}},{"ctor":"Array","paths":[["screens"]],"props":{}},{"ctor":"Screen","paths":[["screens","0"]],"props":{"name":"Screen1"}},{"ctor":"Array","paths":[["screens","0","customLoads"]],"props":{}},{"ctor":"Array","paths":[["screens","0","eos"]],"props":{}},{"ctor":"ElementOnScreen","paths":[["screens","0","eos","0"]],"props":{}},{"ctor":"Image","paths":[["screens","0","eos","0","element"],["screens","0","eos","3","interactions","1","_target"]],"props":{"elementId":"EC"}},{"ctor":"Map","paths":[["screens","0","eos","0","element","configs"]],"props":{}},{"ctor":"StateHash","paths":[["screens","0","eos","0","element","configs","hashFn"]],"props":{}},{"ctor":"Object","paths":[["screens","0","eos","0","element","configs","store"]],"props":{}},{"ctor":"Entry","paths":[["screens","0","eos","0","element","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040"]],"props":{}},{"ctor":"State","paths":[["screens","0","eos","0","element","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","k"],["screens","0","eos","0","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","k"]],"props":{}},{"ctor":"Canvas","paths":[["screens","0","eos","0","element","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","k","canvas"],["screens","0","eos","1","element","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","k","canvas"],["screens","0","eos","3","element","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","k","canvas"],["screens","0","eos","4","element","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","k","canvas"],["canvases","0"]],"props":{"uuid":"71f7c214-b78f-eb7b-98f0-a011c9a867bd"}},{"ctor":"CanvasConfig","paths":[["screens","0","eos","0","element","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","k","canvas","config"]],"props":{"name":"Landscape video","width":960,"height":550}},{"ctor":"Segment","paths":[["screens","0","eos","0","element","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","k","segment"],["screens","0","eos","1","element","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","k","segment"],["screens","0","eos","3","element","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","k","segment"],["screens","0","eos","4","element","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","k","segment"],["segments","0"]],"props":{"uuid":"c44f7d2e-d8dd-6889-907c-d68a84ff3040"}},{"ctor":"Array","paths":[["screens","0","eos","0","element","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","k","segment","signalHolders"]],"props":{}},{"ctor":"SegmentConfig","paths":[["screens","0","eos","0","element","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","k","segment","config"]],"props":{"name":"Default segment","readonly":true}},{"ctor":"ImageConfig","paths":[["screens","0","eos","0","element","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","v"]],"props":{"src":"asset://EC_LS_png","angle":0,"width":579,"height":326,"opacity":1,"visible":false,"panActive":false,"hoverImage":"","imageWidth":960,"usePointer":true,"aspectRatio":1.7760736196319018,"imageHeight":540,"useGyroscope":true,"preserveAspectRatio":true}},{"ctor":"ImageConfig","paths":[["screens","0","eos","0","element","baseConfig"]],"props":{"src":"","angle":0,"width":100,"height":100,"opacity":1,"visible":true,"panActive":false,"hoverImage":"","imageWidth":0,"usePointer":true,"imageHeight":0,"useGyroscope":true,"preserveAspectRatio":false}},{"ctor":"Map","paths":[["screens","0","eos","0","configs"]],"props":{}},{"ctor":"StateHash","paths":[["screens","0","eos","0","configs","hashFn"]],"props":{}},{"ctor":"Object","paths":[["screens","0","eos","0","configs","store"]],"props":{}},{"ctor":"Entry","paths":[["screens","0","eos","0","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040"]],"props":{}},{"ctor":"ElementOnScreenConfig","paths":[["screens","0","eos","0","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","v"]],"props":{"x":190,"y":88,"zIndex":0}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","0","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","v","onHide"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","0","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","v","onShow"]],"props":{"ease":"linear","name":"fadeIn","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"ElementOnScreenConfig","paths":[["screens","0","eos","0","baseConfig"]],"props":{"x":0,"y":0,"zIndex":0}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","0","baseConfig","onHide"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","0","baseConfig","onShow"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"Array","paths":[["screens","0","eos","0","interactions"]],"props":{}},{"ctor":"Interaction","paths":[["screens","0","eos","0","interactions","0"]],"props":{"_action":"clickthru","fireOnce":false,"triggerName":"onclick","triggerFilter":""}},{"ctor":"Array","paths":[["screens","0","eos","0","interactions","0","_actionParameters"]],"props":{"0":"https://www.menswearhouse.com/c/mens-clothing-sale/all-sale?utm_source=teads&utm_medium=paid_olv&utm_campaign=OG_FY25_TMW_Retail_Teads_OLV_AWR_RON_ACQ_EL_FALLHOLIDAY__%epid!%7C%ecid!&ogmap=OLV%7CAWR%7CTeads%7C%7C%7CSITEWIDE%7C%7COG_FY25_TMW_Retail_Teads_OLV_AWR_RON_ACQ_EL_FALLHOLIDAY%7C%epid!%7C%ecid"}},{"ctor":"Object","paths":[["screens","0","eos","0","interactions","0","transition"]],"props":{"in":"","out":"","name":""}},{"ctor":"ElementOnScreen","paths":[["screens","0","eos","1"]],"props":{}},{"ctor":"Image","paths":[["screens","0","eos","1","element"]],"props":{"elementId":"Tagline"}},{"ctor":"Map","paths":[["screens","0","eos","1","element","configs"]],"props":{}},{"ctor":"StateHash","paths":[["screens","0","eos","1","element","configs","hashFn"]],"props":{}},{"ctor":"Object","paths":[["screens","0","eos","1","element","configs","store"]],"props":{}},{"ctor":"Entry","paths":[["screens","0","eos","1","element","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040"]],"props":{}},{"ctor":"State","paths":[["screens","0","eos","1","element","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","k"],["screens","0","eos","1","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","k"]],"props":{}},{"ctor":"ImageConfig","paths":[["screens","0","eos","1","element","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","v"]],"props":{"src":"asset://Tagline_png","angle":0,"width":580,"height":43,"opacity":1,"visible":true,"panActive":false,"hoverImage":"","imageWidth":720,"usePointer":true,"aspectRatio":13.488372093023257,"imageHeight":50,"useGyroscope":true,"preserveAspectRatio":true}},{"ctor":"ImageConfig","paths":[["screens","0","eos","1","element","baseConfig"]],"props":{"src":"","angle":0,"width":100,"height":100,"opacity":1,"visible":true,"panActive":false,"hoverImage":"","imageWidth":0,"usePointer":true,"imageHeight":0,"useGyroscope":true,"preserveAspectRatio":false}},{"ctor":"Map","paths":[["screens","0","eos","1","configs"]],"props":{}},{"ctor":"StateHash","paths":[["screens","0","eos","1","configs","hashFn"]],"props":{}},{"ctor":"Object","paths":[["screens","0","eos","1","configs","store"]],"props":{}},{"ctor":"Entry","paths":[["screens","0","eos","1","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040"]],"props":{}},{"ctor":"ElementOnScreenConfig","paths":[["screens","0","eos","1","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","v"]],"props":{"x":190,"y":414,"zIndex":0}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","1","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","v","onHide"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","1","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","v","onShow"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"ElementOnScreenConfig","paths":[["screens","0","eos","1","baseConfig"]],"props":{"x":0,"y":0,"zIndex":0}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","1","baseConfig","onHide"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","1","baseConfig","onShow"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"Array","paths":[["screens","0","eos","1","interactions"]],"props":{}},{"ctor":"Interaction","paths":[["screens","0","eos","1","interactions","0"]],"props":{"_action":"clickthru","fireOnce":false,"triggerName":"onclick","triggerFilter":""}},{"ctor":"Array","paths":[["screens","0","eos","1","interactions","0","_actionParameters"]],"props":{"0":"https://www.menswearhouse.com/c/mens-clothing-sale/all-sale?utm_source=teads&utm_medium=paid_olv&utm_campaign=OG_FY25_TMW_Retail_Teads_OLV_AWR_RON_ACQ_EL_FALLHOLIDAY__%epid!%7C%ecid!&ogmap=OLV%7CAWR%7CTeads%7C%7C%7CSITEWIDE%7C%7COG_FY25_TMW_Retail_Teads_OLV_AWR_RON_ACQ_EL_FALLHOLIDAY%7C%epid!%7C%ecid"}},{"ctor":"Object","paths":[["screens","0","eos","1","interactions","0","transition"]],"props":{"in":"","out":"","name":""}},{"ctor":"ElementOnScreen","paths":[["screens","0","eos","2"]],"props":{}},{"ctor":"Image","paths":[["screens","0","eos","2","element"]],"props":{"elementId":"ShopNow"}},{"ctor":"Map","paths":[["screens","0","eos","2","element","configs"]],"props":{}},{"ctor":"StateHash","paths":[["screens","0","eos","2","element","configs","hashFn"]],"props":{}},{"ctor":"Object","paths":[["screens","0","eos","2","element","configs","store"]],"props":{}},{"ctor":"Entry","paths":[["screens","0","eos","2","element","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040"]],"props":{}},{"ctor":"State","paths":[["screens","0","eos","2","element","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","k"],["screens","0","eos","2","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","k"]],"props":{}},{"ctor":"Canvas","paths":[["screens","0","eos","2","element","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","k","canvas"]],"props":{"uuid":"71f7c214-b78f-eb7b-98f0-a011c9a867bd"}},{"ctor":"CanvasConfig","paths":[["screens","0","eos","2","element","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","k","canvas","config"]],"props":{"name":"Landscape video","width":960,"height":540}},{"ctor":"Segment","paths":[["screens","0","eos","2","element","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","k","segment"]],"props":{"uuid":"c44f7d2e-d8dd-6889-907c-d68a84ff3040"}},{"ctor":"Array","paths":[["screens","0","eos","2","element","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","k","segment","signalHolders"]],"props":{}},{"ctor":"SegmentConfig","paths":[["screens","0","eos","2","element","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","k","segment","config"]],"props":{"name":"Default segment","readonly":true}},{"ctor":"ImageConfig","paths":[["screens","0","eos","2","element","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","v"]],"props":{"src":"asset://CTA_ShopNow_png","angle":0,"width":272,"height":63,"opacity":1,"visible":true,"panActive":false,"hoverImage":"","imageWidth":212,"usePointer":true,"aspectRatio":4.313725490196078,"imageHeight":49,"useGyroscope":true,"preserveAspectRatio":true}},{"ctor":"ImageConfig","paths":[["screens","0","eos","2","element","baseConfig"]],"props":{"src":"","angle":0,"width":100,"height":100,"opacity":1,"visible":true,"panActive":false,"hoverImage":"","imageWidth":0,"usePointer":true,"imageHeight":0,"useGyroscope":true,"preserveAspectRatio":false}},{"ctor":"Map","paths":[["screens","0","eos","2","configs"]],"props":{}},{"ctor":"StateHash","paths":[["screens","0","eos","2","configs","hashFn"]],"props":{}},{"ctor":"Object","paths":[["screens","0","eos","2","configs","store"]],"props":{}},{"ctor":"Entry","paths":[["screens","0","eos","2","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040"]],"props":{}},{"ctor":"ElementOnScreenConfig","paths":[["screens","0","eos","2","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","v"]],"props":{"x":344,"y":468,"zIndex":0}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","2","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","v","onHide"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","2","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","v","onShow"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"ElementOnScreenConfig","paths":[["screens","0","eos","2","baseConfig"]],"props":{"x":0,"y":0,"zIndex":0}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","2","baseConfig","onHide"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","2","baseConfig","onShow"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"Array","paths":[["screens","0","eos","2","interactions"]],"props":{}},{"ctor":"Interaction","paths":[["screens","0","eos","2","interactions","0"]],"props":{"_action":"clickthru","fireOnce":false,"triggerName":"onclick","triggerFilter":""}},{"ctor":"Array","paths":[["screens","0","eos","2","interactions","0","_actionParameters"]],"props":{"0":"https://www.menswearhouse.com/c/mens-clothing-sale/all-sale?utm_source=teads&utm_medium=paid_olv&utm_campaign=OG_FY25_TMW_Retail_Teads_OLV_AWR_RON_ACQ_EL_FALLHOLIDAY__%epid!%7C%ecid!&ogmap=OLV%7CAWR%7CTeads%7C%7C%7CSITEWIDE%7C%7COG_FY25_TMW_Retail_Teads_OLV_AWR_RON_ACQ_EL_FALLHOLIDAY%7C%epid!%7C%ecid"}},{"ctor":"Object","paths":[["screens","0","eos","2","interactions","0","transition"]],"props":{"in":"","out":"","name":""}},{"ctor":"ElementOnScreen","paths":[["screens","0","eos","3"]],"props":{}},{"ctor":"Video","paths":[["screens","0","eos","3","element"],["screens","0","eos","3","interactions","0","_target"]],"props":{"elementId":"MainVideo"}},{"ctor":"Map","paths":[["screens","0","eos","3","element","configs"]],"props":{}},{"ctor":"StateHash","paths":[["screens","0","eos","3","element","configs","hashFn"]],"props":{}},{"ctor":"Object","paths":[["screens","0","eos","3","element","configs","store"]],"props":{}},{"ctor":"Entry","paths":[["screens","0","eos","3","element","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040"]],"props":{}},{"ctor":"State","paths":[["screens","0","eos","3","element","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","k"],["screens","0","eos","3","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","k"]],"props":{}},{"ctor":"VideoConfig","paths":[["screens","0","eos","3","element","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","v"]],"props":{"src":"asset://MW_FL25_PreBlackFriday_16x9_15_FINAL_V2_1_mp4","mute":false,"cover":"","width":579,"height":326,"opacity":1,"visible":true,"autoplay":true,"panActive":false,"coverWidth":0,"usePointer":true,"videoWidth":540,"aspectRatio":1.7777777777777777,"coverHeight":0,"videoHeight":304,"useGyroscope":true,"videoDuration":15.015,"preserveAspectRatio":true}},{"ctor":"VideoConfig","paths":[["screens","0","eos","3","element","baseConfig"]],"props":{"src":"","mute":false,"cover":"","width":320,"height":180,"opacity":1,"visible":true,"autoplay":true,"panActive":false,"coverWidth":0,"usePointer":true,"videoWidth":0,"coverHeight":0,"videoHeight":0,"useGyroscope":true,"videoDuration":0,"preserveAspectRatio":false}},{"ctor":"Map","paths":[["screens","0","eos","3","configs"]],"props":{}},{"ctor":"StateHash","paths":[["screens","0","eos","3","configs","hashFn"]],"props":{}},{"ctor":"Object","paths":[["screens","0","eos","3","configs","store"]],"props":{}},{"ctor":"Entry","paths":[["screens","0","eos","3","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040"]],"props":{}},{"ctor":"ElementOnScreenConfig","paths":[["screens","0","eos","3","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","v"]],"props":{"x":190,"y":88,"zIndex":0}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","3","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","v","onHide"]],"props":{"ease":"linear","name":"fadeOut","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","3","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","v","onShow"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"ElementOnScreenConfig","paths":[["screens","0","eos","3","baseConfig"]],"props":{"x":0,"y":0,"zIndex":0}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","3","baseConfig","onHide"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","3","baseConfig","onShow"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"Array","paths":[["screens","0","eos","3","interactions"]],"props":{}},{"ctor":"Interaction","paths":[["screens","0","eos","3","interactions","0"]],"props":{"_action":"hide","fireOnce":false,"triggerName":"onend","triggerFilter":2}},{"ctor":"Array","paths":[["screens","0","eos","3","interactions","0","_actionParameters"]],"props":{}},{"ctor":"Object","paths":[["screens","0","eos","3","interactions","0","transition"]],"props":{"in":"","out":"","name":""}},{"ctor":"Interaction","paths":[["screens","0","eos","3","interactions","1"]],"props":{"_action":"show","fireOnce":false,"triggerName":"onend","triggerFilter":""}},{"ctor":"Array","paths":[["screens","0","eos","3","interactions","1","_actionParameters"]],"props":{}},{"ctor":"Object","paths":[["screens","0","eos","3","interactions","1","transition"]],"props":{"in":"","out":"","name":""}},{"ctor":"Interaction","paths":[["screens","0","eos","3","interactions","2"]],"props":{"_action":"clickthru","fireOnce":false,"triggerName":"onclick","triggerFilter":""}},{"ctor":"Array","paths":[["screens","0","eos","3","interactions","2","_actionParameters"]],"props":{"0":"https://www.menswearhouse.com/c/mens-clothing-sale/all-sale?utm_source=teads&utm_medium=paid_olv&utm_campaign=OG_FY25_TMW_Retail_Teads_OLV_AWR_RON_ACQ_EL_FALLHOLIDAY__%epid!%7C%ecid!&ogmap=OLV%7CAWR%7CTeads%7C%7C%7CSITEWIDE%7C%7COG_FY25_TMW_Retail_Teads_OLV_AWR_RON_ACQ_EL_FALLHOLIDAY%7C%epid!%7C%ecid"}},{"ctor":"Object","paths":[["screens","0","eos","3","interactions","2","transition"]],"props":{"in":"","out":"","name":""}},{"ctor":"ElementOnScreen","paths":[["screens","0","eos","4"]],"props":{}},{"ctor":"Shape","paths":[["screens","0","eos","4","element"]],"props":{"elementId":"BG"}},{"ctor":"Map","paths":[["screens","0","eos","4","element","configs"]],"props":{}},{"ctor":"StateHash","paths":[["screens","0","eos","4","element","configs","hashFn"]],"props":{}},{"ctor":"Object","paths":[["screens","0","eos","4","element","configs","store"]],"props":{}},{"ctor":"Entry","paths":[["screens","0","eos","4","element","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040"]],"props":{}},{"ctor":"State","paths":[["screens","0","eos","4","element","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","k"],["screens","0","eos","4","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","k"]],"props":{}},{"ctor":"ShapeConfig","paths":[["screens","0","eos","4","element","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","v"]],"props":{"angle":0,"width":960,"border":2,"height":545,"radius":0,"opacity":1,"visible":true,"borderColor":"#011d5e","backgroundColor":"#0000","preserveAspectRatio":false}},{"ctor":"ShapeConfig","paths":[["screens","0","eos","4","element","baseConfig"]],"props":{"angle":0,"width":100,"border":1,"height":100,"radius":0,"opacity":1,"visible":true,"borderColor":"#aaa","backgroundColor":"#ccc","preserveAspectRatio":false}},{"ctor":"Map","paths":[["screens","0","eos","4","configs"]],"props":{}},{"ctor":"StateHash","paths":[["screens","0","eos","4","configs","hashFn"]],"props":{}},{"ctor":"Object","paths":[["screens","0","eos","4","configs","store"]],"props":{}},{"ctor":"Entry","paths":[["screens","0","eos","4","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040"]],"props":{}},{"ctor":"ElementOnScreenConfig","paths":[["screens","0","eos","4","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","v"]],"props":{"x":0,"y":0,"zIndex":0}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","4","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","v","onHide"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","4","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","v","onShow"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"ElementOnScreenConfig","paths":[["screens","0","eos","4","baseConfig"]],"props":{"x":0,"y":0,"zIndex":0}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","4","baseConfig","onHide"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","4","baseConfig","onShow"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"Array","paths":[["screens","0","eos","4","interactions"]],"props":{}},{"ctor":"Interaction","paths":[["screens","0","eos","4","interactions","0"]],"props":{"_action":"clickthru","fireOnce":false,"triggerName":"onclick","triggerFilter":""}},{"ctor":"Array","paths":[["screens","0","eos","4","interactions","0","_actionParameters"]],"props":{"0":"https://www.menswearhouse.com/c/mens-clothing-sale/all-sale?utm_source=teads&utm_medium=paid_olv&utm_campaign=OG_FY25_TMW_Retail_Teads_OLV_AWR_RON_ACQ_EL_FALLHOLIDAY__%epid!%7C%ecid!&ogmap=OLV%7CAWR%7CTeads%7C%7C%7CSITEWIDE%7C%7COG_FY25_TMW_Retail_Teads_OLV_AWR_RON_ACQ_EL_FALLHOLIDAY%7C%epid!%7C%ecid"}},{"ctor":"Object","paths":[["screens","0","eos","4","interactions","0","transition"]],"props":{"in":"","out":"","name":""}},{"ctor":"ElementOnScreen","paths":[["screens","0","eos","5"]],"props":{}},{"ctor":"Image","paths":[["screens","0","eos","5","element"]],"props":{"elementId":"Logo"}},{"ctor":"Map","paths":[["screens","0","eos","5","element","configs"]],"props":{}},{"ctor":"StateHash","paths":[["screens","0","eos","5","element","configs","hashFn"]],"props":{}},{"ctor":"Object","paths":[["screens","0","eos","5","element","configs","store"]],"props":{}},{"ctor":"Entry","paths":[["screens","0","eos","5","element","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040"]],"props":{}},{"ctor":"State","paths":[["screens","0","eos","5","element","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","k"],["screens","0","eos","5","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","k"]],"props":{}},{"ctor":"Canvas","paths":[["screens","0","eos","5","element","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","k","canvas"]],"props":{"uuid":"71f7c214-b78f-eb7b-98f0-a011c9a867bd"}},{"ctor":"CanvasConfig","paths":[["screens","0","eos","5","element","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","k","canvas","config"]],"props":{"name":"Landscape video","width":960,"height":540}},{"ctor":"Segment","paths":[["screens","0","eos","5","element","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","k","segment"]],"props":{"uuid":"c44f7d2e-d8dd-6889-907c-d68a84ff3040"}},{"ctor":"Array","paths":[["screens","0","eos","5","element","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","k","segment","signalHolders"]],"props":{}},{"ctor":"SegmentConfig","paths":[["screens","0","eos","5","element","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","k","segment","config"]],"props":{"name":"Default segment","readonly":true}},{"ctor":"ImageConfig","paths":[["screens","0","eos","5","element","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","v"]],"props":{"src":"asset://NewLogo_png","angle":0,"width":440,"height":94,"opacity":1,"visible":true,"panActive":false,"hoverImage":"","imageWidth":960,"usePointer":true,"aspectRatio":4.682926829268292,"imageHeight":205,"useGyroscope":true,"preserveAspectRatio":true}},{"ctor":"ImageConfig","paths":[["screens","0","eos","5","element","baseConfig"]],"props":{"src":"asset://NewLogo_png","angle":0,"width":464,"height":99,"opacity":1,"visible":true,"panActive":false,"hoverImage":"","imageWidth":960,"usePointer":true,"aspectRatio":4.682926829268292,"imageHeight":205,"useGyroscope":true,"preserveAspectRatio":true}},{"ctor":"Map","paths":[["screens","0","eos","5","configs"]],"props":{}},{"ctor":"StateHash","paths":[["screens","0","eos","5","configs","hashFn"]],"props":{}},{"ctor":"Object","paths":[["screens","0","eos","5","configs","store"]],"props":{}},{"ctor":"Entry","paths":[["screens","0","eos","5","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040"]],"props":{}},{"ctor":"ElementOnScreenConfig","paths":[["screens","0","eos","5","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","v"]],"props":{"x":260,"y":1,"zIndex":0}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","5","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","v","onHide"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","5","configs","store","71f7c214-b78f-eb7b-98f0-a011c9a867bd_c44f7d2e-d8dd-6889-907c-d68a84ff3040","v","onShow"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"ElementOnScreenConfig","paths":[["screens","0","eos","5","baseConfig"]],"props":{"x":248,"y":1,"zIndex":0}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","5","baseConfig","onHide"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"AnimationConfig","paths":[["screens","0","eos","5","baseConfig","onShow"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"Array","paths":[["screens","0","eos","5","interactions"]],"props":{}},{"ctor":"Interaction","paths":[["screens","0","eos","5","interactions","0"]],"props":{"_action":"clickthru","fireOnce":false,"triggerName":"onclick","triggerFilter":""}},{"ctor":"Array","paths":[["screens","0","eos","5","interactions","0","_actionParameters"]],"props":{"0":"https://www.menswearhouse.com/c/mens-clothing-sale/all-sale?utm_source=teads&utm_medium=paid_olv&utm_campaign=OG_FY25_TMW_Retail_Teads_OLV_AWR_RON_ACQ_EL_FALLHOLIDAY__%epid!%7C%ecid!&ogmap=OLV%7CAWR%7CTeads%7C%7C%7CSITEWIDE%7C%7COG_FY25_TMW_Retail_Teads_OLV_AWR_RON_ACQ_EL_FALLHOLIDAY%7C%epid!%7C%ecid"}},{"ctor":"Object","paths":[["screens","0","eos","5","interactions","0","transition"]],"props":{"in":"","out":"","name":""}},{"ctor":"Map","paths":[["screens","0","indexMapping"]],"props":{}},{"ctor":"ElementHash","paths":[["screens","0","indexMapping","hashFn"]],"props":{}},{"ctor":"Object","paths":[["screens","0","indexMapping","store"]],"props":{}},{"ctor":"Map","paths":[["screens","0","scenes"]],"props":{}},{"ctor":"StateHash","paths":[["screens","0","scenes","hashFn"]],"props":{}},{"ctor":"Object","paths":[["screens","0","scenes","store"]],"props":{}},{"ctor":"Array","paths":[["screens","0","interactions"]],"props":{}},{"ctor":"Interaction","paths":[["screens","0","interactions","0"]],"props":{"_action":"stop","fireOnce":false,"triggerName":"onend","triggerFilter":""}},{"ctor":"Array","paths":[["screens","0","interactions","0","_actionParameters"]],"props":{}},{"ctor":"Object","paths":[["screens","0","interactions","0","transition"]],"props":{"in":"","out":"","name":""}},{"ctor":"ScreenConfig","paths":[["screens","0","config"]],"props":{"duration":0}},{"ctor":"AnimationConfig","paths":[["screens","0","config","onHide"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"AnimationConfig","paths":[["screens","0","config","onShow"]],"props":{"ease":"linear","name":"","delay":0,"repeat":1,"_duration":0.4}},{"ctor":"Map","paths":[["screens","0","customAnimations"]],"props":{}},{"ctor":"StateHash","paths":[["screens","0","customAnimations","hashFn"]],"props":{}},{"ctor":"Object","paths":[["screens","0","customAnimations","store"]],"props":{}},{"ctor":"Array","paths":[["canvases"]],"props":{}},{"ctor":"Array","paths":[["segments"]],"props":{}},{"ctor":"Map","paths":[["screensToPreload"]],"props":{}},{"ctor":"ScreenHash","paths":[["screensToPreload","hashFn"]],"props":{}},{"ctor":"Object","paths":[["screensToPreload","store"]],"props":{}},{"ctor":"Set","paths":[["processingElementNames"]],"props":{"_length":0}},{"ctor":"StringHash","paths":[["processingElementNames","hashFn"]],"props":{}},{"ctor":"Object","paths":[["processingElementNames","store"]],"props":{}},{"ctor":"CreativeConfig","paths":[["config"]],"props":{"name":"inRead Template Skin Landscape","color":"#fff","skippable":false,"trackingSamplingLevel":1}},{"ctor":"Code","paths":[["code"]],"props":{"js":"/******************************************\n * Sound Icon config\n *****************************************/\n\nvar soundConfig = {\n    left: '722', //Position on X axis. Leave just the quotes for default\n    top: '124', //Position on Y axis. Leave just the quotes for default\n    customIcon: '', //Name of the svg file goes between the quotes. Leave just the quotes if you don't wish to change sound color\n    screensToHideSoundIcon: [], //Name of the screens the sound icon should not be displayed; Separate them with comma. Leave it empty for default\n    videosToShowSoundIconOn: [] //Name of the Video the sound icon should be displayed; Separate them with comma. Leave it empty for default\n}\n\n/******************************************\n * Sound Icon visibile calcs\n *****************************************/\nfunction createVisibleCss() {\n    var soundIconSize = 60;\n\n    var cssObj = {} //right, left, top, bottom, transform, display, padding\n\n    var scale = window.innerWidth / creative.canvases[0].config.width;\n\n    var leftTrimLen = soundConfig.left.trim().length;\n    var rightTrimLen = soundConfig.top.trim().length;\n\n    if (leftTrimLen) {\n        cssObj.right = `auto !important`\n        cssObj.left = `${soundConfig.left * scale}px !important`\n\n        cssObj.transform = `translateX(-50%) `\n        cssObj['-webkit-transform'] = `translateX(-50%) `\n    }\n\n    if (rightTrimLen) {\n        cssObj.bottom = `auto !important`;\n        cssObj.top = `${soundConfig.top * scale}px !important`;\n\n        if (cssObj.transform) cssObj.transform += `translateY(-50%)`;\n        else cssObj.transform += `translateY(-50%)`;\n\n        if (cssObj['-webkit-transform']) cssObj['-webkit-transform'] += `translateY(-50%)`;\n        else cssObj['-webkit-transform'] += `translateY(-50%)`;\n    }\n\n    if (leftTrimLen || rightTrimLen) {\n        cssObj.padding = `0px`\n\n        cssObj.width = `${soundIconSize * scale}px !important`;\n        cssObj.height = `${soundIconSize * scale}px !important`;\n\n        cssObj.display = 'flex !important';\n        cssObj['justify-content'] = 'center';\n        cssObj['align-items'] = 'center';\n    }\n\n    var cssStr = 'div.teads-ui-component-soundbutton {\\n';\n    \n     Object.keys(cssObj).forEach(function(key) {\n         cssStr += key + \": \" + cssObj[key] + \";\\n\"\n    })\n\n    cssStr += '}'\n\n    return cssStr;\n}\n\n/******************************************\n * Sound Icon hidden calcs\n *****************************************/\nfunction createHiddenCss() {\n    return 'div.teads-ui-component-soundbutton {right: -2000px !important; }';\n}\n\n/******************************************\n * Sound Icon icon set\n *****************************************/\nfunction createVisualCss() {\n    if (soundConfig.customIcon.trim().length) {\n        return `.icon-muteoff, .icon-muteon {background-image: url( ${bnt.LIBRARY[soundConfig.customIcon].link}) !important;}`\n    } else return ''\n}\n\n/******************************************\n * Check Player Api and Update sound icon\n *****************************************/\nbnt.TeadsPlayerAddons.apiProxy.addObserver(function (api) {\n    if (api) {\n        creative.screens.forEach(function (screen) {\n            screen.onshow.addObserver(function () {\n                if (soundConfig.screensToHideSoundIcon.indexOf(screen) != -1) {\n                    bnt.TeadsPlayerAddons.callPlayerApiMethod('customizeUI', [createHiddenCss()])\n                } else {\n                    bnt.TeadsPlayerAddons.callPlayerApiMethod('customizeUI', [\n                        createVisibleCss() + createVisualCss()\n                    ]);\n                }\n            })\n        })\n\n        if (soundConfig.videosToShowSoundIconOn.length) {\n\n            soundConfig.videosToShowSoundIconOn.forEach(function (vid) {\n                vid.onplay.addObserver(function () {\n                    bnt.TeadsPlayerAddons.callPlayerApiMethod('customizeUI', [\n                        createVisibleCss() + createVisualCss()\n                    ]);\n                })\n                vid.onend.addObserver(function () {\n                    bnt.TeadsPlayerAddons.callPlayerApiMethod('customizeUI', [createHiddenCss()])\n                })\n                vid.onpause.addObserver(function () {\n                    bnt.TeadsPlayerAddons.callPlayerApiMethod('customizeUI', [createHiddenCss()])\n                })\n            })\n        }\n    }\n})","css":""}}]) ;
+bnt.QueryParams.params = {};
+
+adController = new bnt.AdController(creative);
+
+EC = creative.elements.get("EC");
+Tagline = creative.elements.get("Tagline");
+ShopNow = creative.elements.get("ShopNow");
+MainVideo = creative.elements.get("MainVideo");
+BG = creative.elements.get("BG");
+Logo = creative.elements.get("Logo");
+
+EC.onclick
+	.addObserver(function () {
+		creative.getController().clickthru("https://www.menswearhouse.com/c/mens-clothing-sale/all-sale?utm_source=teads&utm_medium=paid_olv&utm_campaign=OG_FY25_TMW_Retail_Teads_OLV_AWR_RON_ACQ_EL_FALLHOLIDAY__%epid!%7C%ecid!&ogmap=OLV%7CAWR%7CTeads%7C%7C%7CSITEWIDE%7C%7COG_FY25_TMW_Retail_Teads_OLV_AWR_RON_ACQ_EL_FALLHOLIDAY%7C%epid!%7C%ecid");
+		bntTracking.trackEvent("EC: onclick", null);
+	});
+Tagline.onclick
+	.addObserver(function () {
+		creative.getController().clickthru("https://www.menswearhouse.com/c/mens-clothing-sale/all-sale?utm_source=teads&utm_medium=paid_olv&utm_campaign=OG_FY25_TMW_Retail_Teads_OLV_AWR_RON_ACQ_EL_FALLHOLIDAY__%epid!%7C%ecid!&ogmap=OLV%7CAWR%7CTeads%7C%7C%7CSITEWIDE%7C%7COG_FY25_TMW_Retail_Teads_OLV_AWR_RON_ACQ_EL_FALLHOLIDAY%7C%epid!%7C%ecid");
+		bntTracking.trackEvent("Tagline: onclick", null);
+	});
+ShopNow.onclick
+	.addObserver(function () {
+		creative.getController().clickthru("https://www.menswearhouse.com/c/mens-clothing-sale/all-sale?utm_source=teads&utm_medium=paid_olv&utm_campaign=OG_FY25_TMW_Retail_Teads_OLV_AWR_RON_ACQ_EL_FALLHOLIDAY__%epid!%7C%ecid!&ogmap=OLV%7CAWR%7CTeads%7C%7C%7CSITEWIDE%7C%7COG_FY25_TMW_Retail_Teads_OLV_AWR_RON_ACQ_EL_FALLHOLIDAY%7C%epid!%7C%ecid");
+		bntTracking.trackEvent("ShopNow: onclick", null);
+	});
+var MainVideo_onend_2 = MainVideo.onend.filter(function (value) { return value == 2 });
+MainVideo_onend_2
+	.addObserver(function () {
+		MainVideo.hide();
+	});
+MainVideo.onend
+	.addObserver(function () {
+		EC.show();
+	});
+MainVideo.onclick
+	.addObserver(function () {
+		creative.getController().clickthru("https://www.menswearhouse.com/c/mens-clothing-sale/all-sale?utm_source=teads&utm_medium=paid_olv&utm_campaign=OG_FY25_TMW_Retail_Teads_OLV_AWR_RON_ACQ_EL_FALLHOLIDAY__%epid!%7C%ecid!&ogmap=OLV%7CAWR%7CTeads%7C%7C%7CSITEWIDE%7C%7COG_FY25_TMW_Retail_Teads_OLV_AWR_RON_ACQ_EL_FALLHOLIDAY%7C%epid!%7C%ecid");
+		bntTracking.trackEvent("MainVideo: onclick", null);
+	});
+BG.onclick
+	.addObserver(function () {
+		creative.getController().clickthru("https://www.menswearhouse.com/c/mens-clothing-sale/all-sale?utm_source=teads&utm_medium=paid_olv&utm_campaign=OG_FY25_TMW_Retail_Teads_OLV_AWR_RON_ACQ_EL_FALLHOLIDAY__%epid!%7C%ecid!&ogmap=OLV%7CAWR%7CTeads%7C%7C%7CSITEWIDE%7C%7COG_FY25_TMW_Retail_Teads_OLV_AWR_RON_ACQ_EL_FALLHOLIDAY%7C%epid!%7C%ecid");
+		bntTracking.trackEvent("BG: onclick", null);
+	});
+Logo.onclick
+	.addObserver(function () {
+		creative.getController().clickthru("https://www.menswearhouse.com/c/mens-clothing-sale/all-sale?utm_source=teads&utm_medium=paid_olv&utm_campaign=OG_FY25_TMW_Retail_Teads_OLV_AWR_RON_ACQ_EL_FALLHOLIDAY__%epid!%7C%ecid!&ogmap=OLV%7CAWR%7CTeads%7C%7C%7CSITEWIDE%7C%7COG_FY25_TMW_Retail_Teads_OLV_AWR_RON_ACQ_EL_FALLHOLIDAY%7C%epid!%7C%ecid");
+		bntTracking.trackEvent("Logo: onclick", null);
+	});
+
+Screen1 = creative.screens[0];
+
+
+trkConfig = { uid: uid, cid: cid };
+bntTracking = new bnt.TrackingUnit(trkConfig);
+bntTracking.trackCreative(creative);
+bntTracking.trackVideoQuartiles(MainVideo, "MainVideo");
+            
+adController.preventDefaultTouchEvents = false;
+
+/******************************************
+ * Sound Icon config
+ *****************************************/
+
+var soundConfig = {
+    left: '722', //Position on X axis. Leave just the quotes for default
+    top: '124', //Position on Y axis. Leave just the quotes for default
+    customIcon: '', //Name of the svg file goes between the quotes. Leave just the quotes if you don't wish to change sound color
+    screensToHideSoundIcon: [], //Name of the screens the sound icon should not be displayed; Separate them with comma. Leave it empty for default
+    videosToShowSoundIconOn: [] //Name of the Video the sound icon should be displayed; Separate them with comma. Leave it empty for default
+}
+
+/******************************************
+ * Sound Icon visibile calcs
+ *****************************************/
+function createVisibleCss() {
+    var soundIconSize = 60;
+
+    var cssObj = {} //right, left, top, bottom, transform, display, padding
+
+    var scale = window.innerWidth / creative.canvases[0].config.width;
+
+    var leftTrimLen = soundConfig.left.trim().length;
+    var rightTrimLen = soundConfig.top.trim().length;
+
+    if (leftTrimLen) {
+        cssObj.right = `auto !important`
+        cssObj.left = `${soundConfig.left * scale}px !important`
+
+        cssObj.transform = `translateX(-50%) `
+        cssObj['-webkit-transform'] = `translateX(-50%) `
+    }
+
+    if (rightTrimLen) {
+        cssObj.bottom = `auto !important`;
+        cssObj.top = `${soundConfig.top * scale}px !important`;
+
+        if (cssObj.transform) cssObj.transform += `translateY(-50%)`;
+        else cssObj.transform += `translateY(-50%)`;
+
+        if (cssObj['-webkit-transform']) cssObj['-webkit-transform'] += `translateY(-50%)`;
+        else cssObj['-webkit-transform'] += `translateY(-50%)`;
+    }
+
+    if (leftTrimLen || rightTrimLen) {
+        cssObj.padding = `0px`
+
+        cssObj.width = `${soundIconSize * scale}px !important`;
+        cssObj.height = `${soundIconSize * scale}px !important`;
+
+        cssObj.display = 'flex !important';
+        cssObj['justify-content'] = 'center';
+        cssObj['align-items'] = 'center';
+    }
+
+    var cssStr = 'div.teads-ui-component-soundbutton {\n';
+    
+     Object.keys(cssObj).forEach(function(key) {
+         cssStr += key + ": " + cssObj[key] + ";\n"
+    })
+
+    cssStr += '}'
+
+    return cssStr;
+}
+
+/******************************************
+ * Sound Icon hidden calcs
+ *****************************************/
+function createHiddenCss() {
+    return 'div.teads-ui-component-soundbutton {right: -2000px !important; }';
+}
+
+/******************************************
+ * Sound Icon icon set
+ *****************************************/
+function createVisualCss() {
+    if (soundConfig.customIcon.trim().length) {
+        return `.icon-muteoff, .icon-muteon {background-image: url( ${bnt.LIBRARY[soundConfig.customIcon].link}) !important;}`
+    } else return ''
+}
+
+/******************************************
+ * Check Player Api and Update sound icon
+ *****************************************/
+bnt.TeadsPlayerAddons.apiProxy.addObserver(function (api) {
+    if (api) {
+        creative.screens.forEach(function (screen) {
+            screen.onshow.addObserver(function () {
+                if (soundConfig.screensToHideSoundIcon.indexOf(screen) != -1) {
+                    bnt.TeadsPlayerAddons.callPlayerApiMethod('customizeUI', [createHiddenCss()])
+                } else {
+                    bnt.TeadsPlayerAddons.callPlayerApiMethod('customizeUI', [
+                        createVisibleCss() + createVisualCss()
+                    ]);
+                }
+            })
+        })
+
+        if (soundConfig.videosToShowSoundIconOn.length) {
+
+            soundConfig.videosToShowSoundIconOn.forEach(function (vid) {
+                vid.onplay.addObserver(function () {
+                    bnt.TeadsPlayerAddons.callPlayerApiMethod('customizeUI', [
+                        createVisibleCss() + createVisualCss()
+                    ]);
+                })
+                vid.onend.addObserver(function () {
+                    bnt.TeadsPlayerAddons.callPlayerApiMethod('customizeUI', [createHiddenCss()])
+                })
+                vid.onpause.addObserver(function () {
+                    bnt.TeadsPlayerAddons.callPlayerApiMethod('customizeUI', [createHiddenCss()])
+                })
+            })
+        }
+    }
+})
+
+}
+			</script><script src="a_data/2022.0.0"></script><style type="text/css">#BackgroundImage {    cursor: pointer;}.slideFromRight{animation-name:slideFromRight}@keyframes slideFromRight{from{transform:translate3d(100%, 0, 0);visibility:visible;opacity:0}to{transform:translate3d(0, 0, 0);opacity:1}}.slideFromLeft{animation-name:slideFromLeft}@keyframes slideFromLeft{from{transform:translate3d(-100%, 0, 0);visibility:visible;opacity:0}to{transform:translate3d(0, 0, 0);opacity:1}}.slideFromTop{animation-name:slideFromTop}@keyframes slideFromTop{from{transform:translate3d(0, -100%, 0);visibility:visible;opacity:0}to{transform:translate3d(0, 0, 0);opacity:1}}.slideFromBottom{animation-name:slideFromBottom}@keyframes slideFromBottom{from{transform:translate3d(0, 100%, 0);visibility:visible;opacity:0}to{transform:translate3d(0, 0, 0);opacity:1}}.horizontalFlipIn{animation-name:horizontalFlipIn}@keyframes horizontalFlipIn{from{transform:perspective(500px) rotate3d(1, 0, 0, 90deg);animation-timing-function:ease-in;opacity:0}to{transform:perspective(500px)}}.verticalFlipIn{animation-name:verticalFlipIn}@keyframes verticalFlipIn{from{transform:perspective(500px) rotate3d(0, 1, 0, 90deg);animation-timing-function:ease-in;opacity:0}to{transform:perspective(500px)}}.fadeIn{animation-name:fadeIn}@keyframes fadeIn{from{opacity:0}to{opacity:1}}.zoomIn{animation-name:zoomIn}@keyframes zoomIn{from{opacity:0;transform:scale3d(0.3, 0.3, 0.3)}to{opacity:1}}.slideToRight{animation-name:slideToRight}@keyframes slideToRight{from{transform:translate3d(0, 0, 0);opacity:1}to{transform:translate3d(100%, 0, 0);visibility:visible;opacity:0}}.slideToLeft{animation-name:slideToLeft}@keyframes slideToLeft{from{transform:translate3d(0, 0, 0);opacity:1}to{transform:translate3d(-100%, 0, 0);visibility:visible;opacity:0}}.slideToTop{animation-name:slideToTop}@keyframes slideToTop{from{transform:translate3d(0, 0, 0);opacity:1}to{transform:translate3d(0, -100%, 0);visibility:visible;opacity:0}}.slideToBottom{animation-name:slideToBottom}@keyframes slideToBottom{from{transform:translate3d(0, 0, 0);opacity:1}to{transform:translate3d(0, 100%, 0);visibility:visible;opacity:0}}.horizontalFlipOut{animation-name:horizontalFlipOut}@keyframes horizontalFlipOut{from{transform:perspective(500px)}to{transform:perspective(500px) rotate3d(1, 0, 0, 90deg);animation-timing-function:ease-in;opacity:0}}.verticalFlipOut{animation-name:verticalFlipOut}@keyframes verticalFlipOut{from{transform:perspective(500px)}to{transform:perspective(500px) rotate3d(0, 1, 0, 90deg);animation-timing-function:ease-in;opacity:0}}.fadeOut{animation-name:fadeOut}@keyframes fadeOut{from{opacity:1}to{opacity:0}}.zoomOut{animation-name:zoomOut}@keyframes zoomOut{from{opacity:1}to{opacity:0;transform:scale3d(0.3, 0.3, 0.3)}}/*# sourceMappingURL=animations.css.map */
+</style></head><body></body></html>

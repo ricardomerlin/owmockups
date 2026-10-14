@@ -1,0 +1,3 @@
+var r,e,s,t,n;const i=(n=(t=(s=(e=(r=window.mParticle)==null?void 0:r.Identity)==null?void 0:e.getCurrentUser)==null?void 0:s.call(e))==null?void 0:t.getMPID)==null?void 0:n.call(t);let d=document.currentScript["data-isUserLoggedIn"];window._comscore=window._comscore||[],window._comscore.push({c1:"2",c2:"9576127",cs_fpid:i,cs_fpit:d?"li":"lo"}),function(){var c=document.createElement("script"),o=document.getElementsByTagName("script")[0];c.async=!0,c.src=(document.location.protocol=="https:"?"https://sb":"http://b")+".scorecardresearch.com/beacon.js",o.parentNode.insertBefore(c,o)}();
+
+//# sourceMappingURL=comscore.ext.9bd87a.js.map

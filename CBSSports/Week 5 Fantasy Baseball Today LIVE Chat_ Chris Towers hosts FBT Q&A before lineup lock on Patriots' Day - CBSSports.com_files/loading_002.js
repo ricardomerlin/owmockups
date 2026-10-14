@@ -1,0 +1,1 @@
+define(["managers/locale"],function(n){var a={en:{loading:'<div class="loader-outer">\n  <div class="loader">\n  <div class="bar"></div>\n  <div class="bar"></div>\n  <div class="bar"></div>\n</div>\n</div>',end:"The End",error:"Error Encountered"}};return a[n.getLanguage()]});

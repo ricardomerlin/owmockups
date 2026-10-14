@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>OW Convo | Cavs Article</title>
+
+
+  <script 
+        async 
+        src="https://launcher.spot.im/spot/sp_ssaVubeJ"
+        data-post-id="wash">
+    </script>
+
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Georgia:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      background-color: #1a1a1a;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: -apple-system, 'SF Pro Text', Helvetica, Arial, sans-serif;
+    }
+
+    .app-container {
+      width: 393px;
+      height: 852px;
+      background: #000;
+      border-radius: 55px;
+      box-shadow:
+        0 0 0 12px #2c2c2c,
+        0 0 0 13px #000,
+        0 30px 60px rgba(0,0,0,0.6);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    /* iOS Status Bar */
+    .status-bar {
+      background: #000;
+      color: #fff;
+      padding: 14px 20px 6px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .status-bar .time { font-size: 15px; font-weight: 700; letter-spacing: -0.3px; }
+
+    .status-bar .icons {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Dynamic Island */
+    .dynamic-island {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 34px;
+      background: #000;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      box-shadow: 0 0 0 1px #222;
+    }
+
+    .dynamic-island .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    /* Nav Bar */
+    .nav-bar {
+      background: #000;
+      color: #fff;
+      padding: 8px 16px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      flex-shrink: 0;
+      border-bottom: 1px solid #1a1a1a;
+    }
+
+    .nav-back {
+      position: absolute;
+      left: 16px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .nav-back svg { width: 10px; height: 16px; }
+
+    .nav-title {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #c8a96e;
+      text-transform: uppercase;
+      font-family: -apple-system, 'SF Pro Display', Helvetica, sans-serif;
+    }
+
+    /* Content Area */
+    .content-area {
+      overflow-y: auto;
+      flex-grow: 1;
+      background: #000;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .content-area::-webkit-scrollbar { display: none; }
+
+    /* Hero Image */
+    .hero-image-wrap {
+      position: relative;
+      width: 100%;
+      height: 280px;
+      overflow: hidden;
+      background: #111;
+    }
+
+    .hero-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .cavs-logo-overlay {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      width: 48px;
+      height: 48px;
+      opacity: 0.85;
+    }
+
+    /* Article Body */
+    .article-body {
+      padding: 16px 16px 8px;
+      color: #fff;
+    }
+
+    .article-title {
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 8px;
+      font-family: -apple-system, 'SF Pro Display', Helvetica, sans-serif;
+    }
+
+    .article-date {
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 18px;
+    }
+
+    .article-body p {
+      font-size: 17px;
+      line-height: 1.6;
+      color: #f0f0f0;
+      margin-bottom: 18px;
+      font-family: -apple-system, 'SF Pro Text', Georgia, serif;
+    }
+
+    .article-body p sup {
+      font-size: 11px;
+      vertical-align: super;
+    }
+
+    /* Ad Banner */
+    .ad-banner {
+      margin: 0 16px 16px;
+      background: #fff;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      height: 50px;
+      flex-shrink: 0.2;
+    }
+
+    .ad-banner .ad-logo {
+      padding: 10px 14px;
+      border-right: 1px solid #e0e0e0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 140px;
+    }
+
+    .ad-banner .ad-logo img {
+      height: 22px;
+      width: auto;
+    }
+
+    .ad-banner .ad-text {
+      padding: 10px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #003087;
+      line-height: 1.3;
+    }
+
+    /* Bottom Navigation */
+    .bottom-nav {
+      background: #000;
+      border-top: 1px solid #222;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 8px 0 20px;
+      flex-shrink: 0;
+    }
+
+    .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 60px; /* forces equal spacing */
+    gap: 4px;
+    color: #888;
+    font-size: 10px;
+    cursor: pointer;
+    text-align: center;
+    }
+
+    .nav-item svg,
+.nav-item img {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.nav-item svg {
+  stroke: #888;
+  fill: none;
+}
+
+    .nav-item.active { color: #c8a96e; }
+    .nav-item.active svg { stroke: #c8a96e; }
+
+    .nav-item span {
+  display: block;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+    /* Cavs "C" SVG logo */
+    .cavs-c-icon svg {
+      width: 26px;
+      height: 26px;
+    }
+
+    @media (max-width: 768px) {
+      body { background: #000; }
+      .app-container {
+        width: 100%;
+        height: 100dvh;
+        border-radius: 0;
+        box-shadow: none;
+      }
+    }
+
+    .nav-title-img {
+  height: 33px;       /* adjust based on your image */
+  width: auto;
+  object-fit: contain;
+}
+
+.sticky-ad {
+  position: absolute;
+  bottom: 70px; /* height of bottom nav */
+  left: 0;
+  width: 100%;
+  margin: 0;
+  border-radius: 0;
+  z-index: 5;
+}
+.chat-trigger {
+  position: absolute;
+  bottom: 140px;
+  right: 16px;
+  width: 56px;
+  height: 56px;
+  background: #c8a96e;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 20;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+}
+
+/* Icon */
+.chat-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: #000;
+  fill: none;
+}
+
+.chat-count {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: #ff3b30;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 2px 6px;
+  min-width: 18px;
+  text-align: center;
+  line-height: 1;
+}
+
+/* Drawer */
+.chat-drawer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  background: #111;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+/* Active state */
+.chat-drawer.open {
+  transform: translateY(0);
+}
+
+/* Header */
+.chat-header {
+  padding: 12px 16px;
+  background: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  border-bottom: 1px solid #222;
+}
+
+/* Content */
+.chat-content {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.chat-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 25;
+}
+
+.chat-backdrop.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.cavs-gold-icon {
+  filter: brightness(0) saturate(100%) invert(78%) sepia(32%) saturate(466%) hue-rotate(7deg) brightness(95%) contrast(92%);
+}
+
+
+  </style>
+</head>
+
+<body>
+
+  <div class="app-container">
+
+    <!-- Dynamic Island -->
+    <div class="dynamic-island">
+      <div class="dot"></div>
+    </div>
+
+    <!-- Status Bar -->
+    <div class="status-bar">
+      <span class="time">4:15</span>
+      <!-- Bell with slash (muted) -->
+      <div style="position:absolute;left:50%;transform:translateX(-50%);width:120px;height:34px;"></div>
+      <div class="icons">
+        <!-- Signal bars -->
+        <svg width="18" height="14" viewBox="0 0 18 14" fill="white">
+          <rect x="0" y="8" width="3" height="6" rx="0.5"/>
+          <rect x="4.5" y="5.5" width="3" height="8.5" rx="0.5"/>
+          <rect x="9" y="3" width="3" height="11" rx="0.5"/>
+          <rect x="13.5" y="0" width="3" height="14" rx="0.5"/>
+        </svg>
+        <!-- WiFi -->
+        <svg width="16" height="12" viewBox="0 0 20 15" fill="white">
+          <path d="M10 12a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z"/>
+          <path d="M5.5 8.5C6.9 7.1 8.4 6.4 10 6.4s3.1.7 4.5 2.1l1.5-1.5C14.1 5 12.2 4 10 4S5.9 5 4 7z"/>
+          <path d="M2 5C4.3 2.7 7 1.5 10 1.5s5.7 1.2 8 3.5l1.5-1.5C17 1.2 13.7 0 10 0S3 1.2.5 3.5z"/>
+        </svg>
+        <!-- Battery -->
+        <div style="display:flex;align-items:center;gap:2px;">
+          <div style="width:28px;height:14px;border:1.5px solid #fff;border-radius:3px;padding:2px;position:relative;display:flex;align-items:center;">
+            <div style="background:#4cd964;height:100%;width:35%;border-radius:1px;"></div>
+            <span style="position:absolute;right:-5px;top:50%;transform:translateY(-50%);font-size:8px;font-weight:900;color:#fff;">+</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Nav Bar -->
+    <div class="nav-bar">
+      <div class="nav-back">
+        <svg viewBox="0 0 10 16" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="8,1 2,8 8,15"/>
+        </svg>
+        <span style="font-size:16px;">Back</span>
+      </div>
+      <div class="nav-title">
+        <img src="./images/cavstext.jpg" alt="Cleveland Cavaliers" class="nav-title-img" />
+      </div>    </div>
+
+    <!-- Content -->
+    <div class="content-area">
+
+      <!-- Hero Image -->
+      <div style="border-bottom: 4px solid rgb(188, 176, 108)">
+        <img 
+          src="./images/clevelandplayer.jpg"
+        />
+      </div>
+
+      <!-- Article Body -->
+      <div class="article-body">
+        <h1 class="article-title">Game Recap: Cavs vs Wizards</h1>
+        <div class="article-date">April 12, 2026</div>
+        <div class="chat-trigger" onclick="toggleChat()">
+            <div class="chat-icon">
+              <svg viewBox="0 0 24 24" stroke-width="2">
+                <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/>
+              </svg>
+            </div>
+            <div class="chat-count">
+              <div data-spotim-module="messages-count" data-post-id="wash"></div>
+            </div>
+          </div>
+
+        <p>*** With the Cavaliers locked in the East's 4<sup>th</sup>-seed with the postseason tipping off this weekend, Sunday's regular season finale was a chance for the young bloods to get a good run.</p>
+
+        <p>Only two rotational players saw action – Max Strus and Jaylon Tyson – and the rest of the regulars watched on as the Cavs coasted to their 52<sup>nd</sup> win of the season, taking the 130-117 decision at Rocket Arena.</p>
+
+        <p>Early on, it looked like the Wine and Gold would coast to an easy win to celebrate Fan Appreciation Night, scoring 43 points and taking a 22-point lead after one quarter. But the league-worst Wizards cut Cleveland's edge to just 10 at intermission and were within four heading into the final period. The Cavs pulled away down the stretch from there, however, closing the contest on a 14-4 run to seal the deal.</p>
+
+        <p>Of the nine Cavaliers who played on Sunday, eight of them notched double-figures, and the only one who didn't, Craig Porter Jr., went 3-of-5 from the floor, grabbed seven boards and handed out seven assists.</p>
+
+        <p>Nae'Qwan Tomlin led the way, scoring a season-high 26 points on 9-for-16 shooting, including 4-of-8 from long-range and 4-of-4 from the strip, adding eight rebounds – six off the offensive glass – to go with five assists in the win.</p>
+
+        <p>Rookie Tyrese Proctor, who erupted for 15 points in the fourth quarter on Friday night in Atlanta, closed the regular season in style – nearly notching a triple-double with a career-high 22 points, a game-high 11 rebounds and a team-high eight assists in 34 excellent minutes off the bench.</p>
+
+        <p>"I just can't believe (Proctor) was the 42<sup>nd</sup> pick," praised Coach Kenny Atkinson. "We got a steal. Our front office, our scouting is top notch. You find a kid like that. From day one in Training Camp, we said he belongs. He's just confirming that. He's got grit, toughness. He's highly skilled. Once his body catches up the rest, he's gonna be a big-time player in this league."</p>
+
+        <p>Jaylon Tyson, in just his second game back after missing the previous 10 with a toe injury, followed up with 18 points on 6-for-16 shooting, adding six boards, three assists and a steal.</p>
+
+        <p>Overall, the Cavaliers shot 54 percent from the floor and drilled 18 three-pointers – dominating Washington on the boards, 54-29, in the paint, 54-34, and on the break, 23-10.</p>
+
+        <p>Cleveland's second unit – each who tallied double-figure scoring, were a combined 22-for-37 from the floor.  Of that group, Tristan Enaruna chipped in with 15 points on 4-of-6 shooting, including 2-of-3 from deep, Riley Minix finished with 12 points, going 5-of-9 from the floor and Olivier Sarr added 10 points on 4-of-6 shooting. Minix and Enaruna both recorded career-highs in the season-ending victory.</p>
+
+        <p>For the Wizards – who haven't won more than 18 games in any of the previous three seasons – Jamir Watkins led the way with 24 points, going 7-for-13 from the floor, including 5-of-9 from long-range. Former Cavalier, Sharife Cooper, led Washington's second unit with 20 points in 28 minutes of work off the bench.</p>
+
+        <p>*** With the Raptors topping the Nets and the Hawks falling to the Heat on Sunday, the Cavaliers will now face Toronto in the First Round of the playoffs, with the schedule still to be determined. Cleveland didn't fare well against the Raptors this season, although they haven't faced them since late November. In the three early-season meetings, Toronto took all three – including two at Rocket Arena – by double-digit margins.</p>
+
+      </div>
+
+
+    </div>
+      <!-- Ad Banner -->
+      <div class="ad-banner">
+        <div class="ad-logo">
+          <!-- Cleveland Clinic logo approximation -->
+          <svg width="20" height="20" viewBox="0 0 40 40" fill="none">
+            <rect width="40" height="40" rx="4" fill="#003087"/>
+            <rect x="8" y="8" width="8" height="24" fill="white"/>
+            <rect x="24" y="8" width="8" height="24" fill="white"/>
+            <rect x="8" y="17" width="24" height="6" fill="white"/>
+          </svg>
+          <span style="font-size:13px;font-weight:700;color:#003087;line-height:1.2;">Cleveland<br>Clinic</span>
+        </div>
+        <div class="ad-text">See How We're Creating<br>Healthier Communities</div>
+      </div>
+
+      <div id="chatBackdrop" class="chat-backdrop" onclick="toggleChat()"></div>
+
+      <div id="chatDrawer" class="chat-drawer">
+      
+        <div class="chat-content" style="padding: 10px; ">
+          <div data-spotim-module="conversation" data-theme="dark" data-messages-count="4"></div>
+        </div>
+      </div>
+
+
+    <!-- Bottom Navigation -->
+    <div class="bottom-nav">
+      <!-- Home (Cavs C icon) -->
+      <div class="nav-item active cavs-c-icon">
+        <img src="./images/cleveland.png" class="w-7 h-7 cavs-gold-icon" />
+        <span>Home</span>
+      </div>
+
+      <!-- Rewards (trophy/ribbon icon) -->
+      <div class="nav-item">
+        <svg viewBox="0 0 24 24" stroke-width="1.5">
+          <circle cx="12" cy="8" r="5"/>
+          <path d="M7 8H4a1 1 0 0 0-1 1 4 4 0 0 0 4 4"/>
+          <path d="M17 8h3a1 1 0 0 1 1 1 4 4 0 0 1-4 4"/>
+          <path d="M12 13v4M9 21h6M10 17h4"/>
+        </svg>
+        <span>Rewards</span>
+      </div>
+
+      <!-- Team (basketball) -->
+      <div class="nav-item">
+        <svg viewBox="0 0 24 24" stroke-width="1.5">
+          <circle cx="12" cy="12" r="9"/>
+          <path d="M12 3a12.5 12.5 0 0 1 0 18M12 3a12.5 12.5 0 0 0 0 18M3 12h18"/>
+        </svg>
+        <span>Team</span>
+      </div>
+
+      <!-- Schedule (calendar) -->
+      <div class="nav-item">
+        <svg viewBox="0 0 24 24" stroke-width="1.5">
+          <rect x="3" y="4" width="18" height="18" rx="2"/>
+          <path d="M3 9h18M8 2v4M16 2v4"/>
+          <rect x="7" y="13" width="2" height="2" fill="#888" stroke="none"/>
+          <rect x="11" y="13" width="2" height="2" fill="#888" stroke="none"/>
+          <rect x="15" y="13" width="2" height="2" fill="#888" stroke="none"/>
+          <rect x="7" y="17" width="2" height="2" fill="#888" stroke="none"/>
+          <rect x="11" y="17" width="2" height="2" fill="#888" stroke="none"/>
+        </svg>
+        <span>Schedule</span>
+      </div>
+
+      <!-- More (hamburger) -->
+      <div class="nav-item">
+        <svg viewBox="0 0 24 24" stroke-width="1.5">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+        <span>More</span>
+      </div>
+    </div>
+
+  </div>
+
+<script>
+    function toggleChat() {
+    const drawer = document.getElementById('chatDrawer');
+    const backdrop = document.getElementById('chatBackdrop');
+
+    drawer.classList.toggle('open');
+    backdrop.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

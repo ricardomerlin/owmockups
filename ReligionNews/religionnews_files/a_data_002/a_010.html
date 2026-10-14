@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script>
+		function loadSyncPixel(pixelUrl){
+			var avImgSync = document.createElement('img');
+			avImgSync.width = "1";
+			avImgSync.height = "1";
+			avImgSync.style.width = "0px";
+			avImgSync.style.height = "0px";
+			avImgSync.style.cssFloat = "left";
+			avImgSync.src = pixelUrl;
+			document.body.appendChild(avImgSync);	
+		}
+		
+		function loadSyncScript(pixelUrl){
+			var raSrcSync = document.createElement("script");
+			raSrcSync.src = pixelUrl;
+			raSrcSync.type = "text/javascript";
+			document.body.appendChild(raSrcSync);		
+		}
+		
+		function loadSyncIframe(pixelUrl){
+			var raIfSync = document.createElement("iframe");
+			raIfSync.src = pixelUrl;
+			raIfSync.setAttribute('frameborder','0');
+			raIfSync.setAttribute('scrolling','no');
+			raIfSync.setAttribute('width','0');
+			raIfSync.setAttribute('height','0');
+			document.body.appendChild(raIfSync);		
+		}	
+		</script>
+		</head>
+		<body>
+		<script>
+			var raAdfSync = document.createElement('script'); raAdfSync.src = 'https://track.adform.net/Serving/Cookie/?adfaction=getjs;adfcookname=uid'; raAdfSync.type = 'text/javascript'; document.body.appendChild(raAdfSync); raAdfSync.onload = function() { loadSyncPixel('https://sync.richaudience.com/502e2341fac2c140295d7b3b0c915c8c/?gdpr=0&gdpr_consent=%7Bgdpr_consent%7D&uid='+window.Adform._uid) };
+			
+			loadSyncIframe('https://ads.pubmatic.com/AdServer/js/user_sync.html?p=156538&gdpr=0&gdpr_consent=%7Bgdpr_consent%7D&predirect=https%3A%2F%2Fsync.richaudience.com%2Fa8c1b6a2754b510b088f624c91944bf3%2F%3Fgdpr%3D0%26euconsent%3D%7Bgdpr_consent%7D%26uid%3D');
+
+			loadSyncPixel('https://match.sharethrough.com/universal/v1?supply_id=mmnOOyXZ&gdpr=0&gdpr_consent=%7Bgdpr_consent%7D');
+
+			loadSyncIframe('https://onetag-sys.com/usync/?pubId=7a4244b2979db22&gdpr=0&gdpr_consent=%7Bgdpr_consent%7D');
+
+			loadSyncPixel('https://sync.adtelligent.com/csync?t=g&ep=108&traffic_source=snippet&sp=852559&pb=753264&c=794620&a=757195&domain=https://religionnews.com/2026/01/13/in-pittsburgh-interfaith-efforts-have-blossomed-amid-concerns-about-ice/&extuid=4755990a-b3ff-4a3a-adcf-1zz1768405064');
+
+		</script><script src="a_data_010/Untitled.js" type="text/javascript"></script><iframe src="a_data_010/user_sync.html" frameborder="0" scrolling="no" width="0" height="0"></iframe><img width="1" height="1" style="width: 0px; height: 0px; float: left;" src="a_data_010/Untitled_002.png"><iframe src="a_data_010/a.html" frameborder="0" scrolling="no" width="0" height="0"></iframe><img width="1" height="1" style="width: 0px; height: 0px; float: left;" src="a_data_010/csync.gif">
+	<img width="1" height="1" style="width: 0px; height: 0px; float: left;" src="a_data_010/Untitled.png"></body></html>

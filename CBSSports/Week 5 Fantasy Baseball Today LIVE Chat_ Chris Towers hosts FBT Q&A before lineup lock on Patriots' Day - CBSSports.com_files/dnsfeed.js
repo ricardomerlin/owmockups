@@ -1,0 +1,1 @@
+dnsfeed({"country":"US","state":"NY","stateName":"New York","continent":"NA"})

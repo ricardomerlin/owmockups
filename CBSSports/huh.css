@@ -1,0 +1,11 @@
+.Article-railContent {
+    position: fixed;
+    right: 10vw;
+  }
+  
+  @media (max-width: 768px) {
+    .Article-railContent {
+      right: 10vw;
+    }
+  }
+  

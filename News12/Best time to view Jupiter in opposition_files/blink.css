@@ -1,0 +1,52 @@
+.blink {
+  -webkit-animation: 2s blinker ease infinite;
+  -moz-animation: 2s blinker ease infinite;
+  -ms-animation: 2s blinker ease infinite;
+  -o-animation: 2s blinker ease infinite;
+  animation: 2s blinker ease infinite;
+}
+
+@keyframes blinker {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes blinker {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes blinker {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes blinker {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes blinker {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}

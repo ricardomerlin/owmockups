@@ -1,0 +1,1 @@
+__sasCookie({"_cookies_":[{"_value_":"ID=25bc8b20aa4f18de:T=1747316707:RT=1747316707:S=ALNI_MYHFcUdq-MXME94Qx5X56A-LiyLmg","_expires_":1781012707,"_path_":"/","_domain_":"ynet.co.il","_version_":1},{"_value_":"UID=00000f17f4aba045:T=1747316707:RT=1747316707:S=ALNI_MYzhy-EWMbMZccGAmonvOlWY8Pg8w","_expires_":1781012707,"_path_":"/","_domain_":"ynet.co.il","_version_":2}]});

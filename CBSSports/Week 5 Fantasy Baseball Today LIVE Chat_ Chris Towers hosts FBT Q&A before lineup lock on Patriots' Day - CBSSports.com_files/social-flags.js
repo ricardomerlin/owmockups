@@ -1,0 +1,1 @@
+define([],function(){return{enabled:{facebook:true,google:true,twitter:true}}});

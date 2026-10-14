@@ -1,0 +1,53 @@
+
+<!-- saved from url=(1910)https://ch-match.taboola.com/sync?dast=V9uKYCABYDALwculOYEan2BAC8HLpTmBGp9gUAAAAABgYA9AcAJDhzLmzO2Wot8bhWa9HKOXMLZ4vhWrBY-BaWlWXhmayMAECCM-fC5pyt1hKPa7UWrZwzt3C2GK4Fi4VvYVlZFp7JygoAJsZymQxqgYzlMhnUAgnL7PcdFJbT02N2GURH19tidzjNnjcAGKHpdPhc93qN3253eUxPj-t0l7t8n8dkrvG7_RKX5_QWPd0ut-jvlj1dvrfUdXiaXpa30u7WGw5_z9P09NvtAAAAAADwAPD___8PAQAAAAAQAQAAAAAgAQAAAABAARBQAfBvASBwAQAAAACAAfD___-vAQAwvgEg4MxyACC4y3dQ_i1ffwAAAAAAgAAAAAAAkAAAFIzelwAAdNDfnwD8_________8cADNBn3sgA_P___98ALPQAADz4AAA8CAEAAABcDAH0peGfGBXM8xABAAj8ShYBMAIAAAAAAAAAADgCmATQCQAVgEUVwP__f78VAMAVAABAwCRrylNyFoDuoMRbGAAAAECAGACtGcetrGuh2BjAAj0sfr_ZYdf43S4D-P________83A_g_A_hHAxASCUdKAxCerB9WA_gFBABYA_gFBABgA1A3AACAN4AAOICQAzBC0-nwue71Gr_d7vKYnh7X6S53-T6PyVzjd_slLs_pLXq6XW7R3y17unxvqevwNL0sb6XdrTcc_p6n6em3mw6AoBWDweoAAmJ2AAAAAAB3AP____94ALRmHLeyroViegAgufJYZsPNaGWzLSam0cawmk2MC9vEMli4ZraJYXsAZpF1FUp_aV19ACjGcpkMaoGEZfb7DgrL6ekxuwyio-ttsTucZs9BfNAwLCeDYH4AE7YYrSaTzXI4Wy4mg-FoOBrtD2AgNosBAkzQcDhY7AaL3WIxnCwmo8FysEAAgRhMEICiRYPJajSaLCbD1Wiymi0Xu90GAShatZqNNoPhajaZ7Xar4WC4HI0QYMIWo9VkslkOZ8vFZDAcDUejIQLA3HIwnHlWG7fCszCtRavlwi2cWTZr1Wa2GC42poVxsFiLXh_Ty7HwjTaTLQIIBiDtRfK0SCey4cqx2thci-XIMXEtR5aVbeOZ7Ga-kWvkW408E7FEc7JIJ7LLvrnyWGbDzWhlsy0mptHGsJpNjAvbxDJYuGa2iWHfWw6GM89q41Z4Fqa1aLVcuIUzy2at2swWw8XGtDAOFmvR62N6ORa-0Wayb-w2m91qOFyu9o3dZrObDSaD4b5DZ_iuPmej6qdReWymx_Dy0dZMB4vLYPNOixZp63D0GXVe20SYWpt2jolVaJV4DQrPb2Hu_bZTn-lnXQt_F8Xj4DEYjAZFLBFcpBON0WUyOSxvucv3eUzWGr_d7vKYnh7X6SKWKE0X6UQvcXlOb9HT7XKL_m7Z0-V7S12Hp-lleSvtbr3h8Pc8TU-_3SKWCE4X6UT0Mp4u6j8CnMhssJnuBoPBdDMzDKajjW1jHZmMw-lwMVxOV4uVczobGTarBAAAAAAAAAAAsASwCQAAAADACWAws-VstVonwEEsZ5vJarVcAAAJOEZdgB_4D9Xr_TmrYwCNMbpMJoflLXf5Po_JWuO3210e09PjOl0ZACAifJoZYDPAZwCCmNOZtQYAAAAYwAYAAAAI4AbYDcAbQMCZHQf4___3pwcAAACg3wcAIuqEG71W6OEHKIjhaDDZPwCAAIWY05ntdmNOZzYgQKB2EwgAAAioJwgAAAAAAAA4Ei8IAAAAAAAAoHpHCBDYdhMCKAQYDNHyd7u8EJAhAAAAAAAAgGrcIUAHqC4OHMxN8CEAACBgkjXFCQk!&excid=22&docw=0&cijs=1&nlb=false -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><script>
+    const partners = [{url: '<img width="0" height="0" src="https://ups.analytics.yahoo.com/ups/58785/sync?redir=true&gdpr=0&us_privacy=1NNY"></img>'},
+{url: '<img width="0" height="0" src="https://event.clientgear.com/cookie/taboola?partner=taboola"></img>'},
+{url: '<img width="0" height="0" src="https://sync.bfmio.com/syncb?gdpr=0&pid=170&us_privacy=1NNY"></img>'},
+{url: '<script type="text/javascript" src="https://sync.inmobi.com/oRTB?redirect=http%3A%2F%2Ftrc.taboola.com%2Fsg%2Finmobirtb-network%2F1%2Frtb-h%2F%3Ftaboola_hm%3D%7BID5UID%7D&gdpr_consent=&gdpr=gdpr=0&"></scr' + 'ipt>'}];
+
+    const MAX_SIMUL = 3 || 1;
+    const WAIT_MS = 5000;
+
+    window.onload = () => {
+        setTimeout(() => run(0), 0);
+    };
+
+    function run(current) {
+        const remaining = partners.length - current;
+        const fragment = new DocumentFragment();
+        for (let i = 0; i < MAX_SIMUL && i < remaining; ++i) {
+            const partner = partners[current + i];
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = partner.url.trim();
+            const element = tempDiv.firstChild;
+            fragment.appendChild(element);
+        }
+
+        document.body.appendChild(fragment);
+
+        if (MAX_SIMUL < remaining) {
+            setTimeout(run.bind(this, current + MAX_SIMUL), WAIT_MS);
+        }
+    }
+</script></head><body data-new-gr-c-s-check-loaded="14.1211.0" data-gr-ext-installed=""><img width="0" height="0" src="./sync"><img width="0" height="0" src="./taboola"><img width="0" height="0" src="./syncb"><script type="text/javascript" src="./oRTB"></script></body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>

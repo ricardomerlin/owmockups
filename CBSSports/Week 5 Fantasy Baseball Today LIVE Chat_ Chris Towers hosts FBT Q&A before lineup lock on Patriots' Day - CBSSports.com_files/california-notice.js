@@ -1,0 +1,1 @@
+define(["jquery","utils/cookie"],function(r,t){r.widget("sports.californiaNotice",r.fly.base,{_create:function i(){this._setup();var e=t.read("fly_geo");if(e){var o=JSON.parse(e);if(o){var a=o.countryCode;if(a!=="us"){r("#california-notice-link").hide()}}}}})});

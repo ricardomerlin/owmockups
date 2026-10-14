@@ -1,0 +1,6 @@
+/* Pogo */
+div[data-pogo] { display: grid; align-content: center; justify-content: center; }
+div[data-pogo] iframe { margin-left: auto; margin-right: auto; }
+
+@media (min-width: 1024px) {
+}

@@ -1,0 +1,1 @@
+window.mnjs.contextual.contextualcallback({"status":"OK","code":200,"notify_object":{"nid":"6tMB10o_55cx","ttl":120},"data":{"category":{"taxo":"IAB-2.0","ids":[640],"name":"Television"},"segments":[{"key":"iab_television"}],"bsst":"safe","brand-safety":{"status":1000,"values":[],"isBrandSafe":true}}});

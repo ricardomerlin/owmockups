@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>OW Convo | Cavs Article</title>
+
+
+  <script 
+        async 
+        src="https://launcher.spot.im/spot/sp_ssaVubeJ"
+        data-post-id="Tomlin">
+    </script>
+
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Georgia:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      background-color: #1a1a1a;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: -apple-system, 'SF Pro Text', Helvetica, Arial, sans-serif;
+    }
+
+    .app-container {
+      width: 393px;
+      height: 852px;
+      background: #000;
+      border-radius: 55px;
+      box-shadow:
+        0 0 0 12px #2c2c2c,
+        0 0 0 13px #000,
+        0 30px 60px rgba(0,0,0,0.6);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    /* iOS Status Bar */
+    .status-bar {
+      background: #000;
+      color: #fff;
+      padding: 14px 20px 6px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .status-bar .time { font-size: 15px; font-weight: 700; letter-spacing: -0.3px; }
+
+    .status-bar .icons {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Dynamic Island */
+    .dynamic-island {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 34px;
+      background: #000;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      box-shadow: 0 0 0 1px #222;
+    }
+
+    .dynamic-island .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    /* Nav Bar */
+    .nav-bar {
+      background: #000;
+      color: #fff;
+      padding: 8px 16px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      flex-shrink: 0;
+      border-bottom: 1px solid #1a1a1a;
+    }
+
+    .nav-back {
+      position: absolute;
+      left: 16px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .nav-back svg { width: 10px; height: 16px; }
+
+    .nav-title {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #c8a96e;
+      text-transform: uppercase;
+      font-family: -apple-system, 'SF Pro Display', Helvetica, sans-serif;
+    }
+
+    /* Content Area */
+    .content-area {
+      overflow-y: auto;
+      flex-grow: 1;
+      background: #000;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .content-area::-webkit-scrollbar { display: none; }
+
+    /* Hero Image */
+    .hero-image-wrap {
+      position: relative;
+      width: 100%;
+      height: 280px;
+      overflow: hidden;
+      background: #111;
+    }
+
+    .hero-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .cavs-logo-overlay {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      width: 48px;
+      height: 48px;
+      opacity: 0.85;
+    }
+
+    /* Article Body */
+    .article-body {
+      padding: 16px 16px 8px;
+      color: #fff;
+    }
+
+    .article-title {
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 4px;
+      font-family: -apple-system, 'SF Pro Display', Helvetica, sans-serif;
+    }
+
+    .article-date {
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 10px;
+    }
+
+    .article-body p {
+      font-size: 17px;
+      line-height: 1.6;
+      color: #f0f0f0;
+      margin-bottom: 18px;
+      font-family: -apple-system, 'SF Pro Text', Georgia, serif;
+    }
+
+    .article-body p sup {
+      font-size: 11px;
+      vertical-align: super;
+    }
+
+    /* Ad Banner */
+    .ad-banner {
+      margin: 0 16px 16px;
+      background: #fff;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      height: 50px;
+      flex-shrink: 0.2;
+    }
+
+    .ad-banner .ad-logo {
+      padding: 10px 14px;
+      border-right: 1px solid #e0e0e0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 140px;
+    }
+
+    .ad-banner .ad-logo img {
+      height: 22px;
+      width: auto;
+    }
+
+    .ad-banner .ad-text {
+      padding: 10px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #003087;
+      line-height: 1.3;
+    }
+
+    /* Bottom Navigation */
+    .bottom-nav {
+      background: #000;
+      border-top: 1px solid #222;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 8px 0 20px;
+      flex-shrink: 0;
+    }
+
+    .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 60px; /* forces equal spacing */
+    gap: 4px;
+    color: #888;
+    font-size: 10px;
+    cursor: pointer;
+    text-align: center;
+    }
+
+    .chat-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: #000;
+  fill: none;
+}
+
+    .nav-item svg,
+.nav-item img {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.nav-item svg {
+  stroke: #888;
+  fill: none;
+}
+
+    .nav-item.active { color: #c8a96e; }
+    .nav-item.active svg { stroke: #c8a96e; }
+
+    .nav-item span {
+  display: block;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+    /* Cavs "C" SVG logo */
+    .cavs-c-icon svg {
+      width: 26px;
+      height: 26px;
+    }
+
+    @media (max-width: 768px) {
+      body { background: #000; }
+      .app-container {
+        width: 100%;
+        height: 100dvh;
+        border-radius: 0;
+        box-shadow: none;
+      }
+    }
+
+    .nav-title-img {
+  height: 33px;       /* adjust based on your image */
+  width: auto;
+  object-fit: contain;
+}
+
+.sticky-ad {
+  position: absolute;
+  bottom: 70px; /* height of bottom nav */
+  left: 0;
+  width: 100%;
+  margin: 0;
+  border-radius: 0;
+  z-index: 5;
+}
+.chat-trigger {
+  position: absolute;
+  bottom: 140px;
+  right: 16px;
+  width: 56px;
+  height: 56px;
+  background: #c8a96e;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 20;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+}
+
+/* Icon */
+.chat-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: #000;
+  fill: none;
+}
+
+.chat-count {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 2px 6px;
+  min-width: 18px;
+  text-align: center;
+  line-height: 1;
+}
+
+
+/* Header */
+.chat-header {
+  padding: 12px 16px;
+  background: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  border-bottom: 1px solid #222;
+}
+
+/* Content */
+.chat-content {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.inline-comments-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+
+  margin: -5px 0 18px;
+  padding: 1px 5px;
+
+  background: #c8a96e;
+  border: 1px solid #222;
+  border-radius: 999px;
+
+  cursor: pointer;
+}
+
+.inline-comments-trigger:active {
+  transform: scale(0.97);
+  background: rgba(255,255,255,0.08);
+}
+
+.inline-comments-trigger span {
+  font-size: 13px;
+  font-weight: 600;
+  color: #c8a96e;
+}
+
+.comment-count {
+  color: #000000;
+
+  /* font-size: 15px; */
+  font-weight: 700;
+
+  border-radius: 999px;
+  padding: 2px 6px;
+  min-width: 16px;
+  text-align: center;
+}
+
+
+.comments-section {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #222;
+}
+
+.comments-header {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.comments-container {
+  background: #111;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.cavs-gold-icon {
+  filter: brightness(0) saturate(100%) invert(78%) sepia(32%) saturate(466%) hue-rotate(7deg) brightness(95%) contrast(92%);
+}
+
+  </style>
+</head>
+
+<body>
+
+  <div class="app-container">
+
+    <!-- Dynamic Island -->
+    <div class="dynamic-island">
+      <div class="dot"></div>
+    </div>
+
+    <!-- Status Bar -->
+    <div class="status-bar">
+      <span class="time">4:15</span>
+      <!-- Bell with slash (muted) -->
+      <div style="position:absolute;left:50%;transform:translateX(-50%);width:120px;height:34px;"></div>
+      <div class="icons">
+        <!-- Signal bars -->
+        <svg width="18" height="14" viewBox="0 0 18 14" fill="white">
+          <rect x="0" y="8" width="3" height="6" rx="0.5"/>
+          <rect x="4.5" y="5.5" width="3" height="8.5" rx="0.5"/>
+          <rect x="9" y="3" width="3" height="11" rx="0.5"/>
+          <rect x="13.5" y="0" width="3" height="14" rx="0.5"/>
+        </svg>
+        <!-- WiFi -->
+        <svg width="16" height="12" viewBox="0 0 20 15" fill="white">
+          <path d="M10 12a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z"/>
+          <path d="M5.5 8.5C6.9 7.1 8.4 6.4 10 6.4s3.1.7 4.5 2.1l1.5-1.5C14.1 5 12.2 4 10 4S5.9 5 4 7z"/>
+          <path d="M2 5C4.3 2.7 7 1.5 10 1.5s5.7 1.2 8 3.5l1.5-1.5C17 1.2 13.7 0 10 0S3 1.2.5 3.5z"/>
+        </svg>
+        <!-- Battery -->
+        <div style="display:flex;align-items:center;gap:2px;">
+          <div style="width:28px;height:14px;border:1.5px solid #fff;border-radius:3px;padding:2px;position:relative;display:flex;align-items:center;">
+            <div style="background:#4cd964;height:100%;width:35%;border-radius:1px;"></div>
+            <span style="position:absolute;right:-5px;top:50%;transform:translateY(-50%);font-size:8px;font-weight:900;color:#fff;">+</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Nav Bar -->
+    <div class="nav-bar">
+      <div class="nav-back">
+        <svg viewBox="0 0 10 16" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="8,1 2,8 8,15"/>
+        </svg>
+        <span style="font-size:16px;">Back</span>
+      </div>
+      <div class="nav-title">
+        <img src="./images/cavstext.jpg" alt="Cleveland Cavaliers" class="nav-title-img" />
+      </div>    </div>
+
+    <!-- Content -->
+    <div class="content-area">
+
+      <!-- Hero Image -->
+      <div style="border-bottom: 4px solid rgb(188, 176, 108)">
+        <img 
+          src="./images/player.jpg"
+        />
+      </div>
+
+      <!-- Article Body -->
+      <div class="article-body">
+        <h1 class="article-title">Nae'Qwan Tomlin Doesn't Shy Away from the Moment</h1>
+        <div class="article-date">April 9, 2026</div>
+        <div class="inline-comments-trigger" onclick="scrollToComments()">
+            <div class="chat-icon">
+                <svg viewBox="0 0 24 24" stroke-width="2">
+                  <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/>
+                </svg>
+              </div>
+            <div class="comment-count">
+              <div data-spotim-module="messages-count" data-post-id="Tomlin"></div>
+            </div>
+          </div>
+
+          <p>Over the weekend, the 2025-26 regular season comes to a close and, for guys like Nae'Qwan Tomlin, the minutes are going to start getting scarcer. But those scarce minutes might just be infinitely more important.</p>
+
+          <p>Rotations get tightened-up once the postseason rolls around, and even on a Cavaliers squad that boasts bigtime depth, Kenny Atkinson is going to be more deliberate with who sees action when push comes to shove.</p>
+          
+          <p>But in a season that's seen 39 different starting lineups (as opposed to 23 last year), with players missing a total of 280 games due to injury, illness or personal reasons, guys like Nae'Qwan helped the Cavaliers win 50-plus games and secure home court in the First Round of the Eastern Conference playoffs.</p>
+          
+          <p>And here's the thing about guys like Tomlin and the playoffs: If the Cavs can string together a long run deep into the spring, <strong><em>at some point</em></strong> a guy like him is going to have a moment or two that got them there.</p>
+          
+          <p>"We're feeling good," said Tomlin, who's appeared in 62 games as a sophomore after just five late last season. "I feel like we have a little bit of momentum going in. We're really just locking in on all the key details and focused on making a run in the playoffs."</p>
+          
+          <p>Cleveland got a taste of the postseason in Wednesday's win over the Hawks, a back-and-forth battle with a rematch slated for Friday night in Atlanta, the campaign's penultimate game.</p>
+          
+          <p>Tomlin didn't see action in Wednesday's playoff-intense contest, but he's had a strong second season with numbers up almost all the across the board, parlaying a 10-day deal late last year and becoming part of the rotation during a difficult season.</p>
+          
+          <p>After playing 15 games with the Charge last year, the Brooklyn native made his pro debut in his hometown late last February and made his bones during the dog days of his sophomore season.</p>
+          
+          <p>"I definitely think it was when I was on my second two-way and I started getting minutes, around, like, December, January kind of vibe," said Tomlin. "And in those times, I feel like that's when I was getting it going and just being free and just playing hard, making plays – winning plays."</p>
+          
+          <p>It was around one year ago that Tomlin showed that he doesn't shy away from an opportunity in last season's Fan Appreciation Night at Rocket Arena – going off for a career-high 24 points and 12 rebounds in a double-overtime loss to the Pacers.</p>
+          
+          <p>"I feel like that's always been my thing, even from college, just going out there and playing hard, being that spark, whether it's off the bench or if I'm starting," said the 25-year-old who didn't even play high school hoops. "I want them to know: if Nae'Qwan's playing, Nae'Qwan's playing hard."</p>
+          
+          <p>After seven straight DNP-CDs to start this season, he appeared in 20 straight games before he got his next one. Over that stretch, he scored a season-high 18 points against Toronto in mid-November, and he finished with nine double-digit scoring games overall.</p>
+          
+          <p>Tomlin's a true NBA success story, making the steady climb through the system, playing for two schools, going undrafted, taking advantage of a 10-day deal last February, a two-way deal in March and turning into all into a pro deal on February 11, 2026 – celebrating with eight points, five board and a pair of steals in a win over the Wizards.</p>
+          
+          <p>"I can't take this for granted – all the hard work, being in the G-League, not playing at first," said the 6-10, 210-pound forward. "And then getting my opportunity and making the most out of my opportunity, getting a 10-day and playing well within those 10 days that I got limited minutes. Then I got the two-way and then going into Summer League, I had a really good Summer League. And so I feel like just all those steps were just making the most out of my opportunities – and not taking them for granted."</p>
+          
+          <p>In Vegas, Tomlin led the Cavs in both scoring (20.3ppg) and rebounding (8.5rpg) in Vegas, including a 30-point effort in a win over the Pacers. And afterward, he stayed in Cleveland for the summer.</p>
+          
+          <p>Tomlin knows that as solid as he's been this year, playoff minutes are going to be harder to come by.</p>
+          
+          <p>"I'm not necessarily sure I earned playoff minutes," smiled Tomlin. "Me personally, I would hope so, you know, with my ability to play defense and crash offensive glass. But everything (right now) is just a learning process for me, and I just hope to just learn from these guys, you know, these vets."</p>
+          
+          <p>Like his teammates, Tomlin has praised the impact James Harden has had on the team. "He's meant a lot. His ability to just come on the team and be a leader right away. It says a lot, especially, you know, for a guy that's been in the league for 17 years. I mean, that's OG."</p>
+          
+          <p>Along his basketball journey, Tomlin got some great advice for a true OG – the Iceman himself, George Gervin.</p>
+          
+          <p>After getting noticed playing in a prep tournament at Rucker Park, Torrell Harris –father of Tobias Harris – helped Tomlin get into a prep school in San Antonio called the Strength in Motional International.</p>
+          
+          <p>"This was George Gervin's team, basically," explained Tomlin. "So, I went from New York to San Antonio. I went there for my prep year, my post-grad year. We worked out at George Griffin Academy. And he was around the team a lot. So, I got to speak to him and, you know, Ice, that's my guy."</p>
+          
+          <p>So, did George Gervin teach him anything about that famous finger-roll?</p>
+          
+          <p>"A little finger-roll?" scoffed Nae'Qwan. "You know coming over here from New York, you know we already got that little bit, for sure."</p>
+          
+          <p>After getting the seal of approval from the Iceman, it's no wonder Nae'Qwan's been on a blessed basketball career. "He definitely saw the potential in me. And so, he's always just telling me, you know, like: You got the talent. Now you just gotta work."</p>
+
+
+          <div class="comments-section">
+          
+              <div data-spotim-module="conversation" data-theme="dark" style="margin-top: -30px;" data-messages-count="4"></div>
+          </div>
+
+      </div>
+
+
+    </div>
+      <!-- Ad Banner -->
+      <div class="ad-banner">
+        <div class="ad-logo">
+          <!-- Cleveland Clinic logo approximation -->
+          <svg width="20" height="20" viewBox="0 0 40 40" fill="none">
+            <rect width="40" height="40" rx="4" fill="#003087"/>
+            <rect x="8" y="8" width="8" height="24" fill="white"/>
+            <rect x="24" y="8" width="8" height="24" fill="white"/>
+            <rect x="8" y="17" width="24" height="6" fill="white"/>
+          </svg>
+          <span style="font-size:13px;font-weight:700;color:#003087;line-height:1.2;">Cleveland<br>Clinic</span>
+        </div>
+        <div class="ad-text">See How We're Creating<br>Healthier Communities</div>
+      </div>
+
+
+    <!-- Bottom Navigation -->
+    <div class="bottom-nav">
+      <!-- Home (Cavs C icon) -->
+      <div class="nav-item active cavs-c-icon">
+        <img src="./images/cleveland.png" class="w-7 h-7 cavs-gold-icon" />
+        <span>Home</span>
+      </div>
+
+      <!-- Rewards (trophy/ribbon icon) -->
+      <div class="nav-item">
+        <svg viewBox="0 0 24 24" stroke-width="1.5">
+          <circle cx="12" cy="8" r="5"/>
+          <path d="M7 8H4a1 1 0 0 0-1 1 4 4 0 0 0 4 4"/>
+          <path d="M17 8h3a1 1 0 0 1 1 1 4 4 0 0 1-4 4"/>
+          <path d="M12 13v4M9 21h6M10 17h4"/>
+        </svg>
+        <span>Rewards</span>
+      </div>
+
+      <!-- Team (basketball) -->
+      <div class="nav-item">
+        <svg viewBox="0 0 24 24" stroke-width="1.5">
+          <circle cx="12" cy="12" r="9"/>
+          <path d="M12 3a12.5 12.5 0 0 1 0 18M12 3a12.5 12.5 0 0 0 0 18M3 12h18"/>
+        </svg>
+        <span>Team</span>
+      </div>
+
+      <!-- Schedule (calendar) -->
+      <div class="nav-item">
+        <svg viewBox="0 0 24 24" stroke-width="1.5">
+          <rect x="3" y="4" width="18" height="18" rx="2"/>
+          <path d="M3 9h18M8 2v4M16 2v4"/>
+          <rect x="7" y="13" width="2" height="2" fill="#888" stroke="none"/>
+          <rect x="11" y="13" width="2" height="2" fill="#888" stroke="none"/>
+          <rect x="15" y="13" width="2" height="2" fill="#888" stroke="none"/>
+          <rect x="7" y="17" width="2" height="2" fill="#888" stroke="none"/>
+          <rect x="11" y="17" width="2" height="2" fill="#888" stroke="none"/>
+        </svg>
+        <span>Schedule</span>
+      </div>
+
+      <!-- More (hamburger) -->
+      <div class="nav-item">
+        <svg viewBox="0 0 24 24" stroke-width="1.5">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+        <span>More</span>
+      </div>
+    </div>
+
+  </div>
+
+<script>
+function scrollToComments() {
+  document.querySelector('.comments-section').scrollIntoView({
+    behavior: 'smooth'
+  });
+}
+  </script>
+
+<script>
+  (function () {
+    'use strict';
+  
+    // ==== EDIT THESE ====
+    var AD_IMAGES = [
+      'https://www.spotim.name/ricardo/cavs/images/healthessentials.jpeg',
+      'https://www.spotim.name/ricardo/cavs/images/seatgeek.jpeg'
+    ];
+    var AD_CLICK_URL = '';        // optional — leave blank for a non-clickable image
+    var EVERY_N_COMMENTS = 3;     // insert after every Nth comment
+    var MAX_WIDTH = 728;          // caps the creative's width; height follows each image's own ratio
+    // =====================
+  
+    var ADCHOICES_ICON_SRC = 'https://www.spotim.name/ricardo/financialtimes/ad-choices.png';
+  
+    // Guards against the script accidentally being included twice on the same page.
+    if (window.__owInConvoAdsInit) return;
+    window.__owInConvoAdsInit = true;
+  
+    var MARK_ATTR = 'data-ow-incovo-ad';
+  
+    // Random — each ad slot picks any creative from AD_IMAGES independently, so the same image
+    // can land in back-to-back slots. The pick happens once per slot (MARK_ATTR stops a slot from
+    // being rebuilt), so an ad never swaps images while the reader is looking at it.
+    function pickAdImageForSlot() {
+      return AD_IMAGES[Math.floor(Math.random() * AD_IMAGES.length)];
+    }
+  
+    // The real comment items (.spcv_list-item) render inside the OpenWeb widget's own OPEN
+    // shadow root, so a plain document.querySelectorAll() never sees them — this walks into
+    // every open shadow root it finds, recursively, the same way the widget's own internals do.
+    function deepQueryAll(root, selector) {
+      var found = [];
+      (function walk(node) {
+        if (!node || !node.querySelectorAll) return;
+        node.querySelectorAll(selector).forEach(function (el) { found.push(el); });
+        node.querySelectorAll('*').forEach(function (el) {
+          if (el.shadowRoot) walk(el.shadowRoot);
+        });
+      })(root);
+      return found;
+    }
+  
+    // Every style is set inline with `all:initial` first — this unit can land inside the
+    // widget's own shadow root, which never inherits the host page's <style> tags. No fixed
+    // width/height on the <img> itself since the two source images are different aspect ratios;
+    // only the container's width is capped, height follows naturally.
+    function buildAdUnit(slotIndex) {
+      var font = '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif';
+  
+      var unit = document.createElement('div');
+      unit.setAttribute('style', 'all:initial;display:block;box-sizing:border-box;width:100%;max-width:' + MAX_WIDTH + 'px;margin:16px auto;font-family:' + font + ';');
+  
+      var creative = document.createElement(AD_CLICK_URL ? 'a' : 'div');
+      creative.setAttribute('style', 'all:initial;display:block;box-sizing:border-box;width:100%;border:1px solid #e4ddd3;background:#f4efe8;border-radius:4px;overflow:hidden;');
+      if (AD_CLICK_URL) {
+        creative.href = AD_CLICK_URL;
+        creative.target = '_blank';
+        creative.rel = 'noopener sponsored';
+      }
+  
+      var img = document.createElement('img');
+      img.setAttribute('style', 'all:initial;display:block;width:100%;height:auto;');
+      img.src = pickAdImageForSlot(slotIndex);
+      img.alt = 'Advertisement';
+      creative.appendChild(img);
+  
+      var footer = document.createElement('div');
+      footer.setAttribute('style', 'all:initial;display:flex;align-items:center;justify-content:space-between;box-sizing:border-box;width:100%;padding:6px 2px 0;font-size:11px;font-family:' + font + ';color:#6b7280;');
+  
+      var adchoices = document.createElement('span');
+      adchoices.setAttribute('style', 'all:initial;display:inline-flex;align-items:center;gap:4px;font-size:11px;font-family:' + font + ';color:#6b7280;');
+      adchoices.appendChild(document.createTextNode('AdChoices'));
+      var icon = document.createElement('img');
+      icon.setAttribute('style', 'all:initial;display:inline-block;width:13px;height:13px;');
+      icon.src = ADCHOICES_ICON_SRC;
+      icon.alt = 'AdChoices';
+      adchoices.appendChild(icon);
+  
+      var sponsored = document.createElement('span');
+      sponsored.setAttribute('style', 'all:initial;display:inline-block;font-size:11px;font-family:' + font + ';color:#6b7280;');
+      sponsored.textContent = 'Sponsored';
+  
+      footer.appendChild(adchoices);
+      footer.appendChild(sponsored);
+  
+      unit.appendChild(creative);
+      unit.appendChild(footer);
+      return unit;
+    }
+  
+    // Appended as the LAST CHILD of every Nth comment item itself (not inserted as a sibling
+    // between items) — sitting inside the item's own box is what keeps the real widget's list
+    // rendering/virtualization from fighting with an injected sibling node. slotIndex always
+    // advances once per ad POSITION on the page (even for a slot already handled on an earlier
+    // tick), never once per actual insertion — that's what keeps the alternation tied to where
+    // an ad sits on the page rather than to insertion timing/order. Idempotent via MARK_ATTR, so
+    // re-running this on a timer (comments load in via infinite scroll) never double-inserts
+    // into an item it's already handled.
+    function insertAds() {
+      var items = deepQueryAll(document, '.spcv_list-item');
+      var slotIndex = 0;
+      for (var i = EVERY_N_COMMENTS - 1; i < items.length; i += EVERY_N_COMMENTS) {
+        var item = items[i];
+        if (item && !item.hasAttribute(MARK_ATTR)) {
+          item.setAttribute(MARK_ATTR, '');
+          item.appendChild(buildAdUnit(slotIndex));
+        }
+        slotIndex++;
+      }
+    }
+  
+    insertAds();
+    setInterval(insertAds, 2000); // re-checks as more comments load in
+  })();
+  </script>
+</body>
+</html>

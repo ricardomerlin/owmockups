@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>OW Convo | Cavs Game Preview</title>
+
+
+  <script
+        async
+        src="https://launcher.spot.im/spot/sp_ssaVubeJ"
+        data-post-id="cavs-celtics-100826">
+    </script>
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      background-color: #1a1a1a;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: -apple-system, 'SF Pro Text', Helvetica, Arial, sans-serif;
+    }
+
+    .app-container {
+      width: 393px;
+      height: 852px;
+      background: #000;
+      border-radius: 0;
+      box-shadow:
+        0 0 0 12px #2c2c2c,
+        0 0 0 13px #000,
+        0 30px 60px rgba(0,0,0,0.6);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    /* iOS Status Bar */
+    .status-bar {
+      background: #000;
+      color: #fff;
+      padding: 14px 20px 6px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .status-bar .time { font-size: 15px; font-weight: 700; letter-spacing: -0.3px; }
+
+    .status-bar .icons {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Dynamic Island */
+    .dynamic-island {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 34px;
+      background: #000;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      box-shadow: 0 0 0 1px #222;
+    }
+
+    .dynamic-island .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    /* Nav Bar */
+    .nav-bar {
+      background: #000;
+      color: #fff;
+      padding: 8px 16px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .nav-back {
+      position: absolute;
+      left: 16px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .nav-back svg { width: 10px; height: 16px; }
+
+    .nav-title-img {
+      height: 33px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    /* Game Tabs */
+    .game-tabs {
+      display: flex;
+      position: relative;
+      background: #000;
+      flex-shrink: 0;
+      border-bottom: 1px solid #1c1c1c;
+    }
+
+    .game-tab {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      padding: 12px 0 13px;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 600;
+      font-size: 13.5px;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      white-space: nowrap;
+      color: #9a9a9a;
+      cursor: pointer;
+      transition: color 0.2s ease;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .game-tab.active { color: #c8a96e; }
+
+    .tab-count {
+      background: #c8a96e;
+      color: #000;
+      font-family: -apple-system, 'SF Pro Text', Helvetica, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0;
+      border-radius: 999px;
+      padding: 2px 6px;
+      min-width: 18px;
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    .game-tab:not(.active) .tab-count { background: #3a3a3a; color: #ddd; }
+
+    .tab-indicator {
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      height: 3px;
+      width: calc(100% / 3);
+      background: #c8a96e;
+      transition: transform 0.3s ease;
+    }
+
+    /* Panes (side-by-side so the conversation module always has real width) */
+    .panes-viewport {
+      flex-grow: 1;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .panes-track {
+      display: flex;
+      width: 300%;
+      height: 100%;
+      transition: transform 0.35s ease;
+    }
+
+    .pane {
+      width: calc(100% / 3);
+      height: 100%;
+      overflow-y: auto;
+      overflow-x: hidden;
+      -webkit-overflow-scrolling: touch;
+      background: #000;
+    }
+
+    .pane::-webkit-scrollbar { display: none; }
+
+    /* Game Header Card */
+    .game-card {
+      position: relative;
+      background:
+        repeating-linear-gradient(45deg, rgba(255,255,255,0.025) 0 2px, transparent 2px 6px),
+        linear-gradient(180deg, #6e0f33 0%, #4a0a22 100%);
+      display: grid;
+      grid-template-columns: 1fr 1.6fr 1fr;
+      align-items: center;
+      padding: 18px 12px 20px;
+      color: #fff;
+    }
+
+    .game-card.boxed {
+      margin: 12px 10px;
+      border-radius: 4px;
+      border-bottom: 4px solid #c8a96e;
+    }
+
+    .game-card .team {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .game-card .team img { width: 50px; height: 50px; object-fit: contain; }
+
+    .game-card .score {
+      width: 12px;
+      height: 3px;
+      background: #fff;
+    }
+
+    .game-card .info {
+      text-align: center;
+      font-size: 13px;
+      line-height: 1.45;
+      color: #eee;
+    }
+
+    .game-card .info strong {
+      display: block;
+      font-size: 14.5px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    /* Section Card */
+    .section-card {
+      margin: 0 10px 12px;
+      background: #151515;
+      border: 1px solid #222;
+      border-radius: 4px;
+      padding: 22px 14px 8px;
+    }
+
+    .section-title {
+      display: inline-block;
+      font-family: 'Bebas Neue', 'Oswald', sans-serif;
+      font-size: 40px;
+      line-height: 0.9;
+      letter-spacing: 1px;
+      color: #fff;
+      padding-bottom: 2px;
+      border-bottom: 6px solid #c8a96e;
+      margin-bottom: 18px;
+    }
+
+    /* Segmented Control */
+    .segmented {
+      display: flex;
+      border: 1px solid #c8a96e;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 6px;
+    }
+
+    .segmented button {
+      flex: 1;
+      background: transparent;
+      border: 0;
+      border-left: 1px solid #c8a96e;
+      color: #c8a96e;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 500;
+      font-size: 15px;
+      padding: 8px 0;
+      cursor: pointer;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .segmented button:first-child { border-left: 0; }
+
+    .segmented button.active {
+      background: #c8a96e;
+      color: #fff;
+    }
+
+    .segmented.large {
+      margin: 14px 12px 12px;
+      border-radius: 6px;
+    }
+
+    .segmented.large button {
+      font-size: 17px;
+      padding: 10px 0;
+    }
+
+    /* Team Leaders */
+    .leader {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 16px 0;
+      border-bottom: 1px solid #262626;
+    }
+
+    .leader:last-child { border-bottom: 0; }
+
+    .avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+      background: #2a2a2a;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      color: #bbb;
+      font-family: 'Oswald', sans-serif;
+      font-size: 15px;
+    }
+
+    .avatar img { width: 130%; height: auto; margin-bottom: -2px; }
+    .avatar.bos { border: 2px solid #007a33; }
+    .avatar.cle { border: 2px solid #c8a96e; }
+    .avatar .initials { align-self: center; }
+
+    .leader-name {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #fff;
+      font-weight: 700;
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+
+    .leader-name img { width: 18px; height: 18px; }
+    .leader-name .pos { color: #8a8a8a; font-weight: 600; }
+
+    .leader-stats {
+      color: #fff;
+      font-size: 15px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .leader-stats span em {
+      font-style: normal;
+      color: #7c7c7c;
+      font-size: 14px;
+    }
+
+    /* Team Stats */
+    .ts-logos {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 4px 12px;
+    }
+
+    .ts-logos img { width: 42px; height: 42px; object-fit: contain; }
+
+    .ts-row {
+      display: grid;
+      grid-template-columns: 70px 1fr 70px;
+      align-items: center;
+      padding: 13px 0;
+      border-bottom: 1px solid #262626;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 500;
+      color: #fff;
+      font-size: 16px;
+    }
+
+    .ts-row:last-child { border-bottom: 0; }
+    .ts-row .l { text-align: left; padding-left: 6px; }
+    .ts-row .c { text-align: center; text-transform: uppercase; font-size: 15.5px; }
+    .ts-row .r { text-align: right; padding-right: 6px; }
+
+    /* Player Stats Table */
+    .players-band {
+      background: #1a1a1a;
+      text-align: center;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      color: #eee;
+      padding: 9px 0;
+      border-top: 1px solid #262626;
+      border-bottom: 1px solid #262626;
+    }
+
+    .table-scroll {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .table-scroll::-webkit-scrollbar { display: none; }
+
+    table.stats {
+      border-collapse: collapse;
+      min-width: 100%;
+      font-size: 15px;
+      color: #d8d8d8;
+      white-space: nowrap;
+    }
+
+    table.stats th {
+      background: #000;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 600;
+      font-size: 14.5px;
+      color: #fff;
+      padding: 12px 10px;
+      text-align: center;
+    }
+
+    table.stats td {
+      padding: 0 10px;
+      height: 57px;
+      text-align: center;
+    }
+
+    table.stats tbody tr:nth-child(odd) td { background: #161616; }
+    table.stats tbody tr:nth-child(even) td { background: #212121; }
+
+    table.stats .sticky {
+      position: sticky;
+      left: 0;
+      z-index: 2;
+      text-align: left;
+      padding-left: 0;
+    }
+
+    table.stats th.sticky { z-index: 3; }
+
+    .player-cell {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      width: 196px;
+    }
+
+    .player-cell .num {
+      width: 32px;
+      flex-shrink: 0;
+      text-align: center;
+      color: #fff;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .player-cell .mini {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+      background: #333;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      font-size: 10px;
+      color: #aaa;
+    }
+
+    .player-cell .mini img { width: 140%; height: auto; }
+    .player-cell .mini .initials { align-self: center; }
+
+    .player-cell .pname {
+      color: #fff;
+      font-weight: 600;
+      font-size: 15px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* Conversation Tab */
+    .convo-intro {
+      margin: 0 10px 4px;
+      padding: 14px 14px 4px;
+    }
+
+    .convo-intro .section-title { margin-bottom: 10px; }
+
+    .convo-intro p {
+      margin: 0;
+      color: #9a9a9a;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .convo-wrap {
+      padding: 0 10px 24px;
+    }
+
+    /* Bottom Navigation */
+    .bottom-nav {
+      background: #000;
+      border-top: 1px solid #222;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 8px 0 20px;
+      flex-shrink: 0;
+    }
+
+    .nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      width: 60px;
+      gap: 4px;
+      color: #888;
+      font-size: 10px;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .nav-item svg,
+    .nav-item img {
+      width: 24px;
+      height: 24px;
+      display: block;
+    }
+
+    .nav-item svg {
+      stroke: #888;
+      fill: none;
+    }
+
+    .nav-item.active { color: #c8a96e; }
+    .nav-item.active svg { stroke: #c8a96e; }
+    .nav-item.active svg rect[fill] { fill: #c8a96e; }
+
+    .nav-item span {
+      display: block;
+      line-height: 1;
+      margin-top: 2px;
+    }
+
+    .cavs-gray-icon {
+      filter: brightness(0) invert(55%);
+    }
+
+    @media (max-width: 768px) {
+      body { background: #000; }
+      .app-container {
+        width: 100%;
+        height: 100dvh;
+        border-radius: 0;
+        box-shadow: none;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="app-container">
+
+    <!-- Dynamic Island -->
+    <div class="dynamic-island">
+      <div class="dot"></div>
+    </div>
+
+    <!-- Status Bar -->
+    <div class="status-bar">
+      <span class="time">9:26</span>
+      <div style="position:absolute;left:50%;transform:translateX(-50%);width:120px;height:34px;"></div>
+      <div class="icons">
+        <!-- Signal bars -->
+        <svg width="18" height="14" viewBox="0 0 18 14" fill="white">
+          <rect x="0" y="8" width="3" height="6" rx="0.5"/>
+          <rect x="4.5" y="5.5" width="3" height="8.5" rx="0.5"/>
+          <rect x="9" y="3" width="3" height="11" rx="0.5"/>
+          <rect x="13.5" y="0" width="3" height="14" rx="0.5"/>
+        </svg>
+        <!-- WiFi -->
+        <svg width="16" height="12" viewBox="0 0 20 15" fill="white">
+          <path d="M10 12a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z"/>
+          <path d="M5.5 8.5C6.9 7.1 8.4 6.4 10 6.4s3.1.7 4.5 2.1l1.5-1.5C14.1 5 12.2 4 10 4S5.9 5 4 7z"/>
+          <path d="M2 5C4.3 2.7 7 1.5 10 1.5s5.7 1.2 8 3.5l1.5-1.5C17 1.2 13.7 0 10 0S3 1.2.5 3.5z"/>
+        </svg>
+        <!-- Battery -->
+        <div style="display:flex;align-items:center;gap:2px;">
+          <div style="width:28px;height:14px;border:1.5px solid #fff;border-radius:3px;padding:2px;position:relative;display:flex;align-items:center;">
+            <div style="background:#fff;height:100%;width:51%;border-radius:1px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Nav Bar -->
+    <div class="nav-bar">
+      <div class="nav-back">
+        <svg viewBox="0 0 10 16" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="8,1 2,8 8,15"/>
+        </svg>
+        <span style="font-size:16px;">Back</span>
+      </div>
+      <div class="nav-title">
+        <img src="./images/cavstext.jpg" alt="Cleveland Cavaliers" class="nav-title-img" />
+      </div>
+    </div>
+
+    <!-- Game Tabs -->
+    <div class="game-tabs">
+      <div class="game-tab active" data-tab="0">Preview</div>
+      <div class="game-tab" data-tab="1">Player Stats</div>
+      <div class="game-tab" data-tab="2">
+        Conversation
+        <span class="tab-count">
+          <div data-spotim-module="messages-count" data-post-id="cavs-celtics-100826"></div>
+        </span>
+      </div>
+      <div class="tab-indicator" id="tabIndicator"></div>
+    </div>
+
+    <!-- Panes -->
+    <div class="panes-viewport">
+      <div class="panes-track" id="panesTrack">
+
+        <!-- ===== PREVIEW ===== -->
+        <div class="pane" id="pane-preview">
+          <div class="game-card boxed" data-game-card></div>
+
+          <div class="section-card">
+            <div class="section-title">Team Leaders</div>
+            <div class="segmented" id="leaderToggle">
+              <button class="active" data-cat="pts">Points</button>
+              <button data-cat="ast">Assists</button>
+              <button data-cat="reb">Rebounds</button>
+            </div>
+            <div id="leadersList"></div>
+          </div>
+
+          <div class="section-card">
+            <div class="section-title">Team Stats</div>
+            <div class="ts-logos">
+              <img data-logo="bos" alt="Celtics" />
+              <img data-logo="cle" alt="Cavaliers" />
+            </div>
+            <div id="teamStats"></div>
+          </div>
+
+          <div style="height: 24px;"></div>
+        </div>
+
+        <!-- ===== PLAYER STATS ===== -->
+        <div class="pane" id="pane-players">
+          <div class="game-card" data-game-card></div>
+
+          <div class="segmented large" id="teamToggle">
+            <button data-team="bos">Celtics</button>
+            <button class="active" data-team="cle">Cavaliers</button>
+          </div>
+
+          <div class="players-band">PLAYERS</div>
+          <div class="table-scroll">
+            <table class="stats">
+              <thead>
+                <tr>
+                  <th class="sticky"><div class="player-cell"></div></th>
+                  <th>G</th><th>MINS</th><th>PTS</th><th>FG%</th><th>3P%</th><th>FT%</th>
+                  <th>REB</th><th>AST</th><th>STL</th><th>BLK</th><th>TO</th>
+                </tr>
+              </thead>
+              <tbody id="playerRows"></tbody>
+            </table>
+          </div>
+
+          <div style="height: 24px;"></div>
+        </div>
+
+        <!-- ===== CONVERSATION ===== -->
+        <div class="pane" id="pane-convo">
+          <div class="game-card boxed" data-game-card></div>
+
+
+
+          <div class="convo-wrap">
+            <div data-spotim-module="conversation" data-theme="dark" data-messages-count="4"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- Bottom Navigation -->
+    <div class="bottom-nav">
+      <!-- Home (Cavs C icon) -->
+      <div class="nav-item cavs-c-icon">
+        <img src="./images/cleveland.png" class="cavs-gray-icon" />
+        <span>Home</span>
+      </div>
+
+      <!-- Rewards (trophy/ribbon icon) -->
+      <div class="nav-item">
+        <svg viewBox="0 0 24 24" stroke-width="1.5">
+          <circle cx="12" cy="8" r="5"/>
+          <path d="M7 8H4a1 1 0 0 0-1 1 4 4 0 0 0 4 4"/>
+          <path d="M17 8h3a1 1 0 0 1 1 1 4 4 0 0 1-4 4"/>
+          <path d="M12 13v4M9 21h6M10 17h4"/>
+        </svg>
+        <span>Rewards</span>
+      </div>
+
+      <!-- Team (basketball) -->
+      <div class="nav-item">
+        <svg viewBox="0 0 24 24" stroke-width="1.5">
+          <circle cx="12" cy="12" r="9"/>
+          <path d="M12 3a12.5 12.5 0 0 1 0 18M12 3a12.5 12.5 0 0 0 0 18M3 12h18"/>
+        </svg>
+        <span>Team</span>
+      </div>
+
+      <!-- Schedule (calendar) -->
+      <div class="nav-item active">
+        <svg viewBox="0 0 24 24" stroke-width="1.5">
+          <rect x="3" y="4" width="18" height="18" rx="2"/>
+          <path d="M3 9h18M8 2v4M16 2v4"/>
+          <rect x="7" y="13" width="2" height="2" fill="#888" stroke="none"/>
+          <rect x="11" y="13" width="2" height="2" fill="#888" stroke="none"/>
+          <rect x="15" y="13" width="2" height="2" fill="#888" stroke="none"/>
+          <rect x="7" y="17" width="2" height="2" fill="#888" stroke="none"/>
+          <rect x="11" y="17" width="2" height="2" fill="#888" stroke="none"/>
+        </svg>
+        <span>Schedule</span>
+      </div>
+
+      <!-- More (hamburger) -->
+      <div class="nav-item">
+        <svg viewBox="0 0 24 24" stroke-width="1.5">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+        <span>More</span>
+      </div>
+    </div>
+
+  </div>
+
+<script>
+  var LOGOS = {
+    bos: 'https://cdn.nba.com/logos/nba/1610612738/primary/L/logo.svg',
+    cle: 'https://cdn.nba.com/logos/nba/1610612739/primary/L/logo.svg'
+  };
+
+  function headshot(id) {
+    return 'https://cdn.nba.com/headshots/nba/latest/260x190/' + id + '.png';
+  }
+
+  // Falls back to initials when a headshot is missing
+  function avatarInner(p) {
+    var initials = p.name.split(' ').map(function (w) { return w[0]; }).join('').slice(0, 2);
+    if (!p.id) return '<span class="initials">' + initials + '</span>';
+    return '<img src="' + headshot(p.id) + '" alt="" onerror="this.outerHTML=\'<span class=&quot;initials&quot;>' + initials + '</span>\'">';
+  }
+
+  // ---- Game header card (shared by all three tabs) ----
+  document.querySelectorAll('[data-game-card]').forEach(function (el) {
+    el.innerHTML =
+      '<div class="team"><img src="' + LOGOS.bos + '" alt="Celtics"><div class="score"></div></div>' +
+      '<div class="info"><strong>Thu, Oct 8, 2026</strong><strong>7:00 PM • Home</strong>TBD<br>Rocket Arena</div>' +
+      '<div class="team"><img src="' + LOGOS.cle + '" alt="Cavaliers"><div class="score"></div></div>';
+  });
+  document.querySelectorAll('[data-logo]').forEach(function (img) { img.src = LOGOS[img.dataset.logo]; });
+
+  // ---- Team Leaders ----
+  var LEADERS = {
+    pts: [
+      { team: 'bos', num: 9,  name: 'Derrick White',   pos: 'G', id: 1628401, min: 27.9, pts: 21.7, ast: 7,   reb: 6.3 },
+      { team: 'cle', num: 45, name: 'Donovan Mitchell', pos: 'G', id: 1628378, min: 23.8, pts: 15.3, ast: 3,   reb: 3 }
+    ],
+    ast: [
+      { team: 'bos', num: 11, name: 'Payton Pritchard', pos: 'G', id: 1630202, min: 30.1, pts: 14.2, ast: 5.8, reb: 3.4 },
+      { team: 'cle', num: 1,  name: 'James Harden',     pos: 'G', id: 201935,  min: 33.8, pts: 20.5, ast: 8.1, reb: 5.2 }
+    ],
+    reb: [
+      { team: 'bos', num: 88, name: 'Neemias Queta',    pos: 'C', id: 1629674, min: 24.6, pts: 9.1,  ast: 1.4, reb: 8.2 },
+      { team: 'cle', num: 31, name: 'Jarrett Allen',    pos: 'C', id: 1628386, min: 27.1, pts: 15.4, ast: 1.9, reb: 10.1 }
+    ]
+  };
+
+  function renderLeaders(cat) {
+    document.getElementById('leadersList').innerHTML = LEADERS[cat].map(function (p) {
+      return '<div class="leader">' +
+        '<div class="avatar ' + p.team + '">' + avatarInner(p) + '</div>' +
+        '<div>' +
+          '<div class="leader-name"><img src="' + LOGOS[p.team] + '" alt="">#' + p.num + ' ' + p.name + ' <span class="pos">' + p.pos + '</span></div>' +
+          '<div class="leader-stats">' +
+            '<span>' + p.min + ' <em>MIN</em></span>' +
+            '<span>' + p.pts + ' <em>PTS</em></span>' +
+            '<span>' + p.ast + ' <em>A</em></span>' +
+            '<span>' + p.reb + ' <em>REB</em></span>' +
+          '</div>' +
+        '</div>' +
+      '</div>';
+    }).join('');
+  }
+
+  // ---- Team Stats ----
+  var TEAM_STATS = [
+    ['56-26', 'Record', '52-30'],
+    ['30-11', 'Home Record', '27-14'],
+    ['26-15', 'Away Record', '25-16'],
+    ['10-6', 'Div Record', '11-5'],
+    ['8-2', 'Last 10', '7-3'],
+    ['W 2', 'Streak', 'W 1'],
+    ['114.9', 'Points Per Game', '119.5'],
+    ['107.2', 'Points Allowed', '115.4'],
+    ['44.9', 'Field Goal %', '42.3'],
+    ['30.9', '3 Point %', '32.4'],
+    ['82.6', 'Free Throw %', '68.4'],
+    ['24.8', 'Assists', '27.5'],
+    ['15.8', 'Off. Rebounds', '13.5'],
+    ['37', 'Def. Rebounds', '28'],
+    ['21.3', 'Turnovers', '17.8'],
+    ['11.3', 'Steals', '14'],
+    ['8.3', 'Blocks', '6.5']
+  ];
+
+  document.getElementById('teamStats').innerHTML = TEAM_STATS.map(function (r) {
+    return '<div class="ts-row"><div class="l">' + r[0] + '</div><div class="c">' + r[1] + '</div><div class="r">' + r[2] + '</div></div>';
+  }).join('');
+
+  // ---- Player Stats ----
+  // [num, name, headshotId, G, MINS, PTS, FG%, 3P%, FT%, REB, AST, STL, BLK, TO]
+  var ROSTERS = {
+    cle: [
+      [45, 'Donovan Mitchell', 1628378, 70, 33.5, 27.9, 48.3, 36.4, 86.5, 4.6, 5.8, 1.4, 0.3, 2.9],
+      [1,  'James Harden',     201935,  26, 33.8, 20.5, 46.6, 43.5, 84.0, 5.2, 8.1, 1.2, 0.5, 3.6],
+      [4,  'Evan Mobley',      1630596, 65, 31.9, 18.2, 54.6, 29.7, 60.6, 9.4, 3.2, 0.9, 1.6, 1.8],
+      [31, 'Jarrett Allen',    1628386, 56, 27.1, 15.4, 63.8, 10.0, 70.9, 10.1, 1.9, 0.8, 1.1, 1.3],
+      [20, 'Jaylon Tyson',     null,    66, 26.9, 13.2, 49.3, 44.6, 73.8, 4.8, 2.4, 0.9, 0.3, 1.2],
+      [5,  'Sam Merrill',      1630241, 52, 26.5, 12.8, 46.1, 42.1, 85.5, 2.9, 2.1, 0.8, 0.2, 0.7],
+      [2,  'Max Strus',        1629622, 12, 24,   11.2, 44.3, 40.2, 77.8, 4.3, 2.8, 0.6, 0.3, 1.0],
+      [14, 'Keon Ellis',       1631165, 29, 24.8, 8.3,  49.1, 35.5, 81.6, 2.5, 1.6, 1.5, 0.6, 0.8],
+      [8,  'Dennis Schröder',  203471,  30, 21.4, 8.2,  40.1, 29.0, 86.1, 2.1, 4.6, 0.7, 0.1, 1.9],
+      [3,  'Thomas Bryant',    1628418, 60, 12.2, 6.2,  50.6, 35.9, 80.3, 3.9, 0.6, 0.3, 0.6, 0.7],
+      [32, 'Dean Wade',        1629731, 59, 22.3, 5.8,  43.9, 36.2, 71.1, 4.4, 1.3, 0.7, 0.5, 0.6],
+      [12, "Nae'Qwan Tomlin",  null,    62, 14.8, 5.6,  47.2, 33.1, 72.4, 4.1, 1.1, 0.6, 0.4, 0.8],
+      [24, 'Tyrese Proctor',   null,    44, 13.9, 5.1,  42.8, 34.6, 78.2, 2.2, 2.3, 0.6, 0.1, 0.9]
+    ],
+    bos: [
+      [7,  'Jaylen Brown',      1627759, 74, 34.6, 26.4, 47.9, 34.8, 76.9, 6.1, 4.3, 1.1, 0.4, 3.0],
+      [9,  'Derrick White',     1628401, 78, 33.2, 21.7, 44.1, 38.2, 89.7, 6.3, 7.0, 1.2, 1.3, 1.6],
+      [11, 'Payton Pritchard',  1630202, 80, 30.1, 14.2, 45.6, 40.3, 83.2, 3.4, 5.8, 0.9, 0.1, 1.2],
+      [4,  'Anfernee Simons',   1629014, 71, 26.8, 13.8, 43.2, 37.9, 90.1, 2.6, 3.9, 0.6, 0.2, 1.7],
+      [30, 'Sam Hauser',        1630573, 76, 24.9, 9.8,  45.3, 41.6, 88.0, 3.9, 1.5, 0.5, 0.3, 0.5],
+      [88, 'Neemias Queta',     1629674, 72, 24.6, 9.1,  63.4, 0,    71.5, 8.2, 1.4, 0.7, 1.5, 1.1],
+      [27, 'Jordan Walsh',      null,    58, 18.3, 6.2,  46.7, 35.0, 69.3, 3.8, 1.2, 0.9, 0.4, 0.6],
+      [55, 'Baylor Scheierman', null,    61, 16.9, 5.9,  44.0, 37.2, 80.4, 3.3, 1.6, 0.5, 0.2, 0.7],
+      [28, 'Hugo González',     null,    49, 14.1, 4.8,  45.5, 33.8, 74.6, 2.9, 1.0, 0.8, 0.3, 0.6],
+      [52, 'Luka Garza',        1630568, 40, 10.6, 4.4,  52.9, 36.1, 77.0, 3.1, 0.5, 0.2, 0.4, 0.4]
+    ]
+  };
+
+  function renderPlayers(team) {
+    document.getElementById('playerRows').innerHTML = ROSTERS[team].map(function (r) {
+      var p = { name: r[1], id: r[2] };
+      var cells = r.slice(3).map(function (v) { return '<td>' + v + '</td>'; }).join('');
+      return '<tr>' +
+        '<td class="sticky"><div class="player-cell">' +
+          '<span class="num">' + r[0] + '</span>' +
+          '<span class="mini">' + avatarInner(p) + '</span>' +
+          '<span class="pname">' + r[1] + '</span>' +
+        '</div></td>' + cells +
+      '</tr>';
+    }).join('');
+  }
+
+  function wireSegmented(id, attr, onChange) {
+    var root = document.getElementById(id);
+    root.addEventListener('click', function (e) {
+      var btn = e.target.closest('button');
+      if (!btn) return;
+      root.querySelectorAll('button').forEach(function (b) { b.classList.toggle('active', b === btn); });
+      onChange(btn.dataset[attr]);
+    });
+  }
+
+  wireSegmented('leaderToggle', 'cat', renderLeaders);
+  wireSegmented('teamToggle', 'team', renderPlayers);
+  renderLeaders('pts');
+  renderPlayers('cle');
+
+  // ---- Tabs ----
+  var TAB_HASHES = ['preview', 'player-stats', 'conversation'];
+
+  function selectTab(index) {
+    document.querySelectorAll('.game-tab').forEach(function (t, i) { t.classList.toggle('active', i === index); });
+    document.getElementById('tabIndicator').style.transform = 'translateX(' + (index * 100) + '%)';
+    document.getElementById('panesTrack').style.transform = 'translateX(' + (-index * 100 / 3) + '%)';
+    history.replaceState(null, '', '#' + TAB_HASHES[index]);
+  }
+
+  document.querySelectorAll('.game-tab').forEach(function (tab) {
+    tab.addEventListener('click', function () { selectTab(Number(tab.dataset.tab)); });
+  });
+
+  var initialTab = TAB_HASHES.indexOf(location.hash.slice(1));
+  if (initialTab > 0) selectTab(initialTab);
+</script>
+
+<script>
+  (function () {
+    'use strict';
+  
+    // ==== EDIT THESE ====
+    var AD_IMAGES = [
+      'https://www.spotim.name/ricardo/cavs/images/healthessentials.jpeg',
+      'https://www.spotim.name/ricardo/cavs/images/seatgeek.jpeg'
+    ];
+    var AD_CLICK_URL = '';        // optional — leave blank for a non-clickable image
+    var EVERY_N_COMMENTS = 3;     // insert after every Nth comment
+    var MAX_WIDTH = 728;          // caps the creative's width; height follows each image's own ratio
+    // =====================
+  
+    var ADCHOICES_ICON_SRC = 'https://www.spotim.name/ricardo/financialtimes/ad-choices.png';
+  
+    // Guards against the script accidentally being included twice on the same page.
+    if (window.__owInConvoAdsInit) return;
+    window.__owInConvoAdsInit = true;
+  
+    var MARK_ATTR = 'data-ow-incovo-ad';
+  
+    // Random — each ad slot picks any creative from AD_IMAGES independently, so the same image
+    // can land in back-to-back slots. The pick happens once per slot (MARK_ATTR stops a slot from
+    // being rebuilt), so an ad never swaps images while the reader is looking at it.
+    function pickAdImageForSlot() {
+      return AD_IMAGES[Math.floor(Math.random() * AD_IMAGES.length)];
+    }
+  
+    // The real comment items (.spcv_list-item) render inside the OpenWeb widget's own OPEN
+    // shadow root, so a plain document.querySelectorAll() never sees them — this walks into
+    // every open shadow root it finds, recursively, the same way the widget's own internals do.
+    function deepQueryAll(root, selector) {
+      var found = [];
+      (function walk(node) {
+        if (!node || !node.querySelectorAll) return;
+        node.querySelectorAll(selector).forEach(function (el) { found.push(el); });
+        node.querySelectorAll('*').forEach(function (el) {
+          if (el.shadowRoot) walk(el.shadowRoot);
+        });
+      })(root);
+      return found;
+    }
+  
+    // Every style is set inline with `all:initial` first — this unit can land inside the
+    // widget's own shadow root, which never inherits the host page's <style> tags. No fixed
+    // width/height on the <img> itself since the two source images are different aspect ratios;
+    // only the container's width is capped, height follows naturally.
+    function buildAdUnit(slotIndex) {
+      var font = '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif';
+  
+      var unit = document.createElement('div');
+      unit.setAttribute('style', 'all:initial;display:block;box-sizing:border-box;width:100%;max-width:' + MAX_WIDTH + 'px;margin:16px auto;font-family:' + font + ';');
+  
+      var creative = document.createElement(AD_CLICK_URL ? 'a' : 'div');
+      creative.setAttribute('style', 'all:initial;display:block;box-sizing:border-box;width:100%;border:1px solid #e4ddd3;background:#f4efe8;border-radius:4px;overflow:hidden;');
+      if (AD_CLICK_URL) {
+        creative.href = AD_CLICK_URL;
+        creative.target = '_blank';
+        creative.rel = 'noopener sponsored';
+      }
+  
+      var img = document.createElement('img');
+      img.setAttribute('style', 'all:initial;display:block;width:100%;height:auto;');
+      img.src = pickAdImageForSlot(slotIndex);
+      img.alt = 'Advertisement';
+      creative.appendChild(img);
+  
+      var footer = document.createElement('div');
+      footer.setAttribute('style', 'all:initial;display:flex;align-items:center;justify-content:space-between;box-sizing:border-box;width:100%;padding:6px 2px 0;font-size:11px;font-family:' + font + ';color:#6b7280;');
+  
+      var adchoices = document.createElement('span');
+      adchoices.setAttribute('style', 'all:initial;display:inline-flex;align-items:center;gap:4px;font-size:11px;font-family:' + font + ';color:#6b7280;');
+      adchoices.appendChild(document.createTextNode('AdChoices'));
+      var icon = document.createElement('img');
+      icon.setAttribute('style', 'all:initial;display:inline-block;width:13px;height:13px;');
+      icon.src = ADCHOICES_ICON_SRC;
+      icon.alt = 'AdChoices';
+      adchoices.appendChild(icon);
+  
+      var sponsored = document.createElement('span');
+      sponsored.setAttribute('style', 'all:initial;display:inline-block;font-size:11px;font-family:' + font + ';color:#6b7280;');
+      sponsored.textContent = 'Sponsored';
+  
+      footer.appendChild(adchoices);
+      footer.appendChild(sponsored);
+  
+      unit.appendChild(creative);
+      unit.appendChild(footer);
+      return unit;
+    }
+  
+    // Appended as the LAST CHILD of every Nth comment item itself (not inserted as a sibling
+    // between items) — sitting inside the item's own box is what keeps the real widget's list
+    // rendering/virtualization from fighting with an injected sibling node. slotIndex always
+    // advances once per ad POSITION on the page (even for a slot already handled on an earlier
+    // tick), never once per actual insertion — that's what keeps the alternation tied to where
+    // an ad sits on the page rather than to insertion timing/order. Idempotent via MARK_ATTR, so
+    // re-running this on a timer (comments load in via infinite scroll) never double-inserts
+    // into an item it's already handled.
+    function insertAds() {
+      var items = deepQueryAll(document, '.spcv_list-item');
+      var slotIndex = 0;
+      for (var i = EVERY_N_COMMENTS - 1; i < items.length; i += EVERY_N_COMMENTS) {
+        var item = items[i];
+        if (item && !item.hasAttribute(MARK_ATTR)) {
+          item.setAttribute(MARK_ATTR, '');
+          item.appendChild(buildAdUnit(slotIndex));
+        }
+        slotIndex++;
+      }
+    }
+  
+    insertAds();
+    setInterval(insertAds, 2000); // re-checks as more comments load in
+  })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,2449 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta name="innervate:creative:crv" content="crv231918">
+		<meta name="innervate:creative:eg" content="eg68271">
+		<meta name="innervate:creative:tag" content="tag342609">
+		<meta name="innervate:creative:adt" content="9026904551140353755">
+	<meta charset="UTF-8">
+	<title>231593863/236386837</title>
+	<script type="text/javascript">
+		var click_url = 'https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&vid=5151282369772089923&__ads=35804b4e5aef95f9e10b09b488252261&adkey=9c1&hx=235239217&agrp=eg68271&agrpKey=193&slot=tag342609&impts=1742884270672&ad=crv231918&crvKey=83e&_cx=$$CX$$&_cy=$$CY$$&_celt=$$ELT-ID$$&_celtid=$$ELT-IDS$$';
+		var click_target ='_blank';
+	</script>
+	<script type="text/javascript">(function(a){function c(a){return function(c,d,e,f){b.layoutEventListeners_.push({eventType:c,listener:d,widgetId:e,source:f,once:a})}}a.revjet=a.revjet||{};a.revjet.elements_api=a.revjet.elements_api||{};var b=a.revjet.elements_api;b.javaScriptErrors_=[];b.layoutEventListeners_=[];b.initialErrorHandler_=function(a){b.javaScriptErrors_.push(a)};a.addEventListener("error",b.initialErrorHandler_,!1);b.listen=c(!1);b.listenOnce=c(!0)})(window);</script>
+	<script async="" src="a_data/elements-2.18.0.js" type="text/javascript" crossorigin="anonymous" fetchpriority="high"></script>
+	<script>
+		var AD_SIZE = '728x90';
+		function mergePersonalizations(socialPersonalizations, catalogPersonalizations) {
+			if (!catalogPersonalizations || catalogPersonalizations.length === 0) {
+				return socialPersonalizations
+			}
+			for (var i = 0 ; i < socialPersonalizations.length; i++) {
+				var sP = socialPersonalizations[i];
+				var cPi = catalogPersonalizations.findIndex(function(p) {return p.id === sP.id})
+				var cP = catalogPersonalizations[cPi]
+				if (!cP) {
+					continue
+				}
+				if (cP.type === 'html5') {
+					var spValues = [].concat(sP.value)
+					if (spValues.every(sV => !sV.catalogSKU) && cP.value.length) {
+						sP.value = cP.value.map((it, i) => Object.assign(it, spValues[i] || spValues[0]))
+					} else {
+						var matchedSkus = {}
+						sP.value = [].concat(sP.value).map(function(sV) {
+							if (Array.isArray(cP.value)) {
+								var cV = cP.value[
+									cP.value.findIndex(function(v) {
+										return v.sku_id.split('$$')[1] == sV.catalogSKU
+									})
+									]
+								if (cV) {
+									matchedSkus[cV.sku_id] = true
+									Object.assign(sV, cV)
+								}
+							} else {
+								if (cP.value.sku_id.split('$$')[1] == sV.catalogSKU) {
+									matchedSkus[cP.value.sku_id] = true
+									Object.assign(sV, cP.value)
+								}
+							}
+							if (AD_SIZE === '160x600' && sV.headline && sV.headline.length) {
+								sV.headline[0] = sV.headline[0].replace(new RegExp(String.fromCharCode(160), 'g'), ' ')
+							}
+							return sV
+						}).concat(Array.isArray(cP.value) ? cP.value.filter(function(v) {
+							return !matchedSkus[v.sku_id]
+						}) : [])
+					}
+				} else if (typeof sP.value === 'object') {
+					Object.assign(sP.value, cP.value || {})
+				} else if (typeof sP.value === 'string' && cP.value) {
+					sP.value = cP.value
+				}
+			}
+			return socialPersonalizations
+		}
+	</script>
+	<!--  -->
+	<!--  -->
+	<style type="text/css">
+		#revjet_container {
+			overflow:hidden;
+			position:relative;
+			font-size:12px;
+			color:#000;
+			font-family:Arial, Helvetica, sans-serif;
+			text-align:left;
+		}
+		#outer_container {
+			position:relative;
+		}
+		.bar-elm {
+			display: table;
+			position:absolute;
+		}
+		.bar-elm-row {
+			display: table-row;
+			height: 100%;
+		}
+		.bar-elm .image-elm {
+			position:absolute;
+			float:left;
+			overflow:hidden;
+			top:0;
+			left:0;
+			font-size:0px;
+		}
+		.bar-elm-cell {
+			display: table-cell;
+			position: relative;
+			vertical-align: middle;
+		}
+		* {
+			padding:0;
+			margin:0;
+			text-rendering:optimizeLegibility;
+			-moz-osx-font-smoothing:grayscale;
+			font-smoothing:antialiased;
+			-webkit-font-smoothing:antialiased;
+		}
+		a {
+			text-decoration:none;
+			color:#000;
+		}
+		a:hover, a:hover * {
+			text-decoration:none;
+		}
+		img, a img{
+			border:none;
+		}
+		li {
+			list-style-type:none;
+		}
+		#content_body.animation_stopped *, .animation_stopped #revjet_container * {
+			-webkit-animation: none !important;
+			animation: none !important;
+		}
+		#content_body.animation_paused *, .animation_paused #revjet_container * {
+			-webkit-animation-play-state: paused !important;
+			animation-play-state: paused !important;
+		}
+		* {
+			box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+		}
+		body {
+			overflow: hidden;
+		}
+		.text-elm, .flash-elm, .block-elm, .html5-elm, .dropdown-elm, .textfield-elm, .animimage-elm{
+			position:absolute;
+			float:left;
+			display:block;
+		}
+		.ic0n-elm, .image-elm{
+			position:absolute;
+			float:left;
+			overflow:hidden;
+			display:block;
+		}
+		.ic0n-elm .ic0n-container{
+			display:table;
+			width:100%;
+			height:100%;
+		}
+		.ic0n-elm .ic0n-container *{
+			box-sizing:border-box;
+		}
+		.ic0n-elm .ic0n-container div{
+			display:table-cell;
+		}
+		.ic0n-elm .ic0n-wrapper{
+			width:1px;
+			white-space:nowrap;
+		}
+		.ic0n-elm img, .ic0n-elm span{
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.image-elm img{
+			width:100%;
+			height:100%;
+		}
+		.button-elm{
+			position:absolute;
+			display:block;
+		}
+		.button-elm .text-elm{
+			position:absolute;
+			float:left;
+			top:0;
+			left:0;
+		}
+		.button-elm .image-elm{
+			position:absolute;
+			float:left;
+			overflow:hidden;
+			top:0;
+			left:0;
+		}
+	</style>
+
+	<!--  -->
+	<style>
+		body {visibility:hidden;}
+	</style>
+	<!--  -->
+
+	<!--  -->
+	<script type="text/javascript">
+		/*Animation sequence fix*/
+		(function () {
+			var fired = false;
+			function animationSequenceFix() {
+				if (!fired) {
+					var elements = document.querySelectorAll('.animated-element'),
+						pfx = ["webkit", "moz", "MS", "o", ""];
+
+					function PrefixedEvent(element, type, callback) {
+						for (var p = 0; p < pfx.length; p++) {
+							if (!pfx[p]) type = type.toLowerCase();
+							element.addEventListener(pfx[p] + type, callback, false);
+						}
+					}
+					elements = Array.prototype.slice.call(elements);
+					for (var i = 0, l = elements.length; i < l; i++) {
+						PrefixedEvent(elements[i],'AnimationEnd', function (e) {
+							e.target.classList.add('run-next');
+						});
+					}
+					fired = true;
+				}
+			}
+
+			if (window.addEventListener) {
+				window.addEventListener('message', function (e) { if (e.data && e.data === 'update') { animationSequenceFix();} }, false);
+			} else {
+				window.attachEvent("onmessage", function (e) { if (e.data && e.data === 'update') { animationSequenceFix();} });
+			}
+			if (document.addEventListener) { document.addEventListener('DOMContentLoaded', animationSequenceFix, false); } else { document.attachEvent("onDOMContentLoaded", animationSequenceFix); }
+		}());
+
+		/* TextField onEnter */
+		(function() {
+			function Fill_Elm_Behavior(){
+				var elmClass = 'textfield-elm-input';
+				var elmList = document.querySelectorAll('.'+elmClass);
+				for (var i=0;i<elmList.length;i++) {
+					applyEvents(elmList[i]);
+				}
+				function applyEvents(elm) {
+					var Fill = elm;
+					Fill.addEventListener("keydown", function(e){
+						var keynum;
+						if (window.event) keynum = e.keyCode;
+						else if (e.which) keynum = e.which;
+						else return;
+						if (keynum == 13) window.open('https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&vid=5151282369772089923&__ads=35804b4e5aef95f9e10b09b488252261&adkey=9c1&hx=235239217&agrp=eg68271&agrpKey=193&slot=tag342609&impts=1742884270672&ad=crv231918&crvKey=83e&_cx=$$CX$$&_cy=$$CY$$&_celt=$$ELT-ID$$&_celtid=$$ELT-IDS$$', '_blank');
+					}, false);
+				}
+			}
+			if (window.addEventListener) {
+				window.addEventListener('load', function() {Fill_Elm_Behavior();}, false);
+			} else {
+				window.attachEvent("onload", function() {Fill_Elm_Behavior();});
+			}
+		})();
+
+	</script>
+	<link rel="dns-prefetch" href="https://pix.revjet.com/"></head>
+<body id="content_body" style="visibility: visible;">
+<!-- revjet-tracking -->
+<img src="a_data/999.gif" fetchpriority="high" style="position:absolute; visibility:hidden">
+
+<!-- /revjet-tracking -->
+<style>
+	#container,#el231593884 { width: 728px; height: 90px; overflow: hidden; position: relative; font-size: 12px; color: #000; font-family: Arial, Helvetica, sans-serif; text-align: left; display: block;}* { padding: 0; margin: 0;}* { box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;}a { text-decoration: none; color: #000;}a:hover,a:hover * { text-decoration: none;}img,a img { border: none;}li { list-style-type: none;}#content_body.animation_stopped *,.animation_stopped #container * { -webkit-animation: none !important; animation: none !important;}body { overflow: hidden;}.text-elm,.flash-elm,.block-elm,.html5-elm,.dropdown-elm,.textfield-elm,.animimage-elm,.border-elm { position: absolute; float: left; display: block;}.ic0n-elm,.image-elm,.animimage-elm { position: absolute; float: left; overflow: hidden; display: block;}.ic0n-elm .ic0n-container { display: table; width: 100%; height: 100%;}.ic0n-elm .ic0n-container * { box-sizing: border-box;}.ic0n-elm .ic0n-container div { display: table-cell;}.ic0n-elm .ic0n-wrapper { width: 1px; white-space: nowrap;}.image-elm img { width: 100%; height: 100%;}.button-elm { position: absolute; display: block;}.button-elm .text-elm { position: absolute; float: left; top: 0; left: 0;}.button-elm .image-elm { position: absolute; float: left; overflow: hidden; top: 0; left: 0;}#container { width: 728px; height: 90px; overflow: hidden; position: relative; font-size: 12px; color: #000; font-family: Arial, Helvetica, sans-serif; text-align: left;}#outer_container { width: 728px; height: 90px; position: relative;}.bar-elm { display: table; position: absolute;}.bar-elm-row { display: table-row; height: 100%;}.bar-elm .image-elm { position: absolute; float: left; overflow: hidden; top: 0; left: 0; font-size: 0px;}.bar-elm-cell { display: table-cell; position: relative; vertical-align: middle;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+<div id="revjet_container">
+	<div id="el231593884" class="revjet_container_el" style="cursor: pointer;">
+		<style type="text/css">#elframe_element231594445{width:728px;height:90px;position:absolute;display:block;} 
+
+
+
+
+
+</style>
+<div id="elframe_element231594445" class="animated-element" data-revjet-role="STAGE 4" data-revjet-role-id="231594436"><style type="text/css">#elframe_element231594454{width:728px;height:90px;position:absolute;display:block;} 
+#el231594508{ display:block; left:0px; top:0px; transform: translateX(314px) translateY(-5px) scale3d(7.28,0.9,1) ; -ms-transform: translateX(314px) translateY(-5px) scale3d(7.28,0.9,1) ; -webkit-transform: translateX(314px) translateY(-5px) scale3d(7.28,0.9,1) ; width:100px; height:100px; }
+#el231594505{display:block;left:0px;top:0px;border-style:none;width:728px;height:90px;background:rgb(255, 255, 255);opacity:1;}
+#el231594499{display:block;left:0px;top:0px; width:728px;height:90px;}#el231594499 img{position: absolute;width:728px;height:90px;left:0px;top:0px;}#el231594499 img {object-fit: cover;}
+#el231594496{display:block;left:449px;top:0px;border-style:none;width:279px;height:90px;background:rgb(255, 255, 255);opacity:1;}
+#el231594493{display:block;left:0px;top:0px;border-style:none;width:160px;height:90px;background:rgb(27, 32, 48);opacity:1;}
+#el231594490{display:block;left:36px;top:27px; width:90px;height:34.434781199999996px;}#el231594490 img{position: absolute;width:90px;height:34.434781199999996px;left:0px;top:0px;}
+
+#el231594481{ display:block; left:0px; top:0px; transform: translateX(0px) translateY(0px) scale3d(1,1,1) ; -ms-transform: translateX(0px) translateY(0px) scale3d(1,1,1) ; -webkit-transform: translateX(0px) translateY(0px) scale3d(1,1,1) ; width:728px; height:90px; }
+
+
+
+
+#el231594466{display:block;left:0px;top:0px;border-style:solid;border-width:1px;border-color:rgb(153, 153, 153);transform-origin: 0% ;width:728px;height:90px;}
+
+
+
+
+
+.html5-elm { position: absolute; float: left; display: block;}
+.block-elm { position: absolute; float: left; display: block;}
+.image-elm { position: absolute; float: left; overflow: hidden; display: block;}.image-elm img { width: 100%; height: 100%;}
+.border-elm { position: absolute; pointer-events: none; float: left; display: block;}</style>
+<div id="elframe_element231594454" class="animated-element run-animation-on-load" data-revjet-role="STAGE 4. SCENE 1" data-revjet-role-id="231594436.231594448"><div id="el231594508" class="animated-element html5-elm elp231594511" data-element-type="html5" data-animation-timeout="" data-revjet-role="STAGE 4. SCENE 1. LOGIC" data-revjet-role-id="231594436.231594448.231594508">
+        <style>
+.run-animation-on-load .intro_headline_wrapper {
+  opacity: 0;
+  animation: animateHeadline 0.5s forwards 0.5s;
+}
+
+[data-revjet-role="STAGE 1. SCENE 1"] .click-wrapper-intro .intro_headline_wrapper,
+[data-revjet-role="STAGE 2. SCENE 1"] .click-wrapper-intro .intro_headline_wrapper,
+[data-revjet-role="STAGE 3. SCENE 1"] .click-wrapper-intro .intro_headline_wrapper,
+[data-revjet-role="STAGE 4. SCENE 1"] .click-wrapper-intro .intro_headline_wrapper {
+	opacity: 1;
+  	animation: none;
+}
+
+@keyframes animateHeadline {
+  0% {
+  	opacity: 0;
+  }
+  
+  100% {
+  	opacity: 1;
+  }
+}
+</style>
+<script type="text/javascript">
+  const currentScript = document.currentScript;
+  
+    if (window.revjet && window.revjet.elements_api) {
+      	const slideDuration = 3000;
+      	const optionalFrames = {};
+      
+        window.revjet.elements_api.listen('before_personalization', function () {
+          const dataFeed = revjet.elements_api.getDataFeed(currentScript);
+
+          //If frame has an Image, we show it in preview and creative
+          if(dataFeed[0].templateImageUrl2[0] && dataFeed[0].templateImageUrl2[0].length > 0) {
+            optionalFrames.frame2 = 'showScene2';
+          }
+
+          if(dataFeed[0].templateImageUrl3[0] && dataFeed[0].templateImageUrl3[0].length > 0) {
+            optionalFrames.frame3 = 'showScene3';
+          }
+
+          if(dataFeed[0].templateImageUrl4[0] && dataFeed[0].templateImageUrl4[0].length > 0) {
+            optionalFrames.frame4 = 'showScene4';
+          }
+        }, undefined, currentScript);
+
+        window.revjet.elements_api.listen('show', function (eventType, source, event) {
+          let time = 0;
+          let framesToShow = optionalFrames;
+          framesToShow.frame5 = 'showScene5';
+          
+         
+          Object.values(framesToShow).forEach((value, i) => {
+            time = slideDuration * (i+1);
+            
+            window.setTimeout(function () {              
+              window.revjet.elements_api.dispatchEvent(currentScript, 'custom_event', {
+                name: value,
+                payload: value,
+              });
+            }, time);
+          });          
+          
+        }, undefined, currentScript);
+    }
+</script>
+</div>
+<a href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$" target="_blank" id="el231594505" class="animated-element block-elm" data-revjet-role="STAGE 4. SCENE 1. BLOCK 2" data-revjet-role-id="231594436.231594448.231594505" rel="nofollow" data-revjet-original-href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$"></a>
+<a href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$" target="_blank" id="el231594499" class="animated-element image-elm elp231594502" data-revjet-role="STAGE 4. SCENE 1. GRAPHIC (PRIMARY)" data-revjet-role-id="231594436.231594448.231594499" rel="nofollow" data-revjet-original-href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$">
+	<div class="animation-extender">
+		<img data-revjet-element-type="image" onload="if ((!window.revjet || !window.revjet.elements_api) &amp;&amp; this.hasAttribute('data-revjet-image-src')) { var imageSrc = this.getAttribute('data-revjet-image-src'); this.removeAttribute('data-revjet-image-src'); this.src = imageSrc; }" src="a_data/OLA_ImageSizingTemplate_ProGRIDBanners728x90_01_3c56f1a4-147.jpg" alt="">
+	</div>
+</a>
+<a href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$" target="_blank" id="el231594496" class="animated-element block-elm" data-revjet-role="STAGE 4. SCENE 1. BLOCK 3" data-revjet-role-id="231594436.231594448.231594496" rel="nofollow" data-revjet-original-href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$"></a>
+<a href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$" target="_blank" id="el231594493" class="animated-element block-elm" data-revjet-role="STAGE 4. SCENE 1. BLOCK 1" data-revjet-role-id="231594436.231594448.231594493" rel="nofollow" data-revjet-original-href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$"></a>
+<a href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$" target="_blank" id="el231594490" class="animated-element image-elm " data-revjet-role="STAGE 4. SCENE 1. LOGO" data-revjet-role-id="231594436.231594448.231594490" rel="nofollow" data-revjet-original-href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$">
+	<div class="animation-extender">
+		<img data-revjet-element-type="image" onload="if ((!window.revjet || !window.revjet.elements_api) &amp;&amp; this.hasAttribute('data-revjet-image-src')) { var imageSrc = this.getAttribute('data-revjet-image-src'); this.removeAttribute('data-revjet-image-src'); this.src = imageSrc; }" src="a_data/TRG_THD_PRO_REV_RGB.png" alt="">
+	</div>
+</a>
+
+<div id="el231594481" class="animated-element html5-elm elp231594484" data-element-type="html5" data-animation-timeout="" data-revjet-role="STAGE 4. SCENE 1. CLICK + HEADLINE" data-revjet-role-id="231594436.231594448.231594481">
+        <style>
+@font-face {
+  font-family: 'HelveticaNeueLTPro77BoldCondensed';
+  src: url('//cdn.revjet.com/~cdn/Ads/ad_shared/fonts/HelveticaNeueLTPro-2/HelveticaNeueLTPro-BdCn.eot');
+  src: url('//cdn.revjet.com/~cdn/Ads/ad_shared/fonts/HelveticaNeueLTPro-2/HelveticaNeueLTPro-BdCn.eot?#iefix') format('embedded-opentype'),
+      url('//cdn.revjet.com/~cdn/Ads/ad_shared/fonts/HelveticaNeueLTPro-2/HelveticaNeueLTPro-BdCn.woff2') format('woff2'),
+      url('//cdn.revjet.com/~cdn/Ads/ad_shared/fonts/HelveticaNeueLTPro-2/HelveticaNeueLTPro-BdCn.woff') format('woff'),
+      url('//cdn.revjet.com/~cdn/Ads/ad_shared/fonts/HelveticaNeueLTPro-2/HelveticaNeueLTPro-BdCn.ttf') format('truetype'),
+      url('//cdn.revjet.com/~cdn/Ads/ad_shared/fonts/HelveticaNeueLTPro-2/HelveticaNeueLTPro-BdCn.svg#HelveticaNeueLTPro77BoldCondensed') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.click-wrapper-intro,
+.click-wrapper-intro__url {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.click-wrapper-intro .intro_headline_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  top: 0px;
+  left: 466px;
+  width: 244px;
+  height: 90px;
+  overflow: hidden;
+}
+.click-wrapper-intro .intro__headline {
+  font-family: "HelveticaNeueLTPro77BoldCondensed", Arial, sans-serif;
+  font-size: 22px;
+  line-height: 1;
+  width: 240px;
+  min-height: 30px;
+  max-height: 90px;
+  overflow: hidden;
+  color: #333;
+  text-transform: uppercase;
+}
+</style>
+<div class="click-wrapper-intro" data-revjet-each="dataFeedItem" data-revjet-sku-pos="1" data-revjet-personalized="">
+  <div class="click-wrapper-intro__url" data-revjet-lp-exit="{_dataFeedItem.url}" data-revjet-click-url="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$&amp;" style="cursor: pointer;">
+    <div class="intro_headline_wrapper" style="cursor: pointer;">
+
+      <div class="intro__headline" data-revjet-text="{_(dataFeedItem.templateHeadline1 || dataFeedItem.templateHeadline2 || dataFeedItem.templateHeadline3 || dataFeedItem.templateHeadline4)}" data-revjet-shrink="18" data-text="regmark" data-revjet-final-style="line-height: 1;" style="cursor: pointer; line-height: 1;" data-revjet-shrinking-completed="">4 WAYS TO GET DELIVERY ON YOUR TERMS</div>
+
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+    (function (currentScript) {
+
+        if (window.revjet && window.revjet.elements_api) {
+            window.revjet.elements_api.listen('before_personalization', function () {
+                /********** REGMARK FIX **********/
+                revjet.elements_api.updateDataFeed(currentScript, function (dataFeed) {
+                    function superscriptString(string, symbolsToSuperscriptArray) {
+                      if (!symbolsToSuperscriptArray) {
+                        symbolsToSuperscriptArray = ["®", "™"];
+                      }
+
+                      return string.split("").map(function ( stringItem ) {
+                        symbolsToSuperscriptArray.forEach(function(symbol) {
+                          if (stringItem === symbol) {
+                            stringItem = stringItem.replace(symbol, "<sup>" + symbol + "</sup>");
+                          }
+                        });
+                        return stringItem;
+                      }).join("");
+                    }
+
+                    var newFeed = JSON.parse(JSON.stringify(dataFeed));
+                  	//console.log(newFeed)
+                    var firstCard = newFeed.filter(function (item) {
+                        return item;
+                    })[0];
+					if (firstCard) {
+                      var templateHeadline1 = firstCard.templateHeadline1 || "";
+                      var templateHeadline2 = firstCard.templateHeadline2 || "";
+                      var templateHeadline3 = firstCard.templateHeadline3 || "";
+                      var templateHeadline4 = firstCard.templateHeadline4 || "";
+
+                      if (templateHeadline1.length && templateHeadline1[0]) {
+                          templateHeadline1[0] = superscriptString(templateHeadline1[0]);
+                      }
+
+                      if (templateHeadline2.length && templateHeadline2[0]) {
+                          templateHeadline2[0] = superscriptString(templateHeadline2[0]);
+                      }
+                      
+                      if (templateHeadline3.length && templateHeadline3[0]) {
+                          templateHeadline3[0] = superscriptString(templateHeadline3[0]);
+                      }
+                      
+                      if (templateHeadline4.length && templateHeadline4[0]) {
+                          templateHeadline4[0] = superscriptString(templateHeadline4[0]);
+                      }
+					}
+                    return newFeed;
+                });
+                /********** REGMARK FIX **********/
+
+            }, undefined, currentScript);
+        }
+
+    })(document.currentScript || document.getElementsByTagName('script')[document.getElementsByTagName('script').length - 1]);
+</script>
+</div>
+
+
+
+
+<a href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$" target="_blank" id="el231594466" class="animated-element border-elm" data-revjet-role="STAGE 4. SCENE 1. BORDER" data-revjet-role-id="231594436.231594448.231594466" rel="nofollow" data-revjet-original-href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$"></a>
+
+
+
+</div>
+
+<style type="text/css">#elframe_element231594520{width:728px;height:90px;position:absolute;display:none;} 
+#el231594565{display:block;left:0px;top:0px;border-style:none;width:728px;height:90px;background:rgb(255, 255, 255);opacity:1;}
+#el231594559{display:block;left:0px;top:0px; width:728px;height:90px;}#el231594559 img{position: absolute;width:728px;height:90px;left:0px;top:0px;}#el231594559 img {object-fit: cover;}
+#el231594556{display:block;left:449px;top:0px;border-style:none;width:279px;height:90px;background:rgb(255, 255, 255);opacity:1;}
+#el231594553{display:block;left:0px;top:0px;border-style:none;width:160px;height:90px;background:rgb(27, 32, 48);opacity:1;}
+#el231594550{display:block;left:36px;top:27px; width:90px;height:34.434781199999996px;}#el231594550 img{position: absolute;width:90px;height:34.434781199999996px;left:0px;top:0px;}
+
+
+
+#el231594535{ display:block; left:0px; top:0px; transform: translateX(0px) translateY(0px) scale3d(1,1,1) ; -ms-transform: translateX(0px) translateY(0px) scale3d(1,1,1) ; -webkit-transform: translateX(0px) translateY(0px) scale3d(1,1,1) ; width:728px; height:90px; }
+
+
+#el231594526{display:block;left:0px;top:0px;border-style:solid;border-width:1px;border-color:rgb(153, 153, 153);transform-origin: 0% ;width:728px;height:90px;}
+
+
+
+.block-elm { position: absolute; float: left; display: block;}
+.image-elm { position: absolute; float: left; overflow: hidden; display: block;}.image-elm img { width: 100%; height: 100%;}
+.html5-elm { position: absolute; float: left; display: block;}
+.border-elm { position: absolute; pointer-events: none; float: left; display: block;}</style>
+<div id="elframe_element231594520" class="animated-element" data-revjet-role="STAGE 4. SCENE 2" data-revjet-role-id="231594436.231594514" style="opacity: 1; overflow: visible; display: block;"><a href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$" target="_blank" id="el231594565" class="animated-element block-elm" data-revjet-role="STAGE 4. SCENE 2. BLOCK 2" data-revjet-role-id="231594436.231594514.231594565" rel="nofollow" data-revjet-original-href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$"></a>
+<a href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$" target="_blank" id="el231594559" class="animated-element image-elm elp231594562" data-revjet-role="STAGE 4. SCENE 2. GRAPHIC (PRIMARY)" data-revjet-role-id="231594436.231594514.231594559" rel="nofollow" data-revjet-original-href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$">
+	<div class="animation-extender">
+		<img data-revjet-element-type="image" onload="if ((!window.revjet || !window.revjet.elements_api) &amp;&amp; this.hasAttribute('data-revjet-image-src')) { var imageSrc = this.getAttribute('data-revjet-image-src'); this.removeAttribute('data-revjet-image-src'); this.src = imageSrc; }" src="a_data/728x90_05.jpg" alt="">
+	</div>
+</a>
+<a href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$" target="_blank" id="el231594556" class="animated-element block-elm" data-revjet-role="STAGE 4. SCENE 2. BLOCK 3" data-revjet-role-id="231594436.231594514.231594556" rel="nofollow" data-revjet-original-href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$"></a>
+<a href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$" target="_blank" id="el231594553" class="animated-element block-elm" data-revjet-role="STAGE 4. SCENE 2. BLOCK 1" data-revjet-role-id="231594436.231594514.231594553" rel="nofollow" data-revjet-original-href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$"></a>
+<a href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$" target="_blank" id="el231594550" class="animated-element image-elm " data-revjet-role="STAGE 4. SCENE 2. LOGO" data-revjet-role-id="231594436.231594514.231594550" rel="nofollow" data-revjet-original-href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$">
+	<div class="animation-extender">
+		<img data-revjet-element-type="image" onload="if ((!window.revjet || !window.revjet.elements_api) &amp;&amp; this.hasAttribute('data-revjet-image-src')) { var imageSrc = this.getAttribute('data-revjet-image-src'); this.removeAttribute('data-revjet-image-src'); this.src = imageSrc; }" src="a_data/TRG_THD_PRO_REV_RGB.png" alt="">
+	</div>
+</a>
+
+
+
+<div id="el231594535" class="animated-element html5-elm elp231594538" data-element-type="html5" data-animation-timeout="" data-revjet-role="STAGE 4. SCENE 2. CLICK + HEADLINE" data-revjet-role-id="231594436.231594514.231594535">
+        <style>
+@font-face {
+  font-family: 'HelveticaNeueLTPro77BoldCondensed';
+  src: url('//cdn.revjet.com/~cdn/Ads/ad_shared/fonts/HelveticaNeueLTPro-2/HelveticaNeueLTPro-BdCn.eot');
+  src: url('//cdn.revjet.com/~cdn/Ads/ad_shared/fonts/HelveticaNeueLTPro-2/HelveticaNeueLTPro-BdCn.eot?#iefix') format('embedded-opentype'),
+      url('//cdn.revjet.com/~cdn/Ads/ad_shared/fonts/HelveticaNeueLTPro-2/HelveticaNeueLTPro-BdCn.woff2') format('woff2'),
+      url('//cdn.revjet.com/~cdn/Ads/ad_shared/fonts/HelveticaNeueLTPro-2/HelveticaNeueLTPro-BdCn.woff') format('woff'),
+      url('//cdn.revjet.com/~cdn/Ads/ad_shared/fonts/HelveticaNeueLTPro-2/HelveticaNeueLTPro-BdCn.ttf') format('truetype'),
+      url('//cdn.revjet.com/~cdn/Ads/ad_shared/fonts/HelveticaNeueLTPro-2/HelveticaNeueLTPro-BdCn.svg#HelveticaNeueLTPro77BoldCondensed') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.click-wrapper-intro,
+.click-wrapper-intro__url {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.click-wrapper-intro .intro_headline_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  top: 0px;
+  left: 466px;
+  width: 244px;
+  height: 90px;
+  overflow: hidden;
+}
+.click-wrapper-intro .intro__headline {
+  font-family: "HelveticaNeueLTPro77BoldCondensed", Arial, sans-serif;
+  font-size: 22px;
+  line-height: 1;
+  width: 240px;
+  min-height: 30px;
+  max-height: 90px;
+  overflow: hidden;
+  color: #333;
+  text-transform: uppercase;
+}
+</style>
+<div class="click-wrapper-intro" data-revjet-each="dataFeedItem" data-revjet-sku-pos="1" data-revjet-personalized="">
+  <div class="click-wrapper-intro__url" data-revjet-lp-exit="{_dataFeedItem.url}" data-revjet-click-url="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$&amp;" style="cursor: pointer;">
+    <div class="intro_headline_wrapper run-next" style="cursor: pointer;">
+
+      <div class="intro__headline" data-revjet-text="{_(dataFeedItem.templateHeadline1 || dataFeedItem.templateHeadline2 || dataFeedItem.templateHeadline3 || dataFeedItem.templateHeadline4)}" data-revjet-shrink="18" data-text="regmark" data-revjet-final-style="line-height: 1;" style="cursor: pointer; line-height: 1;" data-revjet-shrinking-completed="">SCHEDULE DELIVERY TIMES</div>
+
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+    (function (currentScript) {
+
+        if (window.revjet && window.revjet.elements_api) {
+            window.revjet.elements_api.listen('before_personalization', function () {
+                /********** REGMARK FIX **********/
+                revjet.elements_api.updateDataFeed(currentScript, function (dataFeed) {
+                    function superscriptString(string, symbolsToSuperscriptArray) {
+                      if (!symbolsToSuperscriptArray) {
+                        symbolsToSuperscriptArray = ["®", "™"];
+                      }
+
+                      return string.split("").map(function ( stringItem ) {
+                        symbolsToSuperscriptArray.forEach(function(symbol) {
+                          if (stringItem === symbol) {
+                            stringItem = stringItem.replace(symbol, "<sup>" + symbol + "</sup>");
+                          }
+                        });
+                        return stringItem;
+                      }).join("");
+                    }
+
+                    var newFeed = JSON.parse(JSON.stringify(dataFeed));
+                  	//console.log(newFeed)
+                    var firstCard = newFeed.filter(function (item) {
+                        return item;
+                    })[0];
+					if (firstCard) {
+                      var templateHeadline1 = firstCard.templateHeadline1 || "";
+                      var templateHeadline2 = firstCard.templateHeadline2 || "";
+                      var templateHeadline3 = firstCard.templateHeadline3 || "";
+                      var templateHeadline4 = firstCard.templateHeadline4 || "";
+
+                      if (templateHeadline1.length && templateHeadline1[0]) {
+                          templateHeadline1[0] = superscriptString(templateHeadline1[0]);
+                      }
+
+                      if (templateHeadline2.length && templateHeadline2[0]) {
+                          templateHeadline2[0] = superscriptString(templateHeadline2[0]);
+                      }
+                      
+                      if (templateHeadline3.length && templateHeadline3[0]) {
+                          templateHeadline3[0] = superscriptString(templateHeadline3[0]);
+                      }
+                      
+                      if (templateHeadline4.length && templateHeadline4[0]) {
+                          templateHeadline4[0] = superscriptString(templateHeadline4[0]);
+                      }
+					}
+                    return newFeed;
+                });
+                /********** REGMARK FIX **********/
+
+            }, undefined, currentScript);
+        }
+
+    })(document.currentScript || document.getElementsByTagName('script')[document.getElementsByTagName('script').length - 1]);
+</script>
+</div>
+
+
+<a href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$" target="_blank" id="el231594526" class="animated-element border-elm" data-revjet-role="STAGE 4. SCENE 2. BORDER" data-revjet-role-id="231594436.231594514.231594526" rel="nofollow" data-revjet-original-href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$"></a>
+
+</div>
+
+<style type="text/css">#elframe_element231594622{width:728px;height:90px;position:absolute;display:none;} 
+#el231594619{display:block;left:0px;top:0px;border-style:none;width:728px;height:90px;background:rgb(255, 255, 255);opacity:1;}
+#el231594613{display:block;left:0px;top:0px; width:728px;height:90px;}#el231594613 img{position: absolute;width:728px;height:90px;left:0px;top:0px;}#el231594613 img {object-fit: cover;}
+#el231594610{display:block;left:449px;top:0px;border-style:none;width:279px;height:90px;background:rgb(255, 255, 255);opacity:1;}
+#el231594604{display:block;left:0px;top:0px;border-style:none;width:160px;height:90px;background:rgb(27, 32, 48);opacity:1;}
+#el231594601{display:block;left:36px;top:27px; width:90px;height:34.434781199999996px;}#el231594601 img{position: absolute;width:90px;height:34.434781199999996px;left:0px;top:0px;}
+
+
+
+
+#el231594583{ display:block; left:0px; top:0px; transform: translateX(0px) translateY(0px) scale3d(1,1,1) ; -ms-transform: translateX(0px) translateY(0px) scale3d(1,1,1) ; -webkit-transform: translateX(0px) translateY(0px) scale3d(1,1,1) ; width:728px; height:90px; }
+
+#el231594577{display:block;left:0px;top:0px;border-style:solid;border-width:1px;border-color:rgb(153, 153, 153);transform-origin: 0% ;width:728px;height:90px;}
+
+
+
+.block-elm { position: absolute; float: left; display: block;}
+.image-elm { position: absolute; float: left; overflow: hidden; display: block;}.image-elm img { width: 100%; height: 100%;}
+.html5-elm { position: absolute; float: left; display: block;}
+.border-elm { position: absolute; pointer-events: none; float: left; display: block;}</style>
+<div id="elframe_element231594622" class="animated-element run-animation-on-load" data-revjet-role="STAGE 4. SCENE 3" data-revjet-role-id="231594436.231594568" style="opacity: 1; overflow: visible; display: block;"><a href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$" target="_blank" id="el231594619" class="animated-element block-elm" data-revjet-role="STAGE 4. SCENE 3. BLOCK 2" data-revjet-role-id="231594436.231594568.231594619" rel="nofollow" data-revjet-original-href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$"></a>
+<a href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$" target="_blank" id="el231594613" class="animated-element image-elm elp231594616" data-revjet-role="STAGE 4. SCENE 3. GRAPHIC (PRIMARY)" data-revjet-role-id="231594436.231594568.231594613" rel="nofollow" data-revjet-original-href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$">
+	<div class="animation-extender">
+		<img data-revjet-element-type="image" onload="if ((!window.revjet || !window.revjet.elements_api) &amp;&amp; this.hasAttribute('data-revjet-image-src')) { var imageSrc = this.getAttribute('data-revjet-image-src'); this.removeAttribute('data-revjet-image-src'); this.src = imageSrc; }" src="a_data/OLA_ImageSizingTemplate_ProGRIDBanners728x90_03.jpg" alt="">
+	</div>
+</a>
+<a href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$" target="_blank" id="el231594610" class="animated-element block-elm" data-revjet-role="STAGE 4. SCENE 3. BLOCK 3" data-revjet-role-id="231594436.231594568.231594610" rel="nofollow" data-revjet-original-href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$"></a>
+<a href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$" target="_blank" id="el231594604" class="animated-element block-elm" data-revjet-role="STAGE 4. SCENE 3. BLOCK 1" data-revjet-role-id="231594436.231594568.231594604" rel="nofollow" data-revjet-original-href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$"></a>
+<a href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$" target="_blank" id="el231594601" class="animated-element image-elm " data-revjet-role="STAGE 4. SCENE 3. LOGO" data-revjet-role-id="231594436.231594568.231594601" rel="nofollow" data-revjet-original-href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$">
+	<div class="animation-extender">
+		<img data-revjet-element-type="image" onload="if ((!window.revjet || !window.revjet.elements_api) &amp;&amp; this.hasAttribute('data-revjet-image-src')) { var imageSrc = this.getAttribute('data-revjet-image-src'); this.removeAttribute('data-revjet-image-src'); this.src = imageSrc; }" src="a_data/TRG_THD_PRO_REV_RGB.png" alt="">
+	</div>
+</a>
+
+
+
+
+<div id="el231594583" class="animated-element html5-elm elp231594586" data-element-type="html5" data-animation-timeout="" data-revjet-role="STAGE 4. SCENE 3. CLICK + HEADLINE" data-revjet-role-id="231594436.231594568.231594583">
+        <style>
+@font-face {
+  font-family: 'HelveticaNeueLTPro77BoldCondensed';
+  src: url('//cdn.revjet.com/~cdn/Ads/ad_shared/fonts/HelveticaNeueLTPro-2/HelveticaNeueLTPro-BdCn.eot');
+  src: url('//cdn.revjet.com/~cdn/Ads/ad_shared/fonts/HelveticaNeueLTPro-2/HelveticaNeueLTPro-BdCn.eot?#iefix') format('embedded-opentype'),
+      url('//cdn.revjet.com/~cdn/Ads/ad_shared/fonts/HelveticaNeueLTPro-2/HelveticaNeueLTPro-BdCn.woff2') format('woff2'),
+      url('//cdn.revjet.com/~cdn/Ads/ad_shared/fonts/HelveticaNeueLTPro-2/HelveticaNeueLTPro-BdCn.woff') format('woff'),
+      url('//cdn.revjet.com/~cdn/Ads/ad_shared/fonts/HelveticaNeueLTPro-2/HelveticaNeueLTPro-BdCn.ttf') format('truetype'),
+      url('//cdn.revjet.com/~cdn/Ads/ad_shared/fonts/HelveticaNeueLTPro-2/HelveticaNeueLTPro-BdCn.svg#HelveticaNeueLTPro77BoldCondensed') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.click-wrapper-intro,
+.click-wrapper-intro__url {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.click-wrapper-intro .intro_headline_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  top: 0px;
+  left: 466px;
+  width: 244px;
+  height: 90px;
+  overflow: hidden;
+}
+.click-wrapper-intro .intro__headline {
+  font-family: "HelveticaNeueLTPro77BoldCondensed", Arial, sans-serif;
+  font-size: 22px;
+  line-height: 1;
+  width: 240px;
+  min-height: 30px;
+  max-height: 90px;
+  overflow: hidden;
+  color: #333;
+  text-transform: uppercase;
+}
+</style>
+<div class="click-wrapper-intro" data-revjet-each="dataFeedItem" data-revjet-sku-pos="1" data-revjet-personalized="">
+  <div class="click-wrapper-intro__url" data-revjet-lp-exit="{_dataFeedItem.url}" data-revjet-click-url="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$&amp;" style="cursor: pointer;">
+    <div class="intro_headline_wrapper" style="cursor: pointer;">
+
+      <div class="intro__headline" data-revjet-text="{_(dataFeedItem.templateHeadline1 || dataFeedItem.templateHeadline2 || dataFeedItem.templateHeadline3 || dataFeedItem.templateHeadline4)}" data-revjet-shrink="18" data-text="regmark" data-revjet-final-style="line-height: 1;" style="cursor: pointer; line-height: 1;" data-revjet-shrinking-completed="">DELIVER TO YOUR JOB SITE</div>
+
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+    (function (currentScript) {
+
+        if (window.revjet && window.revjet.elements_api) {
+            window.revjet.elements_api.listen('before_personalization', function () {
+                /********** REGMARK FIX **********/
+                revjet.elements_api.updateDataFeed(currentScript, function (dataFeed) {
+                    function superscriptString(string, symbolsToSuperscriptArray) {
+                      if (!symbolsToSuperscriptArray) {
+                        symbolsToSuperscriptArray = ["®", "™"];
+                      }
+
+                      return string.split("").map(function ( stringItem ) {
+                        symbolsToSuperscriptArray.forEach(function(symbol) {
+                          if (stringItem === symbol) {
+                            stringItem = stringItem.replace(symbol, "<sup>" + symbol + "</sup>");
+                          }
+                        });
+                        return stringItem;
+                      }).join("");
+                    }
+
+                    var newFeed = JSON.parse(JSON.stringify(dataFeed));
+                  	//console.log(newFeed)
+                    var firstCard = newFeed.filter(function (item) {
+                        return item;
+                    })[0];
+					if (firstCard) {
+                      var templateHeadline1 = firstCard.templateHeadline1 || "";
+                      var templateHeadline2 = firstCard.templateHeadline2 || "";
+                      var templateHeadline3 = firstCard.templateHeadline3 || "";
+                      var templateHeadline4 = firstCard.templateHeadline4 || "";
+
+                      if (templateHeadline1.length && templateHeadline1[0]) {
+                          templateHeadline1[0] = superscriptString(templateHeadline1[0]);
+                      }
+
+                      if (templateHeadline2.length && templateHeadline2[0]) {
+                          templateHeadline2[0] = superscriptString(templateHeadline2[0]);
+                      }
+                      
+                      if (templateHeadline3.length && templateHeadline3[0]) {
+                          templateHeadline3[0] = superscriptString(templateHeadline3[0]);
+                      }
+                      
+                      if (templateHeadline4.length && templateHeadline4[0]) {
+                          templateHeadline4[0] = superscriptString(templateHeadline4[0]);
+                      }
+					}
+                    return newFeed;
+                });
+                /********** REGMARK FIX **********/
+
+            }, undefined, currentScript);
+        }
+
+    })(document.currentScript || document.getElementsByTagName('script')[document.getElementsByTagName('script').length - 1]);
+</script>
+</div>
+
+<a href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$" target="_blank" id="el231594577" class="animated-element border-elm" data-revjet-role="STAGE 4. SCENE 3. BORDER" data-revjet-role-id="231594436.231594568.231594577" rel="nofollow" data-revjet-original-href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$"></a>
+
+</div>
+
+<style type="text/css">#elframe_element231594676{width:728px;height:90px;position:absolute;display:none;} 
+#el231594673{display:block;left:0px;top:0px;border-style:none;width:728px;height:90px;background:rgb(255, 255, 255);opacity:1;}
+#el231594667{display:block;left:0px;top:0px; width:728px;height:90px;}#el231594667 img{position: absolute;width:728px;height:90px;left:0px;top:0px;}#el231594667 img {object-fit: cover;}
+#el231594664{display:block;left:449px;top:0px;border-style:none;width:279px;height:90px;background:rgb(255, 255, 255);opacity:1;}
+#el231594661{display:block;left:0px;top:0px;border-style:none;width:160px;height:90px;background:rgb(27, 32, 48);opacity:1;}
+#el231594658{display:block;left:36px;top:27px; width:90px;height:34.434781199999996px;}#el231594658 img{position: absolute;width:90px;height:34.434781199999996px;left:0px;top:0px;}
+
+
+
+
+#el231594640{ display:block; left:0px; top:0px; transform: translateX(0px) translateY(0px) scale3d(1,1,1) ; -ms-transform: translateX(0px) translateY(0px) scale3d(1,1,1) ; -webkit-transform: translateX(0px) translateY(0px) scale3d(1,1,1) ; width:728px; height:90px; }
+
+#el231594634{display:block;left:0px;top:0px;border-style:solid;border-width:1px;border-color:rgb(153, 153, 153);transform-origin: 0% ;width:728px;height:90px;}
+
+
+
+.block-elm { position: absolute; float: left; display: block;}
+.image-elm { position: absolute; float: left; overflow: hidden; display: block;}.image-elm img { width: 100%; height: 100%;}
+.html5-elm { position: absolute; float: left; display: block;}
+.border-elm { position: absolute; pointer-events: none; float: left; display: block;}</style>
+<div id="elframe_element231594676" class="animated-element" data-revjet-role="STAGE 4. SCENE 4" data-revjet-role-id="231594436.231594625"><a href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$" target="_blank" id="el231594673" class="animated-element block-elm" data-revjet-role="STAGE 4. SCENE 4. BLOCK 2" data-revjet-role-id="231594436.231594625.231594673" rel="nofollow" data-revjet-original-href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$"></a>
+<a href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$" target="_blank" id="el231594667" class="animated-element image-elm elp231594670" data-revjet-role="STAGE 4. SCENE 4. GRAPHIC (PRIMARY)" data-revjet-role-id="231594436.231594625.231594667" rel="nofollow" data-revjet-original-href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$">
+	<div class="animation-extender">
+		<img data-revjet-element-type="image" onload="if ((!window.revjet || !window.revjet.elements_api) &amp;&amp; this.hasAttribute('data-revjet-image-src')) { var imageSrc = this.getAttribute('data-revjet-image-src'); this.removeAttribute('data-revjet-image-src'); this.src = imageSrc; }" src="a_data/OLA_ImageSizingTemplate_ProGRIDBanners728x90_04.jpg" alt="">
+	</div>
+</a>
+<a href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$" target="_blank" id="el231594664" class="animated-element block-elm" data-revjet-role="STAGE 4. SCENE 4. BLOCK 3" data-revjet-role-id="231594436.231594625.231594664" rel="nofollow" data-revjet-original-href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$"></a>
+<a href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$" target="_blank" id="el231594661" class="animated-element block-elm" data-revjet-role="STAGE 4. SCENE 4. BLOCK 1" data-revjet-role-id="231594436.231594625.231594661" rel="nofollow" data-revjet-original-href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$"></a>
+<a href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$" target="_blank" id="el231594658" class="animated-element image-elm " data-revjet-role="STAGE 4. SCENE 4. LOGO" data-revjet-role-id="231594436.231594625.231594658" rel="nofollow" data-revjet-original-href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$">
+	<div class="animation-extender">
+		<img data-revjet-element-type="image" onload="if ((!window.revjet || !window.revjet.elements_api) &amp;&amp; this.hasAttribute('data-revjet-image-src')) { var imageSrc = this.getAttribute('data-revjet-image-src'); this.removeAttribute('data-revjet-image-src'); this.src = imageSrc; }" src="a_data/TRG_THD_PRO_REV_RGB.png" alt="">
+	</div>
+</a>
+
+
+
+
+<div id="el231594640" class="animated-element html5-elm elp231594643" data-element-type="html5" data-animation-timeout="" data-revjet-role="STAGE 4. SCENE 4. CLICK + HEADLINE" data-revjet-role-id="231594436.231594625.231594640">
+        <style>
+@font-face {
+  font-family: 'HelveticaNeueLTPro77BoldCondensed';
+  src: url('//cdn.revjet.com/~cdn/Ads/ad_shared/fonts/HelveticaNeueLTPro-2/HelveticaNeueLTPro-BdCn.eot');
+  src: url('//cdn.revjet.com/~cdn/Ads/ad_shared/fonts/HelveticaNeueLTPro-2/HelveticaNeueLTPro-BdCn.eot?#iefix') format('embedded-opentype'),
+      url('//cdn.revjet.com/~cdn/Ads/ad_shared/fonts/HelveticaNeueLTPro-2/HelveticaNeueLTPro-BdCn.woff2') format('woff2'),
+      url('//cdn.revjet.com/~cdn/Ads/ad_shared/fonts/HelveticaNeueLTPro-2/HelveticaNeueLTPro-BdCn.woff') format('woff'),
+      url('//cdn.revjet.com/~cdn/Ads/ad_shared/fonts/HelveticaNeueLTPro-2/HelveticaNeueLTPro-BdCn.ttf') format('truetype'),
+      url('//cdn.revjet.com/~cdn/Ads/ad_shared/fonts/HelveticaNeueLTPro-2/HelveticaNeueLTPro-BdCn.svg#HelveticaNeueLTPro77BoldCondensed') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.click-wrapper-intro,
+.click-wrapper-intro__url {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.click-wrapper-intro .intro_headline_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  top: 0px;
+  left: 466px;
+  width: 244px;
+  height: 90px;
+  overflow: hidden;
+}
+.click-wrapper-intro .intro__headline {
+  font-family: "HelveticaNeueLTPro77BoldCondensed", Arial, sans-serif;
+  font-size: 22px;
+  line-height: 1;
+  width: 240px;
+  min-height: 30px;
+  max-height: 90px;
+  overflow: hidden;
+  color: #333;
+  text-transform: uppercase;
+}
+</style>
+<div class="click-wrapper-intro" data-revjet-each="dataFeedItem" data-revjet-sku-pos="1" data-revjet-personalized="">
+  <div class="click-wrapper-intro__url" data-revjet-lp-exit="{_dataFeedItem.url}" data-revjet-click-url="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$&amp;" style="cursor: pointer;">
+    <div class="intro_headline_wrapper" style="cursor: pointer;">
+
+      <div class="intro__headline" data-revjet-text="{_(dataFeedItem.templateHeadline1 || dataFeedItem.templateHeadline2 || dataFeedItem.templateHeadline3 || dataFeedItem.templateHeadline4)}" data-revjet-shrink="18" data-text="regmark" data-revjet-final-style="line-height: 1;" style="cursor: pointer; line-height: 1;" data-revjet-shrinking-completed="">NEXT-DAY DELIVERY AVAILABLE</div>
+
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+    (function (currentScript) {
+
+        if (window.revjet && window.revjet.elements_api) {
+            window.revjet.elements_api.listen('before_personalization', function () {
+                /********** REGMARK FIX **********/
+                revjet.elements_api.updateDataFeed(currentScript, function (dataFeed) {
+                    function superscriptString(string, symbolsToSuperscriptArray) {
+                      if (!symbolsToSuperscriptArray) {
+                        symbolsToSuperscriptArray = ["®", "™"];
+                      }
+
+                      return string.split("").map(function ( stringItem ) {
+                        symbolsToSuperscriptArray.forEach(function(symbol) {
+                          if (stringItem === symbol) {
+                            stringItem = stringItem.replace(symbol, "<sup>" + symbol + "</sup>");
+                          }
+                        });
+                        return stringItem;
+                      }).join("");
+                    }
+
+                    var newFeed = JSON.parse(JSON.stringify(dataFeed));
+                  	//console.log(newFeed)
+                    var firstCard = newFeed.filter(function (item) {
+                        return item;
+                    })[0];
+					if (firstCard) {
+                      var templateHeadline1 = firstCard.templateHeadline1 || "";
+                      var templateHeadline2 = firstCard.templateHeadline2 || "";
+                      var templateHeadline3 = firstCard.templateHeadline3 || "";
+                      var templateHeadline4 = firstCard.templateHeadline4 || "";
+
+                      if (templateHeadline1.length && templateHeadline1[0]) {
+                          templateHeadline1[0] = superscriptString(templateHeadline1[0]);
+                      }
+
+                      if (templateHeadline2.length && templateHeadline2[0]) {
+                          templateHeadline2[0] = superscriptString(templateHeadline2[0]);
+                      }
+                      
+                      if (templateHeadline3.length && templateHeadline3[0]) {
+                          templateHeadline3[0] = superscriptString(templateHeadline3[0]);
+                      }
+                      
+                      if (templateHeadline4.length && templateHeadline4[0]) {
+                          templateHeadline4[0] = superscriptString(templateHeadline4[0]);
+                      }
+					}
+                    return newFeed;
+                });
+                /********** REGMARK FIX **********/
+
+            }, undefined, currentScript);
+        }
+
+    })(document.currentScript || document.getElementsByTagName('script')[document.getElementsByTagName('script').length - 1]);
+</script>
+</div>
+
+<a href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$" target="_blank" id="el231594634" class="animated-element border-elm" data-revjet-role="STAGE 4. SCENE 4. BORDER" data-revjet-role-id="231594436.231594625.231594634" rel="nofollow" data-revjet-original-href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$"></a>
+
+</div>
+
+<style type="text/css">#elframe_element231594685{width:728px;height:90px;position:absolute;display:none;} 
+#el231594712{display:block;left:0px;top:0px;border-style:none;width:728px;height:90px;background:rgb(255, 255, 255);opacity:1;}
+#el231594706{display:block;left:0px;top:0px; width:728px;height:90px;}#el231594706 img{position: absolute;width:728px;height:90px;left:0px;top:0px;}#el231594706 img {object-fit: cover;}
+#el231594703{display:block;left:449px;top:0px;border-style:none;width:279px;height:90px;background:rgb(255, 255, 255);opacity:1;}
+#el231594700{display:block;left:0px;top:0px;border-style:none;width:160px;height:90px;background:rgb(27, 32, 48);opacity:1;}
+#el231594697{display:block;left:36px;top:27px; width:90px;height:34.434781199999996px;}#el231594697 img{position: absolute;width:90px;height:34.434781199999996px;left:0px;top:0px;}
+#el231594691{ display:block; left:0px; top:0px; transform: translateX(0px) translateY(0px) scale3d(1,1,1) ; -ms-transform: translateX(0px) translateY(0px) scale3d(1,1,1) ; -webkit-transform: translateX(0px) translateY(0px) scale3d(1,1,1) ; width:728px; height:90px; }
+#el231594688{display:block;left:0px;top:0px;border-style:solid;border-width:1px;border-color:rgb(153, 153, 153);transform-origin: 0% ;width:728px;height:90px;}
+
+
+.block-elm { position: absolute; float: left; display: block;}
+.image-elm { position: absolute; float: left; overflow: hidden; display: block;}.image-elm img { width: 100%; height: 100%;}
+.html5-elm { position: absolute; float: left; display: block;}
+.border-elm { position: absolute; pointer-events: none; float: left; display: block;}</style>
+<div id="elframe_element231594685" class="animated-element" data-revjet-role="STAGE 4. SCENE 5" data-revjet-role-id="231594436.231594679"><a href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$" target="_blank" id="el231594712" class="animated-element block-elm" data-revjet-role="STAGE 4. SCENE 5. BLOCK 2" data-revjet-role-id="231594436.231594679.231594712" rel="nofollow" data-revjet-original-href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$"></a>
+<a href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$" target="_blank" id="el231594706" class="animated-element image-elm elp231594709" data-revjet-role="STAGE 4. SCENE 5. GRAPHIC (PRIMARY)" data-revjet-role-id="231594436.231594679.231594706" rel="nofollow" data-revjet-original-href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$">
+	<div class="animation-extender">
+		<img data-revjet-element-type="image" onload="if ((!window.revjet || !window.revjet.elements_api) &amp;&amp; this.hasAttribute('data-revjet-image-src')) { var imageSrc = this.getAttribute('data-revjet-image-src'); this.removeAttribute('data-revjet-image-src'); this.src = imageSrc; }" src="a_data/OLA_ImageSizingTemplate_ProGRIDBanners728x90_05.jpg" alt="">
+	</div>
+</a>
+<a href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$" target="_blank" id="el231594703" class="animated-element block-elm" data-revjet-role="STAGE 4. SCENE 5. BLOCK 3" data-revjet-role-id="231594436.231594679.231594703" rel="nofollow" data-revjet-original-href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$"></a>
+<a href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$" target="_blank" id="el231594700" class="animated-element block-elm" data-revjet-role="STAGE 4. SCENE 5. BLOCK 1" data-revjet-role-id="231594436.231594679.231594700" rel="nofollow" data-revjet-original-href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$"></a>
+<a href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$" target="_blank" id="el231594697" class="animated-element image-elm " data-revjet-role="STAGE 4. SCENE 5. LOGO" data-revjet-role-id="231594436.231594679.231594697" rel="nofollow" data-revjet-original-href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$">
+	<div class="animation-extender">
+		<img data-revjet-element-type="image" onload="if ((!window.revjet || !window.revjet.elements_api) &amp;&amp; this.hasAttribute('data-revjet-image-src')) { var imageSrc = this.getAttribute('data-revjet-image-src'); this.removeAttribute('data-revjet-image-src'); this.src = imageSrc; }" src="a_data/TRG_THD_PRO_REV_RGB.png" alt="">
+	</div>
+</a>
+<div id="el231594691" class="animated-element html5-elm elp231594694" data-element-type="html5" data-animation-timeout="" data-revjet-role="STAGE 4. SCENE 5. HEADLINE + CLICK" data-revjet-role-id="231594436.231594679.231594691">
+        <style>
+@font-face {
+  font-family: 'HelveticaNeueLTPro77BoldCondensed';
+  src: url('//cdn.revjet.com/~cdn/Ads/ad_shared/fonts/HelveticaNeueLTPro-2/HelveticaNeueLTPro-BdCn.eot');
+  src: url('//cdn.revjet.com/~cdn/Ads/ad_shared/fonts/HelveticaNeueLTPro-2/HelveticaNeueLTPro-BdCn.eot?#iefix') format('embedded-opentype'),
+    url('//cdn.revjet.com/~cdn/Ads/ad_shared/fonts/HelveticaNeueLTPro-2/HelveticaNeueLTPro-BdCn.woff2') format('woff2'),
+    url('//cdn.revjet.com/~cdn/Ads/ad_shared/fonts/HelveticaNeueLTPro-2/HelveticaNeueLTPro-BdCn.woff') format('woff'),
+    url('//cdn.revjet.com/~cdn/Ads/ad_shared/fonts/HelveticaNeueLTPro-2/HelveticaNeueLTPro-BdCn.ttf') format('truetype'),
+    url('//cdn.revjet.com/~cdn/Ads/ad_shared/fonts/HelveticaNeueLTPro-2/HelveticaNeueLTPro-BdCn.svg#HelveticaNeueLTPro77BoldCondensed') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "HelveticaNeueLTStd75B";
+  src: url("//cdn.revjet.com/~cdn/Content/fonts/HelveticaNeueLTStd75-Bd.eot");
+  src: url("//cdn.revjet.com/~cdn/Content/fonts/HelveticaNeueLTStd75-Bd.eot?#iefix")
+    format("embedded-opentype"),
+    url("//cdn.revjet.com/~cdn/Content/fonts/HelveticaNeueLTStd75-Bd.woff2")
+    format("woff2"),
+    url("//cdn.revjet.com/~cdn/Content/fonts/HelveticaNeueLTStd75-Bd.woff")
+    format("woff"),
+    url("//cdn.revjet.com/~cdn/Content/fonts/HelveticaNeueLTStd75-Bd.ttf")
+    format("truetype"),
+    url("//cdn.revjet.com/~cdn/Content/fonts/HelveticaNeueLTStd75-Bd.svg#HelveticaNeueLTStd75B")
+    format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.intro,
+.intro__url {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.intro .intro_headline_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    top: 0px;
+    left: auto;
+    right: 15px;
+    width: 247px;
+    height: 90px;
+    overflow: hidden;
+}
+.intro .intro__headline {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: "HelveticaNeueLTPro77BoldCondensed", Arial, sans-serif;
+    font-size: 22px;
+    line-height: 1;
+    width: 150px;
+    min-height: 30px;
+    max-height: 90px;
+    overflow: hidden;
+    color: #333;
+    text-transform: uppercase;
+}
+.intro .cta-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.intro .cta {
+    position: relative;
+    width: 90px;
+    height: 35px;
+    border-radius: 2px;
+    display: inline-block;
+    padding: 0 3px;
+    background-color: #f96302;
+    text-align: center;
+    color: #fff;
+    font-family: "HelveticaNeueLTStd75B", Arial, sans-serif;
+    font-size: 11px;
+    line-height: 1;
+    letter-spacing: 0.5px;
+    opacity: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.intro .cta:hover {
+    -webkit-filter: brightness(0.95);
+    filter: brightness(0.95);
+}
+</style>
+<div class="intro" data-revjet-each="dataFeedItem" data-revjet-sku-pos="1" data-revjet-personalized="">
+    <div class="intro__url" data-revjet-lp-exit="{_dataFeedItem.url}" data-revjet-click-url="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$&amp;" style="cursor: pointer;">
+      <div class="intro_headline_wrapper" style="cursor: pointer;">
+
+        <div class="intro__headline" data-revjet-if="dataFeedItem.templateHeadline5" data-revjet-text="{_dataFeedItem.templateHeadline5}" data-revjet-shrink="22" data-text="regmark" data-revjet-final-style="line-height: 1;" style="cursor: pointer; line-height: 1;" data-revjet-shrinking-completed="">OR PICK UP IN STORE</div>
+        
+        <div class="cta-container" data-revjet-if="dataFeedItem.templateCallToAction5" style="cursor: pointer;">
+            <div class="cta" data-revjet-text="{_dataFeedItem.templateCallToAction5}" data-revjet-shrink="8" data-revjet-final-style="line-height: 1.9;" style="cursor: pointer; line-height: 1.9;" data-revjet-shrinking-completed="">Learn More</div>
+        </div>
+      </div>
+    </div>
+</div>
+<script type="text/javascript">
+    (function (currentScript) {
+
+        if (window.revjet && window.revjet.elements_api) {
+            window.revjet.elements_api.listen('before_personalization', function () {
+                /********** REGMARK FIX **********/
+                revjet.elements_api.updateDataFeed(currentScript, function (dataFeed) {
+                    function superscriptString(string, symbolsToSuperscriptArray) {
+                      if (!symbolsToSuperscriptArray) {
+                        symbolsToSuperscriptArray = ["®", "™"];
+                      }
+
+                      return string.split("").map(function ( stringItem ) {
+                        symbolsToSuperscriptArray.forEach(function(symbol) {
+                          if (stringItem === symbol) {
+                            stringItem = stringItem.replace(symbol, "<sup>" + symbol + "</sup>");
+                          }
+                        });
+                        return stringItem;
+                      }).join("");
+                    }
+
+                    var newFeed = JSON.parse(JSON.stringify(dataFeed));
+                    var firstCard = newFeed.filter(function (item) {
+                        return item;
+                    })[0];
+					if (firstCard) {
+                      var templateHeadline5 = firstCard.templateHeadline5 || "";
+
+                      if (templateHeadline5.length && templateHeadline5[0]) {
+                          templateHeadline5[0] = superscriptString(templateHeadline5[0]);
+                      }
+					}
+                    return newFeed;
+                });
+                /********** REGMARK FIX **********/
+
+            }, undefined, currentScript);
+        }
+
+    })(document.currentScript || document.getElementsByTagName('script')[document.getElementsByTagName('script').length - 1]);
+</script>
+</div>
+<a href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$" target="_blank" id="el231594688" class="animated-element border-elm" data-revjet-role="STAGE 4. SCENE 5. BORDER" data-revjet-role-id="231594436.231594679.231594688" rel="nofollow" data-revjet-original-href="https://ads.revjet.com/click/tag342609/9026904551140353755/1?_crm=2&amp;vid=5151282369772089923&amp;__ads=35804b4e5aef95f9e10b09b488252261&amp;adkey=9c1&amp;hx=235239217&amp;agrp=eg68271&amp;agrpKey=193&amp;slot=tag342609&amp;impts=1742884270672&amp;ad=crv231918&amp;crvKey=83e&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$"></a>
+</div>
+
+</div>
+
+	</div>
+</div>
+<!-- revjet-tracking -->
+<!-- Salt Pixel -->
+<script type="text/javascript">
+window.Salt = {
+  
+  "0s": "899",
+  "start": "900",
+  "firstQuartile": "901",
+  "midpoint": "902",
+  "thirdQuartile": "903",
+  "complete": "904",
+  "invisible": "905",
+  "adsDomainName": "https://pix.revjet.com",
+  "pixelPattern": "https://pix.revjet.com/interaction/%%PIXEL%%?__ads=35804b4e5aef95f9e10b09b488252261&vid=5151282369772089923&__adt=9026904551140353755&__ade=1&latent=%%LATENT%%" + "" + "",
+  "duration": 30
+};
+</script>
+
+<!-- /revjet-tracking -->
+<script type="text/javascript">
+	window.revjet = window.revjet || {};
+	window.revjet.elements = {
+		"widgets": [
+			{"id": "el231593884", "type": "container_element", "parentId": null},
+{"id": "elframe_element231593896", "type": "frame_element", "parentId": "el231593884"},
+{"id": "elframe_element231593905", "type": "frame_element", "parentId": "elframe_element231593896", "dataBinding": {}},
+{"id": "el231593932", "type": "html5_element", "parentId": "elframe_element231593905", "disableBrowserEvents": false},
+{"id": "el231593929", "type": "block_element", "parentId": "elframe_element231593905"},
+{"id": "el231593923", "type": "image_element", "parentId": "elframe_element231593905"},
+{"id": "el231593920", "type": "block_element", "parentId": "elframe_element231593905"},
+{"id": "el231593917", "type": "image_element", "parentId": "elframe_element231593905"},
+{"id": "el231593911", "type": "html5_element", "parentId": "elframe_element231593905", "disableBrowserEvents": false},
+{"id": "el231593908", "type": "border_element", "parentId": "elframe_element231593905"},{"id": "elframe_element231593944", "type": "frame_element", "parentId": "elframe_element231593896", "dataBinding": {}},
+{"id": "el231593968", "type": "block_element", "parentId": "elframe_element231593944"},
+{"id": "el231593962", "type": "image_element", "parentId": "elframe_element231593944"},
+{"id": "el231593959", "type": "block_element", "parentId": "elframe_element231593944"},
+{"id": "el231593956", "type": "image_element", "parentId": "elframe_element231593944"},
+{"id": "el231593950", "type": "html5_element", "parentId": "elframe_element231593944", "disableBrowserEvents": false},
+{"id": "el231593947", "type": "border_element", "parentId": "elframe_element231593944"},{"id": "elframe_element231594001", "type": "frame_element", "parentId": "elframe_element231593896", "dataBinding": {}},
+{"id": "el231593998", "type": "block_element", "parentId": "elframe_element231594001"},
+{"id": "el231593992", "type": "image_element", "parentId": "elframe_element231594001"},
+{"id": "el231593989", "type": "block_element", "parentId": "elframe_element231594001"},
+{"id": "el231593986", "type": "image_element", "parentId": "elframe_element231594001"},
+{"id": "el231593980", "type": "html5_element", "parentId": "elframe_element231594001", "disableBrowserEvents": false},
+{"id": "el231593977", "type": "border_element", "parentId": "elframe_element231594001"},{"id": "elframe_element231594034", "type": "frame_element", "parentId": "elframe_element231593896", "dataBinding": {}},
+{"id": "el231594031", "type": "block_element", "parentId": "elframe_element231594034"},
+{"id": "el231594025", "type": "image_element", "parentId": "elframe_element231594034"},
+{"id": "el231594022", "type": "block_element", "parentId": "elframe_element231594034"},
+{"id": "el231594019", "type": "image_element", "parentId": "elframe_element231594034"},
+{"id": "el231594013", "type": "html5_element", "parentId": "elframe_element231594034", "disableBrowserEvents": false},
+{"id": "el231594010", "type": "border_element", "parentId": "elframe_element231594034"},{"id": "elframe_element231594043", "type": "frame_element", "parentId": "elframe_element231593896", "dataBinding": {}},
+{"id": "el231594067", "type": "block_element", "parentId": "elframe_element231594043"},
+{"id": "el231594061", "type": "image_element", "parentId": "elframe_element231594043"},
+{"id": "el231594058", "type": "block_element", "parentId": "elframe_element231594043"},
+{"id": "el231594055", "type": "image_element", "parentId": "elframe_element231594043"},
+{"id": "el231594049", "type": "html5_element", "parentId": "elframe_element231594043", "disableBrowserEvents": false},
+{"id": "el231594046", "type": "border_element", "parentId": "elframe_element231594043"},{"id": "elframe_element231594079", "type": "frame_element", "parentId": "el231593884"},
+{"id": "elframe_element231594088", "type": "frame_element", "parentId": "elframe_element231594079", "dataBinding": {}},
+{"id": "el231594115", "type": "html5_element", "parentId": "elframe_element231594088", "disableBrowserEvents": false},
+{"id": "el231594112", "type": "block_element", "parentId": "elframe_element231594088"},
+{"id": "el231594106", "type": "image_element", "parentId": "elframe_element231594088"},
+{"id": "el231594103", "type": "block_element", "parentId": "elframe_element231594088"},
+{"id": "el231594100", "type": "image_element", "parentId": "elframe_element231594088"},
+{"id": "el231594094", "type": "html5_element", "parentId": "elframe_element231594088", "disableBrowserEvents": false},
+{"id": "el231594091", "type": "border_element", "parentId": "elframe_element231594088"},{"id": "elframe_element231594127", "type": "frame_element", "parentId": "elframe_element231594079", "dataBinding": {}},
+{"id": "el231594151", "type": "block_element", "parentId": "elframe_element231594127"},
+{"id": "el231594145", "type": "image_element", "parentId": "elframe_element231594127"},
+{"id": "el231594142", "type": "block_element", "parentId": "elframe_element231594127"},
+{"id": "el231594139", "type": "image_element", "parentId": "elframe_element231594127"},
+{"id": "el231594133", "type": "html5_element", "parentId": "elframe_element231594127", "disableBrowserEvents": false},
+{"id": "el231594130", "type": "border_element", "parentId": "elframe_element231594127"},{"id": "elframe_element231594184", "type": "frame_element", "parentId": "elframe_element231594079", "dataBinding": {}},
+{"id": "el231594181", "type": "block_element", "parentId": "elframe_element231594184"},
+{"id": "el231594175", "type": "image_element", "parentId": "elframe_element231594184"},
+{"id": "el231594172", "type": "block_element", "parentId": "elframe_element231594184"},
+{"id": "el231594169", "type": "image_element", "parentId": "elframe_element231594184"},
+{"id": "el231594163", "type": "html5_element", "parentId": "elframe_element231594184", "disableBrowserEvents": false},
+{"id": "el231594160", "type": "border_element", "parentId": "elframe_element231594184"},{"id": "elframe_element231594217", "type": "frame_element", "parentId": "elframe_element231594079", "dataBinding": {}},
+{"id": "el231594214", "type": "block_element", "parentId": "elframe_element231594217"},
+{"id": "el231594208", "type": "image_element", "parentId": "elframe_element231594217"},
+{"id": "el231594205", "type": "block_element", "parentId": "elframe_element231594217"},
+{"id": "el231594202", "type": "image_element", "parentId": "elframe_element231594217"},
+{"id": "el231594196", "type": "html5_element", "parentId": "elframe_element231594217", "disableBrowserEvents": false},
+{"id": "el231594193", "type": "border_element", "parentId": "elframe_element231594217"},{"id": "elframe_element231594226", "type": "frame_element", "parentId": "elframe_element231594079", "dataBinding": {}},
+{"id": "el231594250", "type": "block_element", "parentId": "elframe_element231594226"},
+{"id": "el231594244", "type": "image_element", "parentId": "elframe_element231594226"},
+{"id": "el231594241", "type": "block_element", "parentId": "elframe_element231594226"},
+{"id": "el231594238", "type": "image_element", "parentId": "elframe_element231594226"},
+{"id": "el231594232", "type": "html5_element", "parentId": "elframe_element231594226", "disableBrowserEvents": false},
+{"id": "el231594229", "type": "border_element", "parentId": "elframe_element231594226"},{"id": "elframe_element231594262", "type": "frame_element", "parentId": "el231593884"},
+{"id": "elframe_element231594271", "type": "frame_element", "parentId": "elframe_element231594262", "dataBinding": {}},
+{"id": "el231594298", "type": "html5_element", "parentId": "elframe_element231594271", "disableBrowserEvents": false},
+{"id": "el231594295", "type": "block_element", "parentId": "elframe_element231594271"},
+{"id": "el231594289", "type": "image_element", "parentId": "elframe_element231594271"},
+{"id": "el231594286", "type": "block_element", "parentId": "elframe_element231594271"},
+{"id": "el231594283", "type": "image_element", "parentId": "elframe_element231594271"},
+{"id": "el231594277", "type": "html5_element", "parentId": "elframe_element231594271", "disableBrowserEvents": false},
+{"id": "el231594274", "type": "border_element", "parentId": "elframe_element231594271"},{"id": "elframe_element231594310", "type": "frame_element", "parentId": "elframe_element231594262", "dataBinding": {}},
+{"id": "el231594334", "type": "block_element", "parentId": "elframe_element231594310"},
+{"id": "el231594328", "type": "image_element", "parentId": "elframe_element231594310"},
+{"id": "el231594325", "type": "block_element", "parentId": "elframe_element231594310"},
+{"id": "el231594322", "type": "image_element", "parentId": "elframe_element231594310"},
+{"id": "el231594316", "type": "html5_element", "parentId": "elframe_element231594310", "disableBrowserEvents": false},
+{"id": "el231594313", "type": "border_element", "parentId": "elframe_element231594310"},{"id": "elframe_element231594367", "type": "frame_element", "parentId": "elframe_element231594262", "dataBinding": {}},
+{"id": "el231594364", "type": "block_element", "parentId": "elframe_element231594367"},
+{"id": "el231594358", "type": "image_element", "parentId": "elframe_element231594367"},
+{"id": "el231594355", "type": "block_element", "parentId": "elframe_element231594367"},
+{"id": "el231594352", "type": "image_element", "parentId": "elframe_element231594367"},
+{"id": "el231594346", "type": "html5_element", "parentId": "elframe_element231594367", "disableBrowserEvents": false},
+{"id": "el231594343", "type": "border_element", "parentId": "elframe_element231594367"},{"id": "elframe_element231594400", "type": "frame_element", "parentId": "elframe_element231594262", "dataBinding": {}},
+{"id": "el231594397", "type": "block_element", "parentId": "elframe_element231594400"},
+{"id": "el231594391", "type": "image_element", "parentId": "elframe_element231594400"},
+{"id": "el231594388", "type": "block_element", "parentId": "elframe_element231594400"},
+{"id": "el231594385", "type": "image_element", "parentId": "elframe_element231594400"},
+{"id": "el231594379", "type": "html5_element", "parentId": "elframe_element231594400", "disableBrowserEvents": false},
+{"id": "el231594376", "type": "border_element", "parentId": "elframe_element231594400"},{"id": "elframe_element231594409", "type": "frame_element", "parentId": "elframe_element231594262", "dataBinding": {}},
+{"id": "el231594433", "type": "block_element", "parentId": "elframe_element231594409"},
+{"id": "el231594427", "type": "image_element", "parentId": "elframe_element231594409"},
+{"id": "el231594424", "type": "block_element", "parentId": "elframe_element231594409"},
+{"id": "el231594421", "type": "image_element", "parentId": "elframe_element231594409"},
+{"id": "el231594415", "type": "html5_element", "parentId": "elframe_element231594409", "disableBrowserEvents": false},
+{"id": "el231594412", "type": "border_element", "parentId": "elframe_element231594409"},{"id": "elframe_element231594445", "type": "frame_element", "parentId": "el231593884"},
+{"id": "elframe_element231594454", "type": "frame_element", "parentId": "elframe_element231594445", "dataBinding": {}},
+{"id": "el231594508", "type": "html5_element", "parentId": "elframe_element231594454", "disableBrowserEvents": false},
+{"id": "el231594505", "type": "block_element", "parentId": "elframe_element231594454"},
+{"id": "el231594499", "type": "image_element", "parentId": "elframe_element231594454"},
+{"id": "el231594496", "type": "block_element", "parentId": "elframe_element231594454"},
+{"id": "el231594493", "type": "block_element", "parentId": "elframe_element231594454"},
+{"id": "el231594490", "type": "image_element", "parentId": "elframe_element231594454"},
+{"id": "el231594487", "type": "abstract_element", "parentId": "elframe_element231594454"},
+{"id": "el231594481", "type": "html5_element", "parentId": "elframe_element231594454", "disableBrowserEvents": false},
+{"id": "el231594478", "type": "abstract_element", "parentId": "elframe_element231594454"},
+{"id": "el231594475", "type": "abstract_element", "parentId": "elframe_element231594454"},
+{"id": "el231594472", "type": "abstract_element", "parentId": "elframe_element231594454"},
+{"id": "el231594469", "type": "abstract_element", "parentId": "elframe_element231594454"},
+{"id": "el231594466", "type": "border_element", "parentId": "elframe_element231594454"},
+{"id": "el231594463", "type": "abstract_element", "parentId": "elframe_element231594454"},
+{"id": "el231594460", "type": "abstract_element", "parentId": "elframe_element231594454"},
+{"id": "el231594457", "type": "abstract_element", "parentId": "elframe_element231594454"},{"id": "elframe_element231594520", "type": "frame_element", "parentId": "elframe_element231594445", "dataBinding": {}},
+{"id": "el231594565", "type": "block_element", "parentId": "elframe_element231594520"},
+{"id": "el231594559", "type": "image_element", "parentId": "elframe_element231594520"},
+{"id": "el231594556", "type": "block_element", "parentId": "elframe_element231594520"},
+{"id": "el231594553", "type": "block_element", "parentId": "elframe_element231594520"},
+{"id": "el231594550", "type": "image_element", "parentId": "elframe_element231594520"},
+{"id": "el231594547", "type": "abstract_element", "parentId": "elframe_element231594520"},
+{"id": "el231594544", "type": "abstract_element", "parentId": "elframe_element231594520"},
+{"id": "el231594541", "type": "abstract_element", "parentId": "elframe_element231594520"},
+{"id": "el231594535", "type": "html5_element", "parentId": "elframe_element231594520", "disableBrowserEvents": false},
+{"id": "el231594532", "type": "abstract_element", "parentId": "elframe_element231594520"},
+{"id": "el231594529", "type": "abstract_element", "parentId": "elframe_element231594520"},
+{"id": "el231594526", "type": "border_element", "parentId": "elframe_element231594520"},
+{"id": "el231594523", "type": "abstract_element", "parentId": "elframe_element231594520"},{"id": "elframe_element231594622", "type": "frame_element", "parentId": "elframe_element231594445", "dataBinding": {}},
+{"id": "el231594619", "type": "block_element", "parentId": "elframe_element231594622"},
+{"id": "el231594613", "type": "image_element", "parentId": "elframe_element231594622"},
+{"id": "el231594610", "type": "block_element", "parentId": "elframe_element231594622"},
+{"id": "el231594604", "type": "block_element", "parentId": "elframe_element231594622"},
+{"id": "el231594601", "type": "image_element", "parentId": "elframe_element231594622"},
+{"id": "el231594598", "type": "abstract_element", "parentId": "elframe_element231594622"},
+{"id": "el231594595", "type": "abstract_element", "parentId": "elframe_element231594622"},
+{"id": "el231594592", "type": "abstract_element", "parentId": "elframe_element231594622"},
+{"id": "el231594589", "type": "abstract_element", "parentId": "elframe_element231594622"},
+{"id": "el231594583", "type": "html5_element", "parentId": "elframe_element231594622", "disableBrowserEvents": false},
+{"id": "el231594580", "type": "abstract_element", "parentId": "elframe_element231594622"},
+{"id": "el231594577", "type": "border_element", "parentId": "elframe_element231594622"},
+{"id": "el231594574", "type": "abstract_element", "parentId": "elframe_element231594622"},{"id": "elframe_element231594676", "type": "frame_element", "parentId": "elframe_element231594445", "dataBinding": {}},
+{"id": "el231594673", "type": "block_element", "parentId": "elframe_element231594676"},
+{"id": "el231594667", "type": "image_element", "parentId": "elframe_element231594676"},
+{"id": "el231594664", "type": "block_element", "parentId": "elframe_element231594676"},
+{"id": "el231594661", "type": "block_element", "parentId": "elframe_element231594676"},
+{"id": "el231594658", "type": "image_element", "parentId": "elframe_element231594676"},
+{"id": "el231594655", "type": "abstract_element", "parentId": "elframe_element231594676"},
+{"id": "el231594652", "type": "abstract_element", "parentId": "elframe_element231594676"},
+{"id": "el231594649", "type": "abstract_element", "parentId": "elframe_element231594676"},
+{"id": "el231594646", "type": "abstract_element", "parentId": "elframe_element231594676"},
+{"id": "el231594640", "type": "html5_element", "parentId": "elframe_element231594676", "disableBrowserEvents": false},
+{"id": "el231594637", "type": "abstract_element", "parentId": "elframe_element231594676"},
+{"id": "el231594634", "type": "border_element", "parentId": "elframe_element231594676"},
+{"id": "el231594631", "type": "abstract_element", "parentId": "elframe_element231594676"},{"id": "elframe_element231594685", "type": "frame_element", "parentId": "elframe_element231594445", "dataBinding": {}},
+{"id": "el231594712", "type": "block_element", "parentId": "elframe_element231594685"},
+{"id": "el231594706", "type": "image_element", "parentId": "elframe_element231594685"},
+{"id": "el231594703", "type": "block_element", "parentId": "elframe_element231594685"},
+{"id": "el231594700", "type": "block_element", "parentId": "elframe_element231594685"},
+{"id": "el231594697", "type": "image_element", "parentId": "elframe_element231594685"},
+{"id": "el231594691", "type": "html5_element", "parentId": "elframe_element231594685", "disableBrowserEvents": false},
+{"id": "el231594688", "type": "border_element", "parentId": "elframe_element231594685"},{"id": "elframe_element231594724", "type": "frame_element", "parentId": "el231593884"},
+{"id": "elframe_element231594733", "type": "frame_element", "parentId": "elframe_element231594724", "dataBinding": {}},
+{"id": "el231594751", "type": "block_element", "parentId": "elframe_element231594733"},
+{"id": "el231594748", "type": "block_element", "parentId": "elframe_element231594733"},
+{"id": "el231594745", "type": "image_element", "parentId": "elframe_element231594733"},
+{"id": "el231594739", "type": "html5_element", "parentId": "elframe_element231594733", "disableBrowserEvents": false},
+{"id": "el231594736", "type": "border_element", "parentId": "elframe_element231594733"},{"id": "elframe_element231594763", "type": "frame_element", "parentId": "el231593884"},
+{"id": "elframe_element231594772", "type": "frame_element", "parentId": "elframe_element231594763", "dataBinding": {}},
+{"id": "el231594790", "type": "block_element", "parentId": "elframe_element231594772"},
+{"id": "el231594787", "type": "block_element", "parentId": "elframe_element231594772"},
+{"id": "el231594784", "type": "image_element", "parentId": "elframe_element231594772"},
+{"id": "el231594778", "type": "html5_element", "parentId": "elframe_element231594772", "disableBrowserEvents": false},
+{"id": "el231594775", "type": "border_element", "parentId": "elframe_element231594772"}
+		],
+		"actions": window._disanim ? [] : [{"id": 1106,
+	"type": "start_animation",
+	"sourceWidgetId": "elframe_element231593905",
+	"events": [{
+	"type": "before_show"
+}],
+	"widgetId": "elframe_element231593905",
+        "animatedWidgets": [],
+	"animationName": "On Load",
+	"className": "run-animation-on-load",
+        "finalClassName": "run-animation",
+        "finalStyle": [],
+	"maxRunCount": "",
+	"execDelay": "0",
+	"iterationCount": 1,
+	"relatedActions": [1149]
+},{
+	"id": 1149,
+	"type": "start_html5_animation",
+	"sourceWidgetId": "elframe_element231593905",
+	"events": [{
+	"type": "before_show"
+}],
+	"widgetId": "elframe_element231593905",
+	"maxRunCount": "",
+	"execDelay": "0",
+	"iterationCount": 1,
+	"widgets": [],
+	"stopEventPropagation": false
+}, {"id": 1107,
+	"type": "start_animation",
+	"sourceWidgetId": "elframe_element231593944",
+	"events": [{
+	"type": "before_show"
+}],
+	"widgetId": "elframe_element231593944",
+        "animatedWidgets": [],
+	"animationName": "On Load",
+	"className": "run-animation-on-load",
+        "finalClassName": "run-animation",
+        "finalStyle": [],
+	"maxRunCount": "",
+	"execDelay": "0",
+	"iterationCount": 1,
+	"relatedActions": [1148]
+},{
+	"id": 1148,
+	"type": "start_html5_animation",
+	"sourceWidgetId": "elframe_element231593944",
+	"events": [{
+	"type": "before_show"
+}],
+	"widgetId": "elframe_element231593944",
+	"maxRunCount": "",
+	"execDelay": "0",
+	"iterationCount": 1,
+	"widgets": [],
+	"stopEventPropagation": false
+}, {"id": 1108,
+	"type": "start_animation",
+	"sourceWidgetId": "elframe_element231594001",
+	"events": [{
+	"type": "before_show"
+}],
+	"widgetId": "elframe_element231594001",
+        "animatedWidgets": [],
+	"animationName": "On Load",
+	"className": "run-animation-on-load",
+        "finalClassName": "run-animation",
+        "finalStyle": [],
+	"maxRunCount": "",
+	"execDelay": "0",
+	"iterationCount": 1,
+	"relatedActions": [1147]
+},{
+	"id": 1147,
+	"type": "start_html5_animation",
+	"sourceWidgetId": "elframe_element231594001",
+	"events": [{
+	"type": "before_show"
+}],
+	"widgetId": "elframe_element231594001",
+	"maxRunCount": "",
+	"execDelay": "0",
+	"iterationCount": 1,
+	"widgets": [],
+	"stopEventPropagation": false
+}, {"id": 1109,
+	"type": "start_animation",
+	"sourceWidgetId": "elframe_element231594034",
+	"events": [{
+	"type": "before_show"
+}],
+	"widgetId": "elframe_element231594034",
+        "animatedWidgets": [],
+	"animationName": "On Load",
+	"className": "run-animation-on-load",
+        "finalClassName": "run-animation",
+        "finalStyle": [],
+	"maxRunCount": "",
+	"execDelay": "0",
+	"iterationCount": 1,
+	"relatedActions": [1146]
+},{
+	"id": 1146,
+	"type": "start_html5_animation",
+	"sourceWidgetId": "elframe_element231594034",
+	"events": [{
+	"type": "before_show"
+}],
+	"widgetId": "elframe_element231594034",
+	"maxRunCount": "",
+	"execDelay": "0",
+	"iterationCount": 1,
+	"widgets": [],
+	"stopEventPropagation": false
+}, {"id": 1110,
+	"type": "start_animation",
+	"sourceWidgetId": "elframe_element231594043",
+	"events": [{
+	"type": "before_show"
+}],
+	"widgetId": "elframe_element231594043",
+        "animatedWidgets": [],
+	"animationName": "On Load",
+	"className": "run-animation-on-load",
+        "finalClassName": "run-animation",
+        "finalStyle": [],
+	"maxRunCount": "",
+	"execDelay": "0",
+	"iterationCount": 1,
+	"relatedActions": [1145]
+},{
+	"id": 1145,
+	"type": "start_html5_animation",
+	"sourceWidgetId": "elframe_element231594043",
+	"events": [{
+	"type": "before_show"
+}],
+	"widgetId": "elframe_element231594043",
+	"maxRunCount": "",
+	"execDelay": "0",
+	"iterationCount": 1,
+	"widgets": [],
+	"stopEventPropagation": false
+}, {"id": 1111,
+	"type": "start_animation",
+	"sourceWidgetId": "elframe_element231594088",
+	"events": [{
+	"type": "before_show"
+}],
+	"widgetId": "elframe_element231594088",
+        "animatedWidgets": [],
+	"animationName": "On Load",
+	"className": "run-animation-on-load",
+        "finalClassName": "run-animation",
+        "finalStyle": [],
+	"maxRunCount": "",
+	"execDelay": "0",
+	"iterationCount": 1,
+	"relatedActions": [1144]
+},{
+	"id": 1144,
+	"type": "start_html5_animation",
+	"sourceWidgetId": "elframe_element231594088",
+	"events": [{
+	"type": "before_show"
+}],
+	"widgetId": "elframe_element231594088",
+	"maxRunCount": "",
+	"execDelay": "0",
+	"iterationCount": 1,
+	"widgets": [],
+	"stopEventPropagation": false
+}, {"id": 1112,
+	"type": "start_animation",
+	"sourceWidgetId": "elframe_element231594127",
+	"events": [{
+	"type": "before_show"
+}],
+	"widgetId": "elframe_element231594127",
+        "animatedWidgets": [],
+	"animationName": "On Load",
+	"className": "run-animation-on-load",
+        "finalClassName": "run-animation",
+        "finalStyle": [],
+	"maxRunCount": "",
+	"execDelay": "0",
+	"iterationCount": 1,
+	"relatedActions": [1143]
+},{
+	"id": 1143,
+	"type": "start_html5_animation",
+	"sourceWidgetId": "elframe_element231594127",
+	"events": [{
+	"type": "before_show"
+}],
+	"widgetId": "elframe_element231594127",
+	"maxRunCount": "",
+	"execDelay": "0",
+	"iterationCount": 1,
+	"widgets": [],
+	"stopEventPropagation": false
+}, {"id": 1113,
+	"type": "start_animation",
+	"sourceWidgetId": "elframe_element231594184",
+	"events": [{
+	"type": "before_show"
+}],
+	"widgetId": "elframe_element231594184",
+        "animatedWidgets": [],
+	"animationName": "On Load",
+	"className": "run-animation-on-load",
+        "finalClassName": "run-animation",
+        "finalStyle": [],
+	"maxRunCount": "",
+	"execDelay": "0",
+	"iterationCount": 1,
+	"relatedActions": [1142]
+},{
+	"id": 1142,
+	"type": "start_html5_animation",
+	"sourceWidgetId": "elframe_element231594184",
+	"events": [{
+	"type": "before_show"
+}],
+	"widgetId": "elframe_element231594184",
+	"maxRunCount": "",
+	"execDelay": "0",
+	"iterationCount": 1,
+	"widgets": [],
+	"stopEventPropagation": false
+}, {"id": 1114,
+	"type": "start_animation",
+	"sourceWidgetId": "elframe_element231594217",
+	"events": [{
+	"type": "before_show"
+}],
+	"widgetId": "elframe_element231594217",
+        "animatedWidgets": [],
+	"animationName": "On Load",
+	"className": "run-animation-on-load",
+        "finalClassName": "run-animation",
+        "finalStyle": [],
+	"maxRunCount": "",
+	"execDelay": "0",
+	"iterationCount": 1,
+	"relatedActions": [1141]
+},{
+	"id": 1141,
+	"type": "start_html5_animation",
+	"sourceWidgetId": "elframe_element231594217",
+	"events": [{
+	"type": "before_show"
+}],
+	"widgetId": "elframe_element231594217",
+	"maxRunCount": "",
+	"execDelay": "0",
+	"iterationCount": 1,
+	"widgets": [],
+	"stopEventPropagation": false
+}, {"id": 1115,
+	"type": "start_animation",
+	"sourceWidgetId": "elframe_element231594226",
+	"events": [{
+	"type": "before_show"
+}],
+	"widgetId": "elframe_element231594226",
+        "animatedWidgets": [],
+	"animationName": "On Load",
+	"className": "run-animation-on-load",
+        "finalClassName": "run-animation",
+        "finalStyle": [],
+	"maxRunCount": "",
+	"execDelay": "0",
+	"iterationCount": 1,
+	"relatedActions": [1140]
+},{
+	"id": 1140,
+	"type": "start_html5_animation",
+	"sourceWidgetId": "elframe_element231594226",
+	"events": [{
+	"type": "before_show"
+}],
+	"widgetId": "elframe_element231594226",
+	"maxRunCount": "",
+	"execDelay": "0",
+	"iterationCount": 1,
+	"widgets": [],
+	"stopEventPropagation": false
+}, {"id": 1116,
+	"type": "start_animation",
+	"sourceWidgetId": "elframe_element231594271",
+	"events": [{
+	"type": "before_show"
+}],
+	"widgetId": "elframe_element231594271",
+        "animatedWidgets": [],
+	"animationName": "On Load",
+	"className": "run-animation-on-load",
+        "finalClassName": "run-animation",
+        "finalStyle": [],
+	"maxRunCount": "",
+	"execDelay": "0",
+	"iterationCount": 1,
+	"relatedActions": [1139]
+},{
+	"id": 1139,
+	"type": "start_html5_animation",
+	"sourceWidgetId": "elframe_element231594271",
+	"events": [{
+	"type": "before_show"
+}],
+	"widgetId": "elframe_element231594271",
+	"maxRunCount": "",
+	"execDelay": "0",
+	"iterationCount": 1,
+	"widgets": [],
+	"stopEventPropagation": false
+}, {"id": 1117,
+	"type": "start_animation",
+	"sourceWidgetId": "elframe_element231594310",
+	"events": [{
+	"type": "before_show"
+}],
+	"widgetId": "elframe_element231594310",
+        "animatedWidgets": [],
+	"animationName": "On Load",
+	"className": "run-animation-on-load",
+        "finalClassName": "run-animation",
+        "finalStyle": [],
+	"maxRunCount": "",
+	"execDelay": "0",
+	"iterationCount": 1,
+	"relatedActions": [1138]
+},{
+	"id": 1138,
+	"type": "start_html5_animation",
+	"sourceWidgetId": "elframe_element231594310",
+	"events": [{
+	"type": "before_show"
+}],
+	"widgetId": "elframe_element231594310",
+	"maxRunCount": "",
+	"execDelay": "0",
+	"iterationCount": 1,
+	"widgets": [],
+	"stopEventPropagation": false
+}, {"id": 1118,
+	"type": "start_animation",
+	"sourceWidgetId": "elframe_element231594367",
+	"events": [{
+	"type": "before_show"
+}],
+	"widgetId": "elframe_element231594367",
+        "animatedWidgets": [],
+	"animationName": "On Load",
+	"className": "run-animation-on-load",
+        "finalClassName": "run-animation",
+        "finalStyle": [],
+	"maxRunCount": "",
+	"execDelay": "0",
+	"iterationCount": 1,
+	"relatedActions": [1137]
+},{
+	"id": 1137,
+	"type": "start_html5_animation",
+	"sourceWidgetId": "elframe_element231594367",
+	"events": [{
+	"type": "before_show"
+}],
+	"widgetId": "elframe_element231594367",
+	"maxRunCount": "",
+	"execDelay": "0",
+	"iterationCount": 1,
+	"widgets": [],
+	"stopEventPropagation": false
+}, {"id": 1119,
+	"type": "start_animation",
+	"sourceWidgetId": "elframe_element231594400",
+	"events": [{
+	"type": "before_show"
+}],
+	"widgetId": "elframe_element231594400",
+        "animatedWidgets": [],
+	"animationName": "On Load",
+	"className": "run-animation-on-load",
+        "finalClassName": "run-animation",
+        "finalStyle": [],
+	"maxRunCount": "",
+	"execDelay": "0",
+	"iterationCount": 1,
+	"relatedActions": [1136]
+},{
+	"id": 1136,
+	"type": "start_html5_animation",
+	"sourceWidgetId": "elframe_element231594400",
+	"events": [{
+	"type": "before_show"
+}],
+	"widgetId": "elframe_element231594400",
+	"maxRunCount": "",
+	"execDelay": "0",
+	"iterationCount": 1,
+	"widgets": [],
+	"stopEventPropagation": false
+}, {"id": 1120,
+	"type": "start_animation",
+	"sourceWidgetId": "elframe_element231594409",
+	"events": [{
+	"type": "before_show"
+}],
+	"widgetId": "elframe_element231594409",
+        "animatedWidgets": [],
+	"animationName": "On Load",
+	"className": "run-animation-on-load",
+        "finalClassName": "run-animation",
+        "finalStyle": [],
+	"maxRunCount": "",
+	"execDelay": "0",
+	"iterationCount": 1,
+	"relatedActions": [1135]
+},{
+	"id": 1135,
+	"type": "start_html5_animation",
+	"sourceWidgetId": "elframe_element231594409",
+	"events": [{
+	"type": "before_show"
+}],
+	"widgetId": "elframe_element231594409",
+	"maxRunCount": "",
+	"execDelay": "0",
+	"iterationCount": 1,
+	"widgets": [],
+	"stopEventPropagation": false
+}, {"id": 1121,
+	"type": "start_animation",
+	"sourceWidgetId": "elframe_element231594454",
+	"events": [{
+	"type": "before_show"
+}],
+	"widgetId": "elframe_element231594454",
+        "animatedWidgets": [],
+	"animationName": "On Load",
+	"className": "run-animation-on-load",
+        "finalClassName": "run-animation",
+        "finalStyle": [],
+	"maxRunCount": "",
+	"execDelay": "0",
+	"iterationCount": 1,
+	"relatedActions": [1134]
+},{
+	"id": 1134,
+	"type": "start_html5_animation",
+	"sourceWidgetId": "elframe_element231594454",
+	"events": [{
+	"type": "before_show"
+}],
+	"widgetId": "elframe_element231594454",
+	"maxRunCount": "",
+	"execDelay": "0",
+	"iterationCount": 1,
+	"widgets": [],
+	"stopEventPropagation": false
+}, {"id": 1122,
+	"type": "start_animation",
+	"sourceWidgetId": "elframe_element231594520",
+	"events": [{
+	"type": "before_show"
+}],
+	"widgetId": "elframe_element231594520",
+        "animatedWidgets": [],
+	"animationName": "On Load",
+	"className": "run-animation-on-load",
+        "finalClassName": "run-animation",
+        "finalStyle": [],
+	"maxRunCount": "",
+	"execDelay": "0",
+	"iterationCount": 1,
+	"relatedActions": [1133]
+},{
+	"id": 1133,
+	"type": "start_html5_animation",
+	"sourceWidgetId": "elframe_element231594520",
+	"events": [{
+	"type": "before_show"
+}],
+	"widgetId": "elframe_element231594520",
+	"maxRunCount": "",
+	"execDelay": "0",
+	"iterationCount": 1,
+	"widgets": [],
+	"stopEventPropagation": false
+}, {"id": 1123,
+	"type": "start_animation",
+	"sourceWidgetId": "elframe_element231594622",
+	"events": [{
+	"type": "before_show"
+}],
+	"widgetId": "elframe_element231594622",
+        "animatedWidgets": [],
+	"animationName": "On Load",
+	"className": "run-animation-on-load",
+        "finalClassName": "run-animation",
+        "finalStyle": [],
+	"maxRunCount": "",
+	"execDelay": "0",
+	"iterationCount": 1,
+	"relatedActions": [1132]
+},{
+	"id": 1132,
+	"type": "start_html5_animation",
+	"sourceWidgetId": "elframe_element231594622",
+	"events": [{
+	"type": "before_show"
+}],
+	"widgetId": "elframe_element231594622",
+	"maxRunCount": "",
+	"execDelay": "0",
+	"iterationCount": 1,
+	"widgets": [],
+	"stopEventPropagation": false
+}, {"id": 1124,
+	"type": "start_animation",
+	"sourceWidgetId": "elframe_element231594676",
+	"events": [{
+	"type": "before_show"
+}],
+	"widgetId": "elframe_element231594676",
+        "animatedWidgets": [],
+	"animationName": "On Load",
+	"className": "run-animation-on-load",
+        "finalClassName": "run-animation",
+        "finalStyle": [],
+	"maxRunCount": "",
+	"execDelay": "0",
+	"iterationCount": 1,
+	"relatedActions": [1131]
+},{
+	"id": 1131,
+	"type": "start_html5_animation",
+	"sourceWidgetId": "elframe_element231594676",
+	"events": [{
+	"type": "before_show"
+}],
+	"widgetId": "elframe_element231594676",
+	"maxRunCount": "",
+	"execDelay": "0",
+	"iterationCount": 1,
+	"widgets": [],
+	"stopEventPropagation": false
+}, {"id": 1125,
+	"type": "start_animation",
+	"sourceWidgetId": "elframe_element231594685",
+	"events": [{
+	"type": "before_show"
+}],
+	"widgetId": "elframe_element231594685",
+        "animatedWidgets": [],
+	"animationName": "On Load",
+	"className": "run-animation-on-load",
+        "finalClassName": "run-animation",
+        "finalStyle": [],
+	"maxRunCount": "",
+	"execDelay": "0",
+	"iterationCount": 1,
+	"relatedActions": [1130]
+},{
+	"id": 1130,
+	"type": "start_html5_animation",
+	"sourceWidgetId": "elframe_element231594685",
+	"events": [{
+	"type": "before_show"
+}],
+	"widgetId": "elframe_element231594685",
+	"maxRunCount": "",
+	"execDelay": "0",
+	"iterationCount": 1,
+	"widgets": [],
+	"stopEventPropagation": false
+}, {"id": 1126,
+	"type": "start_animation",
+	"sourceWidgetId": "elframe_element231594733",
+	"events": [{
+	"type": "before_show"
+}],
+	"widgetId": "elframe_element231594733",
+        "animatedWidgets": [],
+	"animationName": "On Load",
+	"className": "run-animation-on-load",
+        "finalClassName": "run-animation",
+        "finalStyle": [],
+	"maxRunCount": "",
+	"execDelay": "0",
+	"iterationCount": 1,
+	"relatedActions": [1129]
+},{
+	"id": 1129,
+	"type": "start_html5_animation",
+	"sourceWidgetId": "elframe_element231594733",
+	"events": [{
+	"type": "before_show"
+}],
+	"widgetId": "elframe_element231594733",
+	"maxRunCount": "",
+	"execDelay": "0",
+	"iterationCount": 1,
+	"widgets": [],
+	"stopEventPropagation": false
+}, {"id": 1127,
+	"type": "start_animation",
+	"sourceWidgetId": "elframe_element231594772",
+	"events": [{
+	"type": "before_show"
+}],
+	"widgetId": "elframe_element231594772",
+        "animatedWidgets": [],
+	"animationName": "On Load",
+	"className": "run-animation-on-load",
+        "finalClassName": "run-animation",
+        "finalStyle": [],
+	"maxRunCount": "",
+	"execDelay": "0",
+	"iterationCount": 1,
+	"relatedActions": [1128]
+},{
+	"id": 1128,
+	"type": "start_html5_animation",
+	"sourceWidgetId": "elframe_element231594772",
+	"events": [{
+	"type": "before_show"
+}],
+	"widgetId": "elframe_element231594772",
+	"maxRunCount": "",
+	"execDelay": "0",
+	"iterationCount": 1,
+	"widgets": [],
+	"stopEventPropagation": false
+}, {"id": 231594799,
+	"type": "show",
+	"sourceWidgetId": "el231594508",
+	"events": [{
+	"type": "custom_event",
+	"name": "showScene2",
+	"payload": "showScene2"
+}],
+	"widgetId": "elframe_element231594520",
+	"animationType": "fade",
+	"timing": "linear",
+	"duration": "500",
+	"maxRunCount": "1",
+	"position": "as_is",
+	"execDelay": "0",
+	"stopEventPropagation": false
+}, {"id": 231594805,
+	"type": "link",
+	"sourceWidgetId": "el231593884",
+	"events": [{
+	"type": "click"
+}],
+	"url": click_url,
+	"target": click_target,
+	"stopEventPropagation": false
+}, {"id": 231594808,
+	"type": "show",
+	"sourceWidgetId": "el231593932",
+	"events": [{
+	"type": "custom_event",
+	"name": "showScene2",
+	"payload": "showScene2"
+}],
+	"widgetId": "elframe_element231593944",
+	"animationType": "fade",
+	"timing": "linear",
+	"duration": "500",
+	"maxRunCount": "1",
+	"position": "as_is",
+	"execDelay": "0",
+	"stopEventPropagation": false
+}, {"id": 231594820,
+	"type": "show",
+	"sourceWidgetId": "el231594115",
+	"events": [{
+	"type": "custom_event",
+	"name": "showScene2",
+	"payload": "showScene2"
+}],
+	"widgetId": "elframe_element231594127",
+	"animationType": "fade",
+	"timing": "linear",
+	"duration": "500",
+	"maxRunCount": "1",
+	"position": "as_is",
+	"execDelay": "0",
+	"stopEventPropagation": false
+}, {"id": 231594832,
+	"type": "show",
+	"sourceWidgetId": "el231594298",
+	"events": [{
+	"type": "custom_event",
+	"name": "showScene2",
+	"payload": "showScene2"
+}],
+	"widgetId": "elframe_element231594310",
+	"animationType": "fade",
+	"timing": "linear",
+	"duration": "500",
+	"maxRunCount": "1",
+	"position": "as_is",
+	"execDelay": "0",
+	"stopEventPropagation": false
+}, {"id": 231594793,
+	"type": "show",
+	"sourceWidgetId": "el231594508",
+	"events": [{
+	"type": "custom_event",
+	"name": "showScene3",
+	"payload": "showScene3"
+}],
+	"widgetId": "elframe_element231594622",
+	"animationType": "fade",
+	"timing": "linear",
+	"duration": "500",
+	"maxRunCount": "1",
+	"position": "as_is",
+	"execDelay": "0",
+	"stopEventPropagation": false
+}, {"id": 231594811,
+	"type": "show",
+	"sourceWidgetId": "el231593932",
+	"events": [{
+	"type": "custom_event",
+	"name": "showScene3",
+	"payload": "showScene3"
+}],
+	"widgetId": "elframe_element231594001",
+	"animationType": "fade",
+	"timing": "linear",
+	"duration": "500",
+	"maxRunCount": "1",
+	"position": "as_is",
+	"execDelay": "0",
+	"stopEventPropagation": false
+}, {"id": 231594823,
+	"type": "show",
+	"sourceWidgetId": "el231594115",
+	"events": [{
+	"type": "custom_event",
+	"name": "showScene3",
+	"payload": "showScene3"
+}],
+	"widgetId": "elframe_element231594184",
+	"animationType": "fade",
+	"timing": "linear",
+	"duration": "500",
+	"maxRunCount": "1",
+	"position": "as_is",
+	"execDelay": "0",
+	"stopEventPropagation": false
+}, {"id": 231594835,
+	"type": "show",
+	"sourceWidgetId": "el231594298",
+	"events": [{
+	"type": "custom_event",
+	"name": "showScene3",
+	"payload": "showScene3"
+}],
+	"widgetId": "elframe_element231594367",
+	"animationType": "fade",
+	"timing": "linear",
+	"duration": "500",
+	"maxRunCount": "1",
+	"position": "as_is",
+	"execDelay": "0",
+	"stopEventPropagation": false
+}, {"id": 231594802,
+	"type": "show",
+	"sourceWidgetId": "el231594508",
+	"events": [{
+	"type": "custom_event",
+	"name": "showScene4",
+	"payload": "showScene4"
+}],
+	"widgetId": "elframe_element231594676",
+	"animationType": "fade",
+	"timing": "linear",
+	"duration": "500",
+	"maxRunCount": "1",
+	"position": "as_is",
+	"execDelay": "0",
+	"stopEventPropagation": false
+}, {"id": 231594814,
+	"type": "show",
+	"sourceWidgetId": "el231593932",
+	"events": [{
+	"type": "custom_event",
+	"name": "showScene4",
+	"payload": "showScene4"
+}],
+	"widgetId": "elframe_element231594034",
+	"animationType": "fade",
+	"timing": "linear",
+	"duration": "500",
+	"maxRunCount": "1",
+	"position": "as_is",
+	"execDelay": "0",
+	"stopEventPropagation": false
+}, {"id": 231594826,
+	"type": "show",
+	"sourceWidgetId": "el231594115",
+	"events": [{
+	"type": "custom_event",
+	"name": "showScene4",
+	"payload": "showScene4"
+}],
+	"widgetId": "elframe_element231594217",
+	"animationType": "fade",
+	"timing": "linear",
+	"duration": "500",
+	"maxRunCount": "1",
+	"position": "as_is",
+	"execDelay": "0",
+	"stopEventPropagation": false
+}, {"id": 231594838,
+	"type": "show",
+	"sourceWidgetId": "el231594298",
+	"events": [{
+	"type": "custom_event",
+	"name": "showScene4",
+	"payload": "showScene4"
+}],
+	"widgetId": "elframe_element231594400",
+	"animationType": "fade",
+	"timing": "linear",
+	"duration": "500",
+	"maxRunCount": "1",
+	"position": "as_is",
+	"execDelay": "0",
+	"stopEventPropagation": false
+}, {"id": 231594796,
+	"type": "show",
+	"sourceWidgetId": "el231594508",
+	"events": [{
+	"type": "custom_event",
+	"name": "showScene5",
+	"payload": "showScene5"
+}],
+	"widgetId": "elframe_element231594685",
+	"animationType": "fade",
+	"timing": "linear",
+	"duration": "500",
+	"maxRunCount": "0",
+	"position": "as_is",
+	"execDelay": "0",
+	"stopEventPropagation": false
+}, {"id": 231594817,
+	"type": "show",
+	"sourceWidgetId": "el231593932",
+	"events": [{
+	"type": "custom_event",
+	"name": "showScene5",
+	"payload": "showScene5"
+}],
+	"widgetId": "elframe_element231594043",
+	"animationType": "fade",
+	"timing": "linear",
+	"duration": "500",
+	"maxRunCount": "0",
+	"position": "as_is",
+	"execDelay": "0",
+	"stopEventPropagation": false
+}, {"id": 231594829,
+	"type": "show",
+	"sourceWidgetId": "el231594115",
+	"events": [{
+	"type": "custom_event",
+	"name": "showScene5",
+	"payload": "showScene5"
+}],
+	"widgetId": "elframe_element231594226",
+	"animationType": "fade",
+	"timing": "linear",
+	"duration": "500",
+	"maxRunCount": "0",
+	"position": "as_is",
+	"execDelay": "0",
+	"stopEventPropagation": false
+}, {"id": 231594841,
+	"type": "show",
+	"sourceWidgetId": "el231594298",
+	"events": [{
+	"type": "custom_event",
+	"name": "showScene5",
+	"payload": "showScene5"
+}],
+	"widgetId": "elframe_element231594409",
+	"animationType": "fade",
+	"timing": "linear",
+	"duration": "500",
+	"maxRunCount": "0",
+	"position": "as_is",
+	"execDelay": "0",
+	"stopEventPropagation": false
+}],
+		"personalization": mergePersonalizations([{"type":"html5","value":{"url":"","templateHeadline1":["4 WAYS TO GET DELIVERY ON YOUR TERMS"]},"pers_type":"doa","id":"el231593911","elp_id":"elp231593914"},{"type":"image","value":"https://cdn.revjet.com/s3/csp/3159/1734476227233/OLA_carousel_300x250.jpg","pers_type":"doa","id":"el231593923","elp_id":"elp231593926"},{"type":"html5","value":{"url":"","templateHeadline1":["4 WAYS TO GET DELIVERY ON YOUR TERMS"],"templateHeadline2":["SCHEDULE DELIVERY TIMES"],"templateHeadline3":["DELIVER TO YOUR JOB SITE"],"templateImageUrl1":["https://cdn.revjet.com/s3/csp/3159/1734476227233/OLA_carousel_300x250.jpg"],"templateImageUrl2":["https://cdn.revjet.com/s3/csp/3159/1736269598726/OLA_ImageSizingTemplate_ProGRIDBanners300x250_copy_3.jpg"],"templateImageUrl3":["https://cdn.revjet.com/s3/csp/3159/1734476227260/OLA_carousel_300x250_copy_3.jpg"],"templateCallToAction5":["Learn More"],"templateImageUrl4":["https://cdn.revjet.com/s3/csp/3159/1734476228305/OLA_carousel_300x250_copy.jpg"],"templateImageUrl5":["https://cdn.revjet.com/s3/csp/3159/1737067660700/OLA_ImageSizingTemplate_ProGRIDBanners05.jpg"],"templateHeadline4":["NEXT-DAY DELIVERY AVAILABLE"],"templateHeadline5":["OR PICK UP IN STORE"]},"pers_type":"doa","id":"el231593932","elp_id":"elp231593935"},{"type":"html5","value":{"url":"","templateHeadline2":["SCHEDULE DELIVERY TIMES"]},"pers_type":"doa","id":"el231593950","elp_id":"elp231593953"},{"type":"image","value":"https://cdn.revjet.com/s3/csp/3159/1736269598726/OLA_ImageSizingTemplate_ProGRIDBanners300x250_copy_3.jpg","pers_type":"doa","id":"el231593962","elp_id":"elp231593965"},{"type":"html5","value":{"url":"","templateHeadline3":["DELIVER TO YOUR JOB SITE"]},"pers_type":"doa","id":"el231593980","elp_id":"elp231593983"},{"type":"image","value":"https://cdn.revjet.com/s3/csp/3159/1734476227260/OLA_carousel_300x250_copy_3.jpg","pers_type":"doa","id":"el231593992","elp_id":"elp231593995"},{"type":"html5","value":{"url":"","templateHeadline4":["NEXT-DAY DELIVERY AVAILABLE"]},"pers_type":"doa","id":"el231594013","elp_id":"elp231594016"},{"type":"image","value":"https://cdn.revjet.com/s3/csp/3159/1734476228305/OLA_carousel_300x250_copy.jpg","pers_type":"doa","id":"el231594025","elp_id":"elp231594028"},{"type":"html5","value":{"url":"","templateCallToAction5":["Learn More"],"templateImageUrl5":["https://cdn.revjet.com/s3/csp/3159/1737067660700/OLA_ImageSizingTemplate_ProGRIDBanners05.jpg"],"templateHeadline5":["OR PICK UP IN STORE"]},"pers_type":"doa","id":"el231594049","elp_id":"elp231594052"},{"type":"image","value":"https://cdn.revjet.com/s3/csp/3159/1737067660700/OLA_ImageSizingTemplate_ProGRIDBanners05.jpg","pers_type":"doa","id":"el231594061","elp_id":"elp231594064"},{"type":"html5","value":{"url":"","templateHeadline1":["4 WAYS TO GET DELIVERY ON YOUR TERMS"]},"pers_type":"doa","id":"el231594094","elp_id":"elp231594097"},{"type":"image","value":"https://cdn.revjet.com/s3/csp/3159/1737067660703/OLA_ImageSizingTemplate_ProGRIDBanners160x600_01.jpg","pers_type":"doa","id":"el231594106","elp_id":"elp231594109"},{"type":"html5","value":{"url":"","templateHeadline1":["4 WAYS TO GET DELIVERY ON YOUR TERMS"],"templateHeadline2":["SCHEDULE DELIVERY TIMES"],"templateHeadline3":["DELIVER TO YOUR JOB SITE"],"templateImageUrl1":"https://cdn.revjet.com/s3/csp/3159/1737067660703/OLA_ImageSizingTemplate_ProGRIDBanners160x600_01.jpg","templateImageUrl2":"https://cdn.revjet.com/s3/csp/3159/1737065892331/160x600_05.jpg","templateImageUrl3":"https://cdn.revjet.com/s3/csp/3159/1737067660735/OLA_ImageSizingTemplate_ProGRIDBanners160x600_03.jpg","templateCallToAction5":["Learn More"],"templateImageUrl4":"https://cdn.revjet.com/s3/csp/3159/1737067661592/OLA_ImageSizingTemplate_ProGRIDBanners160x600_04.jpg","templateImageUrl5":"https://cdn.revjet.com/s3/csp/3159/1737067661628/OLA_ImageSizingTemplate_ProGRIDBanners160x600_05.jpg","templateHeadline4":["NEXT-DAY DELIVERY AVAILABLE"],"templateHeadline5":["OR PICK UP IN STORE"]},"pers_type":"doa","id":"el231594115","elp_id":"elp231594118"},{"type":"html5","value":{"url":"","templateHeadline2":["SCHEDULE DELIVERY TIMES"]},"pers_type":"doa","id":"el231594133","elp_id":"elp231594136"},{"type":"image","value":"https://cdn.revjet.com/s3/csp/3159/1737065892331/160x600_05.jpg","pers_type":"doa","id":"el231594145","elp_id":"elp231594148"},{"type":"html5","value":{"url":"","templateHeadline3":["DELIVER TO YOUR JOB SITE"]},"pers_type":"doa","id":"el231594163","elp_id":"elp231594166"},{"type":"image","value":"https://cdn.revjet.com/s3/csp/3159/1737067660735/OLA_ImageSizingTemplate_ProGRIDBanners160x600_03.jpg","pers_type":"doa","id":"el231594175","elp_id":"elp231594178"},{"type":"html5","value":{"url":"","templateHeadline4":["NEXT-DAY DELIVERY AVAILABLE"]},"pers_type":"doa","id":"el231594196","elp_id":"elp231594199"},{"type":"image","value":"https://cdn.revjet.com/s3/csp/3159/1737067661592/OLA_ImageSizingTemplate_ProGRIDBanners160x600_04.jpg","pers_type":"doa","id":"el231594208","elp_id":"elp231594211"},{"type":"html5","value":{"url":"","templateCallToAction5":["Learn More"],"templateHeadline5":["OR PICK UP IN STORE"]},"pers_type":"doa","id":"el231594232","elp_id":"elp231594235"},{"type":"image","value":"https://cdn.revjet.com/s3/csp/3159/1737067661628/OLA_ImageSizingTemplate_ProGRIDBanners160x600_05.jpg","pers_type":"doa","id":"el231594244","elp_id":"elp231594247"},{"type":"html5","value":{"url":"","templateHeadline1":["4 WAYS TO GET DELIVERY ON YOUR TERMS"]},"pers_type":"doa","id":"el231594277","elp_id":"elp231594280"},{"type":"image","value":"https://cdn.revjet.com/s3/csp/3159/1734476227233/OLA_carousel_300x250.jpg","pers_type":"doa","id":"el231594289","elp_id":"elp231594292"},{"type":"html5","value":{"url":"","templateHeadline1":["4 WAYS TO GET DELIVERY ON YOUR TERMS"],"templateHeadline2":["SCHEDULE DELIVERY TIMES"],"templateHeadline3":["DELIVER TO YOUR JOB SITE"],"templateImageUrl1":["https://cdn.revjet.com/s3/csp/3159/1734476227233/OLA_carousel_300x250.jpg"],"templateImageUrl2":["https://cdn.revjet.com/s3/csp/3159/1736269598726/OLA_ImageSizingTemplate_ProGRIDBanners300x250_copy_3.jpg"],"templateImageUrl3":["https://cdn.revjet.com/s3/csp/3159/1734476227260/OLA_carousel_300x250_copy_3.jpg"],"templateCallToAction5":["Learn More"],"templateImageUrl4":["https://cdn.revjet.com/s3/csp/3159/1734476228305/OLA_carousel_300x250_copy.jpg"],"templateImageUrl5":["https://cdn.revjet.com/s3/csp/3159/1737067660700/OLA_ImageSizingTemplate_ProGRIDBanners05.jpg"],"templateHeadline4":["NEXT-DAY DELIVERY AVAILABLE"],"templateHeadline5":["OR PICK UP IN STORE"]},"pers_type":"doa","id":"el231594298","elp_id":"elp231594301"},{"type":"html5","value":{"url":"","templateHeadline2":["SCHEDULE DELIVERY TIMES"]},"pers_type":"doa","id":"el231594316","elp_id":"elp231594319"},{"type":"image","value":"https://cdn.revjet.com/s3/csp/3159/1736269598726/OLA_ImageSizingTemplate_ProGRIDBanners300x250_copy_3.jpg","pers_type":"doa","id":"el231594328","elp_id":"elp231594331"},{"type":"html5","value":{"url":"","templateHeadline3":["DELIVER TO YOUR JOB SITE"]},"pers_type":"doa","id":"el231594346","elp_id":"elp231594349"},{"type":"image","value":"https://cdn.revjet.com/s3/csp/3159/1734476227260/OLA_carousel_300x250_copy_3.jpg","pers_type":"doa","id":"el231594358","elp_id":"elp231594361"},{"type":"html5","value":{"url":"","templateHeadline4":["NEXT-DAY DELIVERY AVAILABLE"]},"pers_type":"doa","id":"el231594379","elp_id":"elp231594382"},{"type":"image","value":"https://cdn.revjet.com/s3/csp/3159/1734476228305/OLA_carousel_300x250_copy.jpg","pers_type":"doa","id":"el231594391","elp_id":"elp231594394"},{"type":"html5","value":{"url":"","templateCallToAction5":["Learn More"],"templateHeadline5":["OR PICK UP IN STORE"]},"pers_type":"doa","id":"el231594415","elp_id":"elp231594418"},{"type":"image","value":"https://cdn.revjet.com/s3/csp/3159/1737067660700/OLA_ImageSizingTemplate_ProGRIDBanners05.jpg","pers_type":"doa","id":"el231594427","elp_id":"elp231594430"},{"type":"html5","value":{"url":"","templateHeadline1":["4 WAYS TO GET DELIVERY ON YOUR TERMS"]},"pers_type":"doa","id":"el231594481","elp_id":"elp231594484"},{"type":"image","value":"https://cdn.revjet.com/s3/csp/3159/1737067699254/OLA_ImageSizingTemplate_ProGRIDBanners728x90_01_3c56f1a4-1475-42b6-a3c4-d4a98173c152.jpg","pers_type":"doa","id":"el231594499","elp_id":"elp231594502"},{"type":"html5","value":{"url":"","templateHeadline1":["4 WAYS TO GET DELIVERY ON YOUR TERMS"],"templateHeadline2":["SCHEDULE DELIVERY TIMES"],"templateHeadline3":["DELIVER TO YOUR JOB SITE"],"templateImageUrl1":"https://cdn.revjet.com/s3/csp/3159/1737067699254/OLA_ImageSizingTemplate_ProGRIDBanners728x90_01_3c56f1a4-1475-42b6-a3c4-d4a98173c152.jpg","templateImageUrl2":"https://cdn.revjet.com/s3/csp/3159/1737065893924/728x90_05.jpg","templateImageUrl3":"https://cdn.revjet.com/s3/csp/3159/1737067662399/OLA_ImageSizingTemplate_ProGRIDBanners728x90_03.jpg","templateCallToAction5":["Learn More"],"templateImageUrl4":"https://cdn.revjet.com/s3/csp/3159/1737067662448/OLA_ImageSizingTemplate_ProGRIDBanners728x90_04.jpg","templateImageUrl5":"https://cdn.revjet.com/s3/csp/3159/1737067662459/OLA_ImageSizingTemplate_ProGRIDBanners728x90_05.jpg","templateHeadline4":["NEXT-DAY DELIVERY AVAILABLE"],"templateHeadline5":["OR PICK UP IN STORE"]},"pers_type":"doa","id":"el231594508","elp_id":"elp231594511"},{"type":"html5","value":{"url":"","templateHeadline2":["SCHEDULE DELIVERY TIMES"]},"pers_type":"doa","id":"el231594535","elp_id":"elp231594538"},{"type":"image","value":"https://cdn.revjet.com/s3/csp/3159/1737065893924/728x90_05.jpg","pers_type":"doa","id":"el231594559","elp_id":"elp231594562"},{"type":"html5","value":{"url":"","templateHeadline3":["DELIVER TO YOUR JOB SITE"]},"pers_type":"doa","id":"el231594583","elp_id":"elp231594586"},{"type":"image","value":"https://cdn.revjet.com/s3/csp/3159/1737067662399/OLA_ImageSizingTemplate_ProGRIDBanners728x90_03.jpg","pers_type":"doa","id":"el231594613","elp_id":"elp231594616"},{"type":"html5","value":{"url":"","templateHeadline4":["NEXT-DAY DELIVERY AVAILABLE"]},"pers_type":"doa","id":"el231594640","elp_id":"elp231594643"},{"type":"image","value":"https://cdn.revjet.com/s3/csp/3159/1737067662448/OLA_ImageSizingTemplate_ProGRIDBanners728x90_04.jpg","pers_type":"doa","id":"el231594667","elp_id":"elp231594670"},{"type":"html5","value":{"url":"","templateCallToAction5":["Learn More"],"templateHeadline5":["OR PICK UP IN STORE"]},"pers_type":"doa","id":"el231594691","elp_id":"elp231594694"},{"type":"image","value":"https://cdn.revjet.com/s3/csp/3159/1737067662459/OLA_ImageSizingTemplate_ProGRIDBanners728x90_05.jpg","pers_type":"doa","id":"el231594706","elp_id":"elp231594709"},{"type":"html5","value":{"url":"","headlineMobile":["DELIVERY ON YOUR TERMS"]},"pers_type":"doa","id":"el231594739","elp_id":"elp231594742"},{"type":"html5","value":{"url":"","headlineMobile":["DELIVERY ON YOUR TERMS"]},"pers_type":"doa","id":"el231594778","elp_id":"elp231594781"}], [{"id":"el231594481","type":"html5","value":[],"elp_id":"elp231594484","pers_type":"doa"},{"id":"el231594499","type":"image","elp_id":"elp231594502","pers_type":"doa"},{"id":"el231594508","type":"html5","value":[],"elp_id":"elp231594511","pers_type":"doa"},{"id":"el231594535","type":"html5","value":[],"elp_id":"elp231594538","pers_type":"doa"},{"id":"el231594559","type":"image","elp_id":"elp231594562","pers_type":"doa"},{"id":"el231594583","type":"html5","value":[],"elp_id":"elp231594586","pers_type":"doa"},{"id":"el231594613","type":"image","elp_id":"elp231594616","pers_type":"doa"},{"id":"el231594640","type":"html5","value":[],"elp_id":"elp231594643","pers_type":"doa"},{"id":"el231594667","type":"image","elp_id":"elp231594670","pers_type":"doa"},{"id":"el231594691","type":"html5","value":[],"elp_id":"elp231594694","pers_type":"doa"},{"id":"el231594706","type":"image","elp_id":"elp231594709","pers_type":"doa"}]),
+		"tracking": [
+			{
+	"type": "open_link",
+	"pixels": []
+},
+{
+	"type": "click_heatmap",
+	"pixels": []
+},
+{
+	"type": "video_started",
+	"pixels": [{"type":"image","url":"https://pix.revjet.com/interaction/1103?__ads=35804b4e5aef95f9e10b09b488252261&__adt=9026904551140353755&__ade=1&vid=5151282369772089923&__imps_time=1742884270659"}]
+},
+{
+	"type": "video_first_quartile",
+	"pixels": [{"type":"image","url":"https://pix.revjet.com/interaction/1104?__ads=35804b4e5aef95f9e10b09b488252261&__adt=9026904551140353755&__ade=1&vid=5151282369772089923&__imps_time=1742884270659"}]
+},
+{
+	"type": "video_midpoint",
+	"pixels": [{"type":"image","url":"https://pix.revjet.com/interaction/1105?__ads=35804b4e5aef95f9e10b09b488252261&__adt=9026904551140353755&__ade=1&vid=5151282369772089923&__imps_time=1742884270659"}]
+},
+{
+	"type": "video_third_quartile",
+	"pixels": [{"type":"image","url":"https://pix.revjet.com/interaction/1106?__ads=35804b4e5aef95f9e10b09b488252261&__adt=9026904551140353755&__ade=1&vid=5151282369772089923&__imps_time=1742884270659"}]
+},
+{
+	"type": "video_complete",
+	"pixels": [{"type":"image","url":"https://pix.revjet.com/interaction/1107?__ads=35804b4e5aef95f9e10b09b488252261&__adt=9026904551140353755&__ade=1&vid=5151282369772089923&__imps_time=1742884270659"}]
+},
+{
+	"type": "expand",
+	"pixels": [{"type":"image","url":"https://pix.revjet.com/interaction/1112?__ads=35804b4e5aef95f9e10b09b488252261&__adt=9026904551140353755&__ade=1&vid=5151282369772089923&__imps_time=1742884270659"}]
+},
+{
+	"type": "collapse",
+	"pixels": [{"type":"image","url":"https://pix.revjet.com/interaction/1192?__ads=35804b4e5aef95f9e10b09b488252261&__adt=9026904551140353755&__ade=1&vid=5151282369772089923&__imps_time=1742884270659"}]
+},
+{
+	"type": "javascript_error",
+	"pixels": []
+},
+{
+	"type": "consumer_data",
+	"pixels": [{"type":"image","url":"https://pix.revjet.com/interaction/53?__ads=35804b4e5aef95f9e10b09b488252261&__adt=9026904551140353755&__ade=1&vid=5151282369772089923&__imps_time=1742884270659"}]
+}
+		],
+		"options": {
+			"hideBody": true,
+			"hideMethod": "visibility",
+			"disableAnimation": window._disanim,
+			"canonicalEventURL": "https://pix.revjet.com/interaction/__PIXEL__?__ads=35804b4e5aef95f9e10b09b488252261&vid=5151282369772089923&__adt=9026904551140353755&__ade=1"
+		},
+		"eligibleActions": [231594793, 231594796, 231594799, 231594802, 231594805, 231594808, 231594811, 231594814, 231594817, 231594820, 231594823, 231594826, 231594829, 231594832, 231594835, 231594838, 231594841].concat([1127,1126,1125,1124,1123,1122,1121,1120,1119,1118,1117,1116,1115,1114,1113,1112,1111,1110,1109,1108,1107,1106]),
+		"consumerData": []
+	};
+</script>
+
+
+
+<!-- revjet-tracking -->
+<!--  -->
+<img height="0" width="0" style="border-style:none;" alt="" src="a_data/1000.gif">
+<img src="a_data/pixel.gif" width="0" height="0">
+<img height="0" width="0" style="border-style:none;" alt="" src="a_data/adServerESI.html">
+
+<script>
+	(function() {
+		if (document.readyState !== 'complete') {
+			var onWindowLoad = function(ev) {
+				window.removeEventListener('load', onWindowLoad, false);
+				new Image().src = "https://pix.revjet.com/interaction/1007?__ads=35804b4e5aef95f9e10b09b488252261&__adt=9026904551140353755&__ade=1&vid=5151282369772089923&__imps_time=1742884270659&__clstampdif=" + Math.round(ev.timeStamp) + '&__stamp=' + new Date().getTime();
+			};
+			window.addEventListener('load', onWindowLoad, false);
+		} else {
+			new Image().src = "https://pix.revjet.com/interaction/1007?__ads=35804b4e5aef95f9e10b09b488252261&__adt=9026904551140353755&__ade=1&vid=5151282369772089923&__imps_time=1742884270659&__stamp=" + new Date().getTime();
+		}
+	})();
+</script>
+
+<!--  -->
+<!-- /revjet-tracking -->
+
+<script type="text/javascript">
+	function pauseAnimation() {
+		var element = document.getElementById('content_body');
+		if (!element.classList.contains('animation_paused')) {
+			element.classList.add('animation_paused');
+		}
+
+		element.getBoundingClientRect();
+	}
+
+	function resumeAnimation() {
+		var element = document.getElementById('content_body');
+		if (element.classList.contains('animation_paused')) {
+			element.classList.remove('animation_paused');
+		}
+
+		element.getBoundingClientRect();
+	}
+
+	var prefixes = ['moz', 'ms', 'webkit'];
+	var hiddenProperty = 'hidden';
+	var visibilityChangeEventName = 'visibilitychange';
+
+	for (var i = 0; i < prefixes.length; i++) {
+		if (document[prefixes[i] + 'Hidden']) {
+			hiddenProperty = prefixes[i] + 'Hidden';
+			visibilityChangeEventName = prefixes[i] + visibilityChangeEventName;
+			break;
+		}
+	}
+
+	document.addEventListener(visibilityChangeEventName, function() {
+		if (document[hiddenProperty]) {
+			pauseAnimation();
+		} else {
+			resumeAnimation();
+		}
+	}, false);
+</script>
+
+
+
+</body></html>

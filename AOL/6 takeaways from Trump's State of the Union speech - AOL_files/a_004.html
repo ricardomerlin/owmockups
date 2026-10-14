@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"></head><body>
+            <script>
+                (function () {
+                'use strict';
+                // Browsers treat srcdoc iframes as unique, sandboxed documents with no origin, so any messages sent from or to them will have event.origin set to null.
+                const validTldOrAolRegex = new RegExp("(.[a-z]{2,24}|aol.com)(:d+)?$", "i");
+                function sendBeacon(page) {
+                    const version = 17;
+                    const data = {version, ...page};
+                    const params = new URLSearchParams(data);
+                    fetch('https://b.trueanthem.com/beacon', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+                    },
+                    body: params.toString()
+                    }).then(res => {
+                    console.log('trueAnthem Beacon response:', res.status);
+                    }).catch(err => {
+                    console.error('trueAnthem Beacon error:', err);
+                    });
+                }
+                document.addEventListener('DOMContentLoaded', () => {
+                    window.parent.postMessage({type:'ta-ready'}, '*');
+                });
+                window.addEventListener('message', ev => {
+                    // This will ensure only aol.com domain can access
+                    if (!validTldOrAolRegex.test(ev.origin)) return;
+                    if (!ev.data || ev.data.type !== 'ta-opts') return;
+                    sendBeacon(ev.data.meta);
+                });
+                }());
+            </script>
+            
+        </body></html>

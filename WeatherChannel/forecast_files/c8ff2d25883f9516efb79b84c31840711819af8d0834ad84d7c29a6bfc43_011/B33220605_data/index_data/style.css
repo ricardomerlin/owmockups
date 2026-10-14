@@ -1,0 +1,188 @@
+@font-face {
+  font-family: 'Tele-Neo-Bold';
+  src: url(https://video.seenthis.se/v2/creatives/JibuyO6ZJ/assets/KMzHQptCv.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Tele-Neo-Medium';
+  src: url(https://video.seenthis.se/v2/creatives/JibuyO6ZJ/assets/Cdv3fn41o.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Tele-Neo';
+  src: url(https://video.seenthis.se/v2/creatives/JibuyO6ZJ/assets/s8gk7YDku.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url(https://video.seenthis.se/v2/creatives/JibuyO6ZJ/assets/fPTLmTxbj.woff) format('woff');
+}
+
+
+#creative {
+  box-sizing: border-box;
+  border: 1px solid #000;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+#player {
+  width: 298px;
+  height: 169px;
+  position: absolute;
+  top: 430px;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000
+}
+
+.static {
+  width: 300px;
+  height: 429px;
+  padding: 0px;
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-image: url('https://video.seenthis.se/v2/creatives/JibuyO6ZJ/assets/gbpY3Z-m5.jpeg');
+  background-position: 0px -7px;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.copyBox {
+  margin-left: 10px;
+  margin-top: 4px;
+}
+
+.logo {
+  margin-top: 220px;
+  margin-left: 10px;
+  width: 40px;
+}
+
+.tbold {
+  font-family: 'Tele-Neo-Bold';
+}
+
+.tmobileColor {
+  color: #e20074;
+}
+
+.fsmall {
+  font-size: 10px;
+}
+
+.styleItalic {
+  font-style: italic;
+}
+
+.lineA {
+  font-family: 'Tele-Neo-Medium';
+  font-size: 14px;
+}
+
+.lineB {
+  font-size: 26px;
+  margin-bottom: 5px;
+}
+
+.lineC {
+  margin-bottom: 25px;
+  width: 260px;
+  font-size: 10px;
+}
+
+.disclaimer {
+  position: absolute;
+  bottom: 4px;
+  width: 290px;
+  font-size: 7px;
+}
+
+.cta {
+  position: absolute;
+  top: 345px;
+  right: 30px;
+  background-color: #e20074;
+  font-family: 'Tele-Neo-Bold';
+  display: inline-block;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 4px;
+}
+
+.phoneBox {
+  width: 170px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.phoneName {
+  width: 60px;
+  margin-top: 10px;
+}
+
+.phoneImage {
+  width: 150px;
+  position: absolute;
+  top: 0;
+  right: 0px;
+}
+
+
+.obs {
+  display: block;
+  position: absolute;
+  bottom: -85px;
+  font-weight: normal;
+  font-family: 'Roboto-Regular';
+  color: #ffffff;
+  left: 0;
+  width: 300px;
+  font-size: 12px;
+  padding: 0;
+  transition: transform .5s ease-in-out;
+  transform: translateY(calc(100% - 24px));
+  -ms-transform: translateY(100%) translateY(-24px);
+  bottom: 0;
+}
+
+.obs:hover {
+  transform: translateY(0);
+  /* -webkit-animation: slide 0.5s forwards;
+   animation: slide 0.5s forwards; */
+}
+
+.info {
+  padding: 3%;
+  background-color: hsla(0, 2%, 7%, 0.7);
+  border-top-left-radius: 8px;
+  font-family: 'Roboto-Regular';
+  font-size: 12px;
+}
+
+#info {
+  z-index: 1002;
+  display: inline;
+  background-color: hsla(0, 2%, 7%, 0.7);
+  padding: 7px 10px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  font-size: 12px;
+  line-height: 28px;
+  margin-left: 223px;
+}

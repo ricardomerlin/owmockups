@@ -1,0 +1,219 @@
+var __TRINITY_IS_LEGACY__ = false;
+
+try {
+  eval('({...{x: 1}})');
+  eval('let b = window?.x ?? document');
+  eval('(async () => { await Promise.resolve(); })()');
+  eval('const fn = ({a, b = {}, ...c}) => {}');
+  eval('`${window.x}`');
+  eval('(async () => { for await (const item of []) {} })()');
+
+  if (!window.fetch) throw 'No fetch';
+  if (!(typeof Symbol)) throw 'No Symbol';
+} catch (error) {
+  __TRINITY_IS_LEGACY__ = error;
+}
+(function() {
+    var prefix = __TRINITY_IS_LEGACY__ ? 'legacy/' : '';
+
+    window.TRINITY_PLAYER = window.TRINITY_PLAYER || {
+        isLegacyBrowser: !!__TRINITY_IS_LEGACY__,
+        isDev: false,
+        domain: 'ynet.co.il',
+        options: {
+            useBunnyCDN: 0,
+            serverSubdomain: '',
+            pageURL: 'https://www.ynet.co.il/economy/article/hk7tn2zlyg',
+            disabledDepartEvents: ["injectorImp"]        },
+        config: {
+            bundlePath: 'https://vd.trinitymedia.ai/trinity-player/tts-player/20250515_71b8945354c49e0c6fd088cdf1a1e452cd2b7678/',
+            injectorScriptPath: prefix + 'trinity-injector-script.js',
+            SRIHashes: {
+                'trinity-injector-script.js': 'sha384-nvgrTyFtMPNOVrUwVQAqulg5NX+7gcBSAzpB2yVi9ijsxRXIfOMNqZeQaYvCdlaU',
+                'legacy/trinity-injector-script.js': 'sha384-1mHhGuPtMZ3a38b1LJ0qLJV7iJQpgcPD8lfiPO9FF9DwoNSjpPJyCRH+Rnc1WFx2'
+            }
+        },
+        userAgentData: {"browser":"Firefox","os":"Mac OS X","os_ver":"10.15","device":"Mac","browser_ver":"138.0","is_bot":false,"is_legacy_browser":true},
+        SDKData: {},
+        userId: 'b270f0ee-9985-4418-83c7-6c23284ee183',
+        server: 'staging-audio',
+        server_region: 'us-east-1',
+        server_env: 'STG',
+        publisherId: '28091',
+        ts: Date.now(),
+        tsServer: 1747316817345,
+        isOembed: 0    };
+    const TP = window.TRINITY_PLAYER;
+    const d = document;
+
+    const playerId = d.currentScript.dataset.playerId || '' || 'da2db6b6bd5ada28a1cbd7c62f430d12'
+    d.currentScript.setAttribute('data-player-id', playerId); // set dynamically generated ID
+
+    
+    TP.players = TP.players || {};
+    TP.players[playerId] = {
+        isIframe: '',
+        isAMP: '',
+        abTestAlias: '',
+        adsDurationThreshold: '',
+        cf: '',
+        contentURL: 'https://www.ynet.co.il/economy/article/hk7tn2zlyg',
+        documentLoadType: '',
+        documentLoadTypeSelector: '',
+        estimatedDuration: '',
+        filters: [],
+        FAB: 'none',
+        FABConfig: {},
+        displayExpanded: {"isEnabled":true,"maxAdHeight":90,"renderType":"onInit","integration":"adtelligent"},
+        displayOverlay: {"returnToPlayer":{},"integration":"adtelligent"},
+        isTrinityEnabled: true,
+        isShareEnabled: 0,
+        shareEndpoint: '',
+        isNewTextApproach: true,
+        selectorVersion: '1',
+        headlineSelector: 'h1.mainTitle,h2.subTitle, div.title, div.subTitle, .ArticleHeaderMobileComponent h1, .ArticleHeaderMobileComponent h2, .ArticleHeaderApp h1, .ArticleHeaderApp h2',
+        articleSelector: '.text_editor_paragraph, h3.pHeader',
+        textSelector: '',
+        imageSelector: '',
+        language: 'he',
+        isTranslationEnabled: true,
+        loaderText: '',
+        paramsObject: {},
+        partnerName: '',
+        isShowPoweredBy: true,
+        isPoweredByLinkDisabled: '',
+        placeholderSelector: {},
+        playerMode: 'default',
+        playerType: '',
+        integrationType: 'ios',
+        googleCustomParams: '',
+        pubShare: '1',
+        publisherSections: [],
+        publisherSectionsAutoEnabled: false,
+        publisherTags: [{"type":"metadata","regexp":"(.*)","example":"","selector":"jsonld.keywords","timestamp":1717494811509,"delimiterSplitter":","},{"type":"metadata","regexp":"(.*)","example":"איתמר אייכנר","selector":"meta[property=\"vr:author\"]","timestamp":1717494890365,"result":"איתמר אייכנר"}],
+        publisherUserId: '',
+        publisherUserIdOptions: '{}',
+        readContentType: '',
+        readContentConfig: '',
+        renderOptions: {},
+        rchURL: '',
+        state: 'not-started',
+        themeDataComputed: {"light":{"layout":"global-expanded","is-force-desktop":true,"height":100,"height-mobile":100,"el-play-button.width":"36px","el-play-button.height":"36px","el-powered-by.extra.link-url":"mailto:product@ynet.co.il"},"dark":{"layout":"global-expanded","is-force-desktop":true,"height":100,"height-mobile":100,"el-play-button.width":"36px","el-play-button.height":"36px","el-powered-by.extra.link-url":"mailto:product@ynet.co.il"},"i18n":{"he":{"initialTitle":"\u05dc\u05d7\u05e6\u05d5 \u05dc\u05d4\u05d0\u05d6\u05e0\u05d4 \u05dc\u05db\u05ea\u05d1\u05d4"}},"fonts":[{"name":"MosesText","weight":400,"woff2":"https:\/\/vd.trinitymedia.ai\/fonts\/MosesText_1.0VF.woff2"}],"__key":"production:default:79a7308c3a1091dc1cd76cf442c815d28c744f66:0","__debug":{"isOnDemand":true}},
+        themeId: '565',
+        themeAppearance: 'auto_react',
+        unitId: '2900015732',
+        unitType: 'tts-player',
+        unitEnvironment: 'ios',
+        version: '20250515_71b8945354c49e0c6fd088cdf1a1e452cd2b7678'
+    };
+
+    function trinitySendDepart(params) {
+  const data = {
+    t: 'audio',
+    platform: 'Trinity',
+    server: params.server,
+    server_env: params.serverENV,
+    server_region: params.serverRegion,
+    unit_type: params.unitType,
+
+    imp_id: params.impId,
+    user_id: params.userId,
+    kind: params.kind,
+    campaign_id: params.unitId,
+    seller_id: params.publisherId,
+    url: params.url,
+    top_domain: params.topDomain,
+    text_value: params.textValue,
+    user_agent: params.userAgent,
+    user_agent_data: params.userAgentData,
+    player_version: params.playerVersion
+  };
+
+  const resultData = JSON.stringify(data);
+
+  fetch('https://depart.trinitymedia.ai/api/collect?t=audio', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: resultData
+  })
+    .then((response) => response.text())
+    .catch((error) => {
+      console.error('Can not send depart', error, data);
+    });
+
+  console.info('DEPART', resultData);
+}
+    TP.injectScript = function(playerId, injectorScriptId) {
+  var isDOMContentLoaded = false;
+
+  function checkIfDocumentReady() {
+    return ['interactive', 'complete', 'loaded'].indexOf(d.readyState) !== -1 || isDOMContentLoaded;
+  }
+
+  function run() {
+    if (d.body) {
+      if (!d.getElementById(injectorScriptId)) {
+        var js = d.createElement('script');
+        var src = TP.config.bundlePath + TP.config.injectorScriptPath;
+
+        js.type = 'text/javascript';
+        js.setAttribute('crossorigin', 'anonymous');
+        js.setAttribute('integrity', TP.config.SRIHashes[TP.config.injectorScriptPath]);
+        js.setAttribute('fetchpriority', 'high');
+        js.setAttribute('charset', 'UTF-8');
+        js.onerror = () => {
+          trinitySendDepart({
+            server: TP.server,
+            serverENV: TP.server_env,
+            serverRegion: TP.server_region,
+            unitType: TP.players[playerId].unitType,
+            userId: TP.userId,
+            kind: 'errorJSLoad',
+            unitId: Number(TP.players[playerId].unitId),
+            publisherId: Number(TP.publisherId || TP.players[playerId].publisherId),
+            url: window.location.href,
+            topDomain: TP.domain,
+            textValue: src,
+            userAgent: navigator.userAgent,
+            userAgentData: TP.userAgentData,
+            playerVersion: TP.players[playerId].version
+          });
+        };
+        js.src = src;
+        js.id = injectorScriptId;
+
+        js.addEventListener('load', createPlayer);
+
+        d.body.appendChild(js);
+      } else {
+        if (TP.isLoaded) createPlayer();
+        else d.getElementById(injectorScriptId).addEventListener('load', createPlayer);
+      }
+    }
+  }
+
+  function createPlayer() {
+    if (TP.players[playerId].__initializing) return;
+    if (checkIfDocumentReady()) TP.api && TP.api._internal && TP.api._internal.createPlayer(playerId);
+  }
+
+  run();
+
+  d.addEventListener('DOMContentLoaded', () => {
+    isDOMContentLoaded = true;
+  });
+
+  const t = setInterval(() => {
+    if (!checkIfDocumentReady()) return;
+
+    clearInterval(t);
+
+    run();
+  }, 100);
+};
+
+    TP.injectScript(playerId, 'trinity-tts-js');
+})();
+var __TRINITY_TAG_TIME__ = 26;

@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+    <title>adisync</title>
+</head>
+<body>
+  <script>
+    (function () {
+      var dnt = (typeof navigator.doNotTrack !== 'undefined') ? navigator.doNotTrack
+      : (typeof window.doNotTrack !== 'undefined')            ? window.doNotTrack
+      : (typeof navigator.msDoNotTrack !== 'undefined')       ? navigator.msDoNotTrack
+      : null;
+
+      if (dnt == 1 || dnt == '1' || dnt == 'yes') return console.log('DNT is enabled');
+
+
+      function getQSParam(a) {
+        if (!a || -1 === (window.location.search || "").indexOf(a)) return null;
+        var b = new RegExp("[?&]" + a + "((=([^&]*))|(&|$))"),
+          c = b.exec(window.location.search);
+        return !c || c.length < 5 ? null : decodeURIComponent(c[3] || "");
+      }
+
+      function fireFrame(endpoint) {
+        var iframe = document.createElement('iframe');
+        iframe.style.cssText = 'display:none;width:0px;height:0px;';
+        iframe.src = endpoint;
+        document.body.appendChild(iframe);
+      }
+
+      function firePixel(endpoint) {
+        var img = document.createElement('img');
+        img.style.cssText = 'display:none;width:0px;height:0px;';
+        img.src = endpoint;
+        document.body.appendChild(img);
+      }
+
+      if (window.location.search && getQSParam('cb')) {
+        firePixel(MASTEREP + window.location.search);
+      }
+
+      for (var i in cfg) {
+        if (cfg.hasOwnProperty(i)) {
+          if (cfg[i].hasOwnProperty('iframe')) {
+            fireFrame(cfg[i].iframe);
+          } else if (cfg[i].hasOwnProperty('pixel')) {
+            firePixel(cfg[i].pixel);
+          }
+        }
+      }
+    })();
+  </script><img style="display: none; width: 0px; height: 0px;" src="adisync_data/setuid.gif"><img style="display: none; width: 0px; height: 0px;" src="adisync_data/sync_002.html"><img style="display: none; width: 0px; height: 0px;" src="adisync_data/sync.gif"><img style="display: none; width: 0px; height: 0px;" src="adisync_data/psync.gif"><img style="display: none; width: 0px; height: 0px;" src="adisync_data/psync_002.gif"><img style="display: none; width: 0px; height: 0px;" src="adisync_data/cookie.gif"><img style="display: none; width: 0px; height: 0px;" src="adisync_data/usersync.gif"><img style="display: none; width: 0px; height: 0px;" src="adisync_data/psync_003.gif"><iframe style="display: none; width: 0px; height: 0px;" src="adisync_data/a.html"></iframe><iframe style="display: none; width: 0px; height: 0px;" src="adisync_data/cookie_sync.html"></iframe><iframe style="display: none; width: 0px; height: 0px;" src="adisync_data/sync.html"></iframe><iframe style="display: none; width: 0px; height: 0px;" src="adisync_data/ssync.html"></iframe><img style="display: none; width: 0px; height: 0px;" src="adisync_data/csync.gif">
+
+
+</body></html>
